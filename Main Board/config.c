@@ -18,9 +18,9 @@ static PWMConfig pwmcfg = {
 
 static const ICUConfig icucfgA = {
     ICU_INPUT_ACTIVE_HIGH,
-    1000,
-    NULL,
+    1000000,
     encoder_pulse_captured,
+    NULL,
     NULL,
     ICU_CHANNEL_1,
     0   
@@ -28,7 +28,7 @@ static const ICUConfig icucfgA = {
 
 static const ICUConfig icucfgB = {
     ICU_INPUT_ACTIVE_HIGH,
-    1000,
+    1000000,
     NULL,
     encoder_pulse_captured,
     NULL,
@@ -38,7 +38,7 @@ static const ICUConfig icucfgB = {
 
 static const ICUConfig icucfgC = {
     ICU_INPUT_ACTIVE_HIGH,
-    1000,
+    1000000,
     NULL,
     encoder_pulse_captured,
     NULL,
@@ -70,10 +70,17 @@ void init_pins() {
     palSetPadMode(GPIOC,5,PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOC,6,PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOB,1,PAL_MODE_ALTERNATE(1));
-    // Input capture
+    // Input capture 
     palSetPadMode(GPIOA,0,PAL_MODE_ALTERNATE(1));
     palSetPadMode(GPIOA,1,PAL_MODE_ALTERNATE(2));
     palSetPadMode(GPIOB,4,PAL_MODE_ALTERNATE(2));
+    // ADC
+    // PA6 + PA7
+    
+    // Usta
+    // PC0
+
+    // Kicker Solenoid
 }
 
 void board_init() {
@@ -101,9 +108,7 @@ void board_init() {
     icuStartCapture(&ICUD5);
     icuStartCapture(&ICUD3);
     
-    configure_icu_notifications(true, 0);
-    configure_icu_notifications(true, 1);
-    configure_icu_notifications(true, 2);
+    configure_icu_notifications(true);
 }
 
 void configure_icu_notifications(bool state) {

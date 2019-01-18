@@ -6,15 +6,20 @@
 thread_t *motor_save_thread;
 
 volatile int16_t rotations_per_sec[NUM_OF_MOTORS];
-int8_t motor_speed_calculation[NUM_OF_MOTORS];
-int8_t motor_speed_temp[NUM_OF_MOTORS];
-
+int32_t motor_speeds[NUM_OF_MOTORS];
+int16_t motor_actual_speeds[NUM_OF_MOTORS];
 
 void encoder_pulse_captured(ICUDriver *icup) {
     int16_t period_width = icuGetPeriodX(icup);
-	if ()
     if (icup == &ICUD2) {
-        rotations_per_sec[0] = 1000 / (period_width * 24);
+        rotations_per_sec[0] = period_width;
+        chprintf(&SD2, "%d \r\n", (3270000 - 1352 * motor_speeds[0]) / 1000);
+        if(period_width < (3270000 - 1352 * motor_speeds[0]) / 1000) {
+            // −1,352813853 3270,562770563
+            pwmEnableChannel(&PWMD1, 0, ++motor_actual_speeds[0]);
+        } else {
+            pwmEnableChannel(&PWMD1, 0, --motor_actual_speeds[0]);             
+        }
     } else if (icup == &ICUD5) {
         rotations_per_sec[1] = 1000 / (period_width * 24);
     } else if (icup == &ICUD3) {
@@ -22,31 +27,23 @@ void encoder_pulse_captured(ICUDriver *icup) {
     }
 }
 
-// COM THEARD
-THD_WORKING_AREA(waMotorThread, 128);
-THD_FUNCTION(MotorThread, arg) {
-    (void)arg;
-    
-    thread_t *main;
-    msg_t information;
-
-    while(1) {
-        main = chMsgWait();
-        information = chMsgGet(main);
-        if (information == UPDATE) {
-			motor_speed_calculation = motor_speed_temp;
-		}
-    }
-}
-
-
  // TODO
  // speed between 0 - 100
  // encoder movement
  
 void move_motor(int8_t motor_number, int16_t speed) {
-	motor_speed_temp[motor_number] = speed;
-    chMsgSend(motor_save_thread, UPDATE);
+    configure_icu_notifications(false);
+    if (motor_speeds[motor_number] == 0) {
+        if (speed < 0) {
+            set_motor_state(0, motor_number);
+        } else {
+            set_motor_state(1, motor_number);
+        }
+        pwmEnableChannel(&PWMD1, motor_number, 2048);
+        motor_actual_speeds[motor_number] = 2048;
+    }
+    motor_speeds[motor_number] = speed;
+    configure_icu_notifications(true);   
 }
  
 void calculate_speed(float alpha) {
@@ -58,12 +55,14 @@ void calculate_speed(float alpha) {
     }
 }
 
-void move_motors(float angle) {
-    calculate_speed(angle);
-	chMsgSend(motor_save_thread, UPDATE);
+void move_motors(float alpha) {
+    calculate_speed(alpha);
 }
 
 void set_motor_off(int8_t motor_number) {
+    configure_icu_notifications(false);
+	motor_speeds[motor_number] = 0;
+    configure_icu_notifications(true);
     set_motor_state(MOTOR_BREAK, motor_number);
 }
 
@@ -73,14 +72,13 @@ void set_motors_off() {
     }
 }
 
-int16_t read_motors_speed() {
-    configure_icu_notifications(false;
-	rot = rotations_per_sec;
+void read_motors_speed(int16_t *buff) {
+    configure_icu_notifications(false);
+    for(int i = 0; i < NUM_OF_MOTORS; i++) {
+        buff[i] = rotations_per_sec[i];
+    }
     configure_icu_notifications(true);
-    return rot;
 }
-
-
 
 void set_motor_state(int8_t dir, int8_t num) {
     
