@@ -17,5 +17,6 @@ void set_motor_off(int8_t motor_number);
 void set_motors_off(void);
 void encoder_pulse_captured(ICUDriver *icup);
 void read_motors_speed(int16_t *buff);
+void read_motors_period(int16_t *buff);
 
 #endif

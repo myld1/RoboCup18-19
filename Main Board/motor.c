@@ -5,26 +5,43 @@
 
 thread_t *motor_save_thread;
 
+
+
 volatile int16_t rotations_per_sec[NUM_OF_MOTORS];
-int32_t motor_speeds[NUM_OF_MOTORS];
-int16_t motor_actual_speeds[NUM_OF_MOTORS];
+int32_t motor_freqs[NUM_OF_MOTORS];
+int16_t motor_actual_speeds[NUM_OF_MOTORS] = { 0, 0, 0 };
+int16_t period[3];
+
+bool i_occured[NUM_OF_MOTORS] = { false, false, false };
 
 void encoder_pulse_captured(ICUDriver *icup) {
-    int16_t period_width = icuGetPeriodX(icup);
+    int16_t period_width = 1000000/icuGetPeriodX(icup);
+    int16_t period_calc = (1848*period_width-281984)/1667;
     if (icup == &ICUD2) {
-        rotations_per_sec[0] = period_width;
-        chprintf(&SD2, "%d \r\n", (3270000 - 1352 * motor_speeds[0]) / 1000);
-        if(period_width < (3270000 - 1352 * motor_speeds[0]) / 1000) {
-            // −1,352813853 3270,562770563
-            pwmEnableChannel(&PWMD1, 0, ++motor_actual_speeds[0]);
-        } else {
-            pwmEnableChannel(&PWMD1, 0, --motor_actual_speeds[0]);             
-        }
+   
+
     } else if (icup == &ICUD5) {
         rotations_per_sec[1] = 1000 / (period_width * 24);
     } else if (icup == &ICUD3) {
         rotations_per_sec[2] = 1000 / (period_width * 24);
     }
+         i_occured[0] = true;
+        rotations_per_sec[0] = period_width;
+      
+        period[0] = motor_freqs[0];
+        // ==
+        period[1] = period_calc;
+
+        period[2] = motor_actual_speeds[0]; 
+       
+        if(period_calc < motor_freqs[0]) {
+            // −1,352813853 3270,562770563
+            //motor_actual_speeds[0] += (motor_freqs[0] - period_calc)/256 //+ 1;
+            pwmEnableChannel(&PWMD1, 0, ++motor_actual_speeds[0]);
+        } else {
+            //motor_actual_speeds[0] -= (period_calc - motor_freqs[0])/256 //+ 1;
+            pwmEnableChannel(&PWMD1, 0, --motor_actual_speeds[0]);
+        }
 }
 
  // TODO
@@ -32,18 +49,26 @@ void encoder_pulse_captured(ICUDriver *icup) {
  // encoder movement
  
 void move_motor(int8_t motor_number, int16_t speed) {
-    configure_icu_notifications(false);
-    if (motor_speeds[motor_number] == 0) {
-        if (speed < 0) {
-            set_motor_state(0, motor_number);
-        } else {
-            set_motor_state(1, motor_number);
-        }
-        pwmEnableChannel(&PWMD1, motor_number, 2048);
-        motor_actual_speeds[motor_number] = 2048;
+    if (speed < 0) {
+        set_motor_state(0, motor_number);
+    } else {
+        set_motor_state(1, motor_number);
     }
-    motor_speeds[motor_number] = speed;
-    configure_icu_notifications(true);   
+
+    motor_freqs[motor_number] = abs(speed); 
+
+    if (motor_actual_speeds[motor_number] == 0) {
+        pwmEnableChannel(&PWMD1, motor_number, abs(speed));
+        motor_actual_speeds[motor_number] = abs(speed);
+        motor_checker(motor_number);
+    } 
+}
+
+void motor_checker(int8_t motor_number) {
+    if(!i_occured[motor_number] && motor_actual_speeds[motor_number] != 0) {
+    pwmEnableChannel(&PWMD1, motor_number, ++motor_actual_speeds[motor_number]);
+    } else { return; }
+    motor_checker(motor_number);
 }
  
 void calculate_speed(float alpha) {
@@ -61,7 +86,7 @@ void move_motors(float alpha) {
 
 void set_motor_off(int8_t motor_number) {
     configure_icu_notifications(false);
-	motor_speeds[motor_number] = 0;
+	motor_freqs[motor_number] = 0;
     configure_icu_notifications(true);
     set_motor_state(MOTOR_BREAK, motor_number);
 }
@@ -80,6 +105,14 @@ void read_motors_speed(int16_t *buff) {
     configure_icu_notifications(true);
 }
 
+void read_motors_period(int16_t *buff) {
+    //configure_icu_notifications(false);
+    for(int i = 0; i < 3; i++) {
+        buff[i] = period[i];
+    }
+    //configure_icu_notifications(true);
+}
+
 void set_motor_state(int8_t dir, int8_t num) {
     
     int8_t pinA;
@@ -94,7 +127,6 @@ void set_motor_state(int8_t dir, int8_t num) {
             pinA = 9;
             pinB = 8;
             break;
-        case 2:
             pinA = 0;
             pinB = 0;
             break;
