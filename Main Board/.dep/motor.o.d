@@ -89,9 +89,8 @@ build/obj/motor.o: motor.c motor.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/st.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h \
- /home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h \
- /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h config.h \
- /usr/include/newlib/math.h /usr/include/newlib/sys/reent.h \
+ includes/chprintf.h /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h \
+ config.h /usr/include/newlib/math.h /usr/include/newlib/sys/reent.h \
  /usr/include/newlib/_ansi.h /usr/include/newlib/newlib.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
  /usr/include/newlib/sys/_types.h /usr/include/newlib/machine/_types.h \
@@ -290,7 +289,7 @@ mcuconf.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h:
 
-/home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h:
+includes/chprintf.h:
 
 /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h:
 

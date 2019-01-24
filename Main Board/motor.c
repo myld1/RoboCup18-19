@@ -1,11 +1,11 @@
 #include "motor.h"
 #include "config.h"
 #include <math.h>
-#include "/home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h"
+#include "includes/chprintf.h"
 
 thread_t *motor_save_thread;
 
-
+int8_t main_timer[NUM_OF_MOTORS] = { -1, -1, -1 };
 
 volatile int16_t rotations_per_sec[NUM_OF_MOTORS];
 int32_t motor_freqs[NUM_OF_MOTORS];
@@ -17,21 +17,19 @@ bool i_occured[NUM_OF_MOTORS] = { false, false, false };
 void encoder_pulse_captured(ICUDriver *icup) {
     int16_t period_width = 1000000/icuGetPeriodX(icup);
     int16_t period_calc = (1848*period_width-281984)/1667;
+    //ICUD sender
+    int8_t sender = -1;
     if (icup == &ICUD2) {
-   
-
+        int8_t sender = 0;
     } else if (icup == &ICUD5) {
-        rotations_per_sec[1] = 1000 / (period_width * 24);
+       int8_t sender = 1;
     } else if (icup == &ICUD3) {
-        rotations_per_sec[2] = 1000 / (period_width * 24);
-    }
-         i_occured[0] = true;
-        rotations_per_sec[0] = period_width;
-      
+       int8_t sender = 2;
+    }   
+    // stats
+        rotations_per_sec[sender] = period_width;
         period[0] = motor_freqs[0];
-        // ==
         period[1] = period_calc;
-
         period[2] = motor_actual_speeds[0]; 
        
         if(period_calc < motor_freqs[0]) {
