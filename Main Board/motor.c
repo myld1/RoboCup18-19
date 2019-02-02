@@ -1,9 +1,6 @@
 #include "motor.h"
 #include "config.h"
-#include <math.h>
 #include "includes/chprintf.h"
-
-thread_t *motor_save_thread;
 
 int8_t main_timer[NUM_OF_MOTORS] = { -1, -1, -1 };
 
@@ -12,61 +9,77 @@ int32_t motor_freqs[NUM_OF_MOTORS];
 int16_t motor_actual_speeds[NUM_OF_MOTORS] = { 0, 0, 0 };
 int16_t period[3];
 
-bool i_occured[NUM_OF_MOTORS] = { false, false, false };
-
 void encoder_pulse_captured(ICUDriver *icup) {
     int16_t period_width = 1000000/icuGetPeriodX(icup);
     int16_t period_calc = (1848*period_width-281984)/1667;
+
     //ICUD sender
     int8_t sender = -1;
     if (icup == &ICUD2) {
-        int8_t sender = 0;
+        sender = 0;
     } else if (icup == &ICUD5) {
-       int8_t sender = 1;
+        sender = 1;
     } else if (icup == &ICUD3) {
-       int8_t sender = 2;
+        sender = 2;
     }   
-    // stats
+    if (sender >= 0) {
+        main_timer[sender] = 0;
+
+        // stats
         rotations_per_sec[sender] = period_width;
-        period[0] = motor_freqs[0];
-        period[1] = period_calc;
-        period[2] = motor_actual_speeds[0]; 
-       
-        if(period_calc < motor_freqs[0]) {
+        period[0] = period_calc;
+        
+        if(period_calc < motor_freqs[sender]) {
             // −1,352813853 3270,562770563
             //motor_actual_speeds[0] += (motor_freqs[0] - period_calc)/256 //+ 1;
-            pwmEnableChannel(&PWMD1, 0, ++motor_actual_speeds[0]);
+            pwmEnableChannel(&PWMD1, sender, ++motor_actual_speeds[sender]);
         } else {
             //motor_actual_speeds[0] -= (period_calc - motor_freqs[0])/256 //+ 1;
-            pwmEnableChannel(&PWMD1, 0, --motor_actual_speeds[0]);
+            pwmEnableChannel(&PWMD1, sender, --motor_actual_speeds[sender]);
         }
+    }
 }
 
- // TODO
- // speed between 0 - 100
- // encoder movement
- 
 void move_motor(int8_t motor_number, int16_t speed) {
     if (speed < 0) {
         set_motor_state(0, motor_number);
+        speed *= -1;
     } else {
         set_motor_state(1, motor_number);
     }
 
-    motor_freqs[motor_number] = abs(speed); 
-
+    motor_freqs[motor_number] = speed; 
     if (motor_actual_speeds[motor_number] == 0) {
-        pwmEnableChannel(&PWMD1, motor_number, abs(speed));
-        motor_actual_speeds[motor_number] = abs(speed);
-        motor_checker(motor_number);
+        pwmEnableChannel(&PWMD1, motor_number, speed);
+        motor_actual_speeds[motor_number] = speed;
+        main_timer[motor_number] = 0;
+        //motor_checker(motor_number); 
     } 
 }
 
-void motor_checker(int8_t motor_number) {
-    if(!i_occured[motor_number] && motor_actual_speeds[motor_number] != 0) {
+/*void motor_checker(int8_t motor_number) {
+    if(main_timer[motor_number] < 0 && motor_actual_speeds[motor_number] != 0) {
     pwmEnableChannel(&PWMD1, motor_number, ++motor_actual_speeds[motor_number]);
     } else { return; }
     motor_checker(motor_number);
+    chprintf(&SD1, "%d \r\n", motor_actual_speeds[motor_number]);
+}*/
+
+void motor_tick() {
+    for(int8_t i = 0; i < NUM_OF_MOTORS; i++) {
+        if(main_timer[i] >= 0) {
+            chprintf(&SD1, "%d %5d %5d %5d %5d \r\n",i, main_timer[i], motor_actual_speeds[i], period[i], motor_freqs[i]);
+            if(main_timer[i] < 3) {    
+                 main_timer[i]++;   
+            } else {
+                if (motor_actual_speeds[i] < 2048) {
+                    pwmEnableChannel(&PWMD1, i, ++motor_actual_speeds[i]);
+                } else {
+                   //chprintf(&SD1, "Error: Battery error or bad powwer supply on motor %d /r/n", i);
+                }
+            }
+        }
+    }
 }
  
 void calculate_speed(float alpha) {

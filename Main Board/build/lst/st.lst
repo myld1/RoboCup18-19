@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc8HoLkC.s 			page 1
+ARM GAS  /tmp/ccetottm.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -14,14 +14,14 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   11              		.file	"st.c"
   12              		.text
   13              	.Ltext0:
-  14              		.section	.gnu.lto_.profile.77bedbaa75871000,"",%progbits
+  14              		.section	.gnu.lto_.profile.efb1a95cae29ba25,"",%progbits
   15 0000 789C6365 		.ascii	"x\234ce`b`a```d\220\342\001\000\000\300\0003"
   15      60626061 
   15      60606064 
   15      90E20100 
   15      00C00033 
   16              		.text
-  17              		.section	.gnu.lto_.icf.77bedbaa75871000,"",%progbits
+  17              		.section	.gnu.lto_.icf.efb1a95cae29ba25,"",%progbits
   18 0000 789C6365 		.ascii	"x\234ce`bP`@\000V\206\205??\354\345a|{\353\355kN\246"
   18      60625060 
   18      40005686 
@@ -35,7 +35,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   20 002b 19001D6F 		.ascii	"\031\000\035o\020\213"
   20      108B
   21              		.text
-  22              		.section	.gnu.lto_.jmpfuncs.77bedbaa75871000,"",%progbits
+  22              		.section	.gnu.lto_.jmpfuncs.efb1a95cae29ba25,"",%progbits
   23 0000 789C6365 		.ascii	"x\234ce`b\020c@\000V\020\301\010\004\365L\014\014\314"
   23      60621063 
   23      40005610 
@@ -45,7 +45,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   24      00000E0A 
   24      0131
   25              		.text
-  26              		.section	.gnu.lto_.inline.77bedbaa75871000,"",%progbits
+  26              		.section	.gnu.lto_.inline.efb1a95cae29ba25,"",%progbits
   27 0000 789C6365 		.ascii	"x\234ce`b\310g@\000V\006\006\026\036F\240 \003\003\333"
   27      6062C867 
   27      40005606 
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   29 0024 18191898 		.ascii	"\030\031\030\230\330>\350\301%\231\030X\230\201\312"
   29      D83EE8C1 
   29      25991858 
-ARM GAS  /tmp/cc8HoLkC.s 			page 2
+ARM GAS  /tmp/ccetottm.s 			page 2
 
 
   29      9881CA
@@ -69,7 +69,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   30      00CA
   31 0045 39089E   		.ascii	"9\010\236"
   32              		.text
-  33              		.section	.gnu.lto_.pureconst.77bedbaa75871000,"",%progbits
+  33              		.section	.gnu.lto_.pureconst.efb1a95cae29ba25,"",%progbits
   34 0000 789C6365 		.ascii	"x\234ce`b\340f```e\220`\224b\222b\226b\221\002\000\004"
   34      6062E066 
   34      60606065 
@@ -77,7 +77,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   34      92629662 
   35 0018 1000A2   		.ascii	"\020\000\242"
   36              		.text
-  37              		.section	.gnu.lto_stInit.77bedbaa75871000,"",%progbits
+  37              		.section	.gnu.lto_stInit.efb1a95cae29ba25,"",%progbits
   38 0000 789C6365 		.ascii	"x\234ce`bX\314\300\300\240\003\304\322@\314\310\314"
   38      606258CC 
   38      C0C0A003 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   45      A90719
   46 0086 B273E79B 		.ascii	"\262s\347\233\333\354\365\177\0338\34633\316d\006\232"
   46      DBECF57F 
-ARM GAS  /tmp/cc8HoLkC.s 			page 3
+ARM GAS  /tmp/ccetottm.s 			page 3
 
 
   46      1B38E633 
@@ -146,7 +146,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   51      00E85645 
   51      2F
   52              		.text
-  53              		.section	.gnu.lto_stStartAlarm.77bedbaa75871000,"",%progbits
+  53              		.section	.gnu.lto_stStartAlarm.efb1a95cae29ba25,"",%progbits
   54 0000 789C9D52 		.ascii	"x\234\235RMH\224A\030\236gf\375v\265\037;t\010\332C"
   54      4D489441 
   54      189E6766 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   59      EF9E
   60 0071 61ACDDC3 		.ascii	"a\254\335\303\001\275Q\036\2606\2166\334\020\011\201"
   60      01BD511E 
-ARM GAS  /tmp/cc8HoLkC.s 			page 4
+ARM GAS  /tmp/ccetottm.s 			page 4
 
 
   60      B0368E36 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   71      92188395 
   71      1422A7
   72 014f 928D7FFB 		.ascii	"\222\215\177\373\276\322sT\237\0210\036\315\316\272"
-ARM GAS  /tmp/cc8HoLkC.s 			page 5
+ARM GAS  /tmp/ccetottm.s 			page 5
 
 
   72      BED27354 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   83      3B501B0A 
   83      373637B8 
   83      F4E7
-ARM GAS  /tmp/cc8HoLkC.s 			page 6
+ARM GAS  /tmp/ccetottm.s 			page 6
 
 
   84 022a F85F7967 		.ascii	"\370_yg[Z\303!YU]y\350\240\254\2508)\253OW\236\363\223"
@@ -311,7 +311,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   85      0231800B 
   85      FF
   86              		.text
-  87              		.section	.gnu.lto_stStopAlarm.77bedbaa75871000,"",%progbits
+  87              		.section	.gnu.lto_stStopAlarm.efb1a95cae29ba25,"",%progbits
   88 0000 789C8550 		.ascii	"x\234\205P=HBQ\024>\337\275\366\262\241\275\250\255"
   88      3D484251 
   88      143EDFBD 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
   97      7B2C4B61 
   97      9FF215A5 
   97      F7CF87B3 
-ARM GAS  /tmp/cc8HoLkC.s 			page 7
+ARM GAS  /tmp/ccetottm.s 			page 7
 
 
   97      ACF9
@@ -408,7 +408,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  107 015a 0CD02F91 		.ascii	"\014\320/\2219\210X"
  107      398858
  108              		.text
- 109              		.section	.gnu.lto_stSetAlarm.77bedbaa75871000,"",%progbits
+ 109              		.section	.gnu.lto_stSetAlarm.efb1a95cae29ba25,"",%progbits
  110 0000 789C8592 		.ascii	"x\234\205\222OHTQ\024\306\317w\357\314\274\321\012#"
  110      4F485451 
  110      14C6CF77 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  111      021185E6 
  111      324551BB 
  111      A02002A5 
-ARM GAS  /tmp/cc8HoLkC.s 			page 8
+ARM GAS  /tmp/ccetottm.s 			page 8
 
 
  111      85
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  123      E3F9293F 
  123      B37385E4 
  123      5A1F
-ARM GAS  /tmp/cc8HoLkC.s 			page 9
+ARM GAS  /tmp/ccetottm.s 			page 9
 
 
  124 00fa 518195A6 		.ascii	"Q\201\225\246\223\001)\314.W!\214\327\025\267\360\242"
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  134      0ADC
  135 01c1 13CF91FF 		.ascii	"\023\317\221\377\232&\025O\247\272T\2643\232R'\342\211"
  135      9A26154F 
-ARM GAS  /tmp/cc8HoLkC.s 			page 10
+ARM GAS  /tmp/ccetottm.s 			page 10
 
 
  135      A7BA54B4 
@@ -563,7 +563,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  139      331CA79F 
  139      BEA5CFA0 
  140              		.text
- 141              		.section	.gnu.lto_stGetAlarm.77bedbaa75871000,"",%progbits
+ 141              		.section	.gnu.lto_stGetAlarm.efb1a95cae29ba25,"",%progbits
  142 0000 789C8590 		.ascii	"x\234\205\220KH[A\024\206\317?\347\346&AJ\273n\003\256"
  142      4B485B41 
  142      1486CF3F 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  148      8C9DEB4A 
  148      70F70DFB 
  148      1693F0
-ARM GAS  /tmp/cc8HoLkC.s 			page 11
+ARM GAS  /tmp/ccetottm.s 			page 11
 
 
  149 0081 E07CB758 		.ascii	"\340|\267XcC\340\236\204\213s\245r\244n\336\230\234"
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  160      EA637F
  161 014a 09ACC3A3 		.ascii	"\011\254\303\2433\344\312\371\005\276\021\305\242\213"
  161      33E4CAF9 
-ARM GAS  /tmp/cc8HoLkC.s 			page 12
+ARM GAS  /tmp/ccetottm.s 			page 12
 
 
  161      05BE11C5 
@@ -688,7 +688,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  166      DAFA
  167 01b0 A369     		.ascii	"\243i"
  168              		.text
- 169              		.section	.gnu.lto_.symbol_nodes.77bedbaa75871000,"",%progbits
+ 169              		.section	.gnu.lto_.symbol_nodes.efb1a95cae29ba25,"",%progbits
  170 0000 789C55C8 		.ascii	"x\234U\310K\015\200@\014\006\341\351\277\254/\020\305"
  170      4B0D8040 
  170      0C06E1E9 
@@ -711,14 +711,14 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  173      391C
  174 004b F3       		.ascii	"\363"
  175              		.text
- 176              		.section	.gnu.lto_.refs.77bedbaa75871000,"",%progbits
+ 176              		.section	.gnu.lto_.refs.efb1a95cae29ba25,"",%progbits
  177 0000 789C6365 		.ascii	"x\234ce`b`d\000\002\000\000I\000\011"
  177      60626064 
  177      00020000 
  177      490009
  178              		.text
- 179              		.section	.gnu.lto_.decls.77bedbaa75871000,"",%progbits
-ARM GAS  /tmp/cc8HoLkC.s 			page 13
+ 179              		.section	.gnu.lto_.decls.efb1a95cae29ba25,"",%progbits
+ARM GAS  /tmp/ccetottm.s 			page 13
 
 
  180 0000 789CB557 		.ascii	"x\234\265WkPT\311\025\276\347\366\2000<tGcL\305T,\013"
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  191      A4F1F036 
  191      F777A89B 
  191      04B7CA45 
-ARM GAS  /tmp/cc8HoLkC.s 			page 14
+ARM GAS  /tmp/ccetottm.s 			page 14
 
 
  191      7928
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  203      3BCFC499 
  203      6A12D7EE 
  203      1C323647 
-ARM GAS  /tmp/cc8HoLkC.s 			page 15
+ARM GAS  /tmp/ccetottm.s 			page 15
 
 
  203      C9E9
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  215      C9CE2335 
  215      8D0126BA 
  215      29281516 
-ARM GAS  /tmp/cc8HoLkC.s 			page 16
+ARM GAS  /tmp/ccetottm.s 			page 16
 
 
  215      8BF6
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  227 0353 6AA2844D 		.ascii	"j\242\204M\2317\002\371f\035C\367x_\353U\177\377\024"
  227      993702F9 
  227      661D43F7 
-ARM GAS  /tmp/cc8HoLkC.s 			page 17
+ARM GAS  /tmp/ccetottm.s 			page 17
 
 
  227      785FEB55 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  239      8FEDAD17 
  239      053C41F5 
  239      7507EA0E 
-ARM GAS  /tmp/cc8HoLkC.s 			page 18
+ARM GAS  /tmp/ccetottm.s 			page 18
 
 
  239      FA91
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  251 04fe 90B7EB2B 		.ascii	"\220\267\353+\012\267\001\331\305\225\336\314\372\373"
  251      0AB701D9 
  251      C595DECC 
-ARM GAS  /tmp/cc8HoLkC.s 			page 19
+ARM GAS  /tmp/ccetottm.s 			page 19
 
 
  251      FAFB
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  263      A024A37C 
  263      8F9288B2 
  264 05dd 1A250965 		.ascii	"\032%\011e9\312\022\224e(+PV\242,EIEy\005A\360\006%"
-ARM GAS  /tmp/cc8HoLkC.s 			page 20
+ARM GAS  /tmp/ccetottm.s 			page 20
 
 
  264      39CA1294 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  275      E42F6339 
  275      F92D
  276 06b3 24BF26E0 		.ascii	"$\277&\340\352\353]\024\220\303\351\005\241\361Ba Y"
-ARM GAS  /tmp/cc8HoLkC.s 			page 21
+ARM GAS  /tmp/ccetottm.s 			page 21
 
 
  276      EAEB5D14 
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  287      CB44FDEE 
  287      CE5490BE 
  287      E73BDACD 
-ARM GAS  /tmp/cc8HoLkC.s 			page 22
+ARM GAS  /tmp/ccetottm.s 			page 22
 
 
  288 0792 EF6A3D79 		.ascii	"\357j=y\012\031%\301$vVA6\326'\227\371\311\223GC\016"
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  299      3D9058DA 
  299      E135E8AA 
  299      295157CD 
-ARM GAS  /tmp/cc8HoLkC.s 			page 23
+ARM GAS  /tmp/ccetottm.s 			page 23
 
 
  299      2E9EE8
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  310      3A2E2266 
  311 0945 FC486B5C 		.ascii	"\374Hk\\\344?c\242\347Yc\303#\242\242\343\"\255\216"
  311      E43F63A2 
-ARM GAS  /tmp/cc8HoLkC.s 			page 24
+ARM GAS  /tmp/ccetottm.s 			page 24
 
 
  311      E75963C3 
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  322      84E2705A 
  322      442A
  323 0a26 12688D1D 		.ascii	"\022h\215\035\3414;\001\016\3077\213\342\"\034\216\320"
-ARM GAS  /tmp/cc8HoLkC.s 			page 25
+ARM GAS  /tmp/ccetottm.s 			page 25
 
 
  323      E1343B01 
@@ -1458,7 +1458,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  326 0a5a 37439E3B 		.ascii	"7C\236;y"
  326      79
  327              		.text
- 328              		.section	.gnu.lto_.symtab.77bedbaa75871000,"",%progbits
+ 328              		.section	.gnu.lto_.symtab.efb1a95cae29ba25,"",%progbits
  329 0000 7374496E 		.ascii	"stInit\000"
  329      697400
  330 0007 00       		.ascii	"\000"
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  353 0067 73744765 		.ascii	"stGetAlarm\000"
  353      74416C61 
  353      726D00
-ARM GAS  /tmp/cc8HoLkC.s 			page 26
+ARM GAS  /tmp/ccetottm.s 			page 26
 
 
  354 0072 00       		.ascii	"\000"
@@ -1550,7 +1550,7 @@ ARM GAS  /tmp/cc8HoLkC.s 			page 1
  374              		.comm	__gnu_lto_v1,1,1
  375              		.comm	__gnu_lto_slim,1,1
  376              		.ident	"GCC: (15:6.3.1+svn253039-1build1) 6.3.1 20170620"
-ARM GAS  /tmp/cc8HoLkC.s 			page 27
+ARM GAS  /tmp/ccetottm.s 			page 27
 
 
 DEFINED SYMBOLS
