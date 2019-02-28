@@ -9,6 +9,8 @@ uart = UART(3, 115200, timeout_char=1)  # init with given baudrate
 color = [[0,0,0,0,0,0]]
 cl = (0,0,0)
 
+#color = [[58, 87, 18, 65, -10, 52]]
+
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.CIF)
