@@ -88,8 +88,8 @@ build/obj/main.o: main.c /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/st.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h config.h \
- /home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h \
- /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h motor.h
+ includes/chprintf.h /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h \
+ motor.h
 
 /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h:
 
@@ -283,7 +283,7 @@ mcuconf.h:
 
 config.h:
 
-/home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h:
+includes/chprintf.h:
 
 /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h:
 

@@ -1,5 +1,4 @@
-build/obj/chprintf.o: \
- /home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.c \
+build/obj/chprintf.o: includes/chprintf.c \
  /home/adam/ChibiOS_16.1.9/os/hal/include/hal.h \
  /home/adam/ChibiOS_16.1.9/os/hal/osal/rt/osal.h \
  /usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h \
@@ -90,9 +89,8 @@ build/obj/chprintf.o: \
  /home/adam/ChibiOS_16.1.9/os/hal/include/st.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h \
- /home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h \
- /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h \
- /home/adam/ChibiOS_16.1.9/os/hal/lib/streams/memstreams.h
+ includes/chprintf.h /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h \
+ includes/memstreams.h
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/hal.h:
 
@@ -284,8 +282,8 @@ mcuconf.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h:
 
-/home/adam/ChibiOS_16.1.9/os/hal/lib/streams/chprintf.h:
+includes/chprintf.h:
 
 /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h:
 
-/home/adam/ChibiOS_16.1.9/os/hal/lib/streams/memstreams.h:
+includes/memstreams.h:
