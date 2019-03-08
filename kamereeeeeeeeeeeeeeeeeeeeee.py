@@ -9,15 +9,25 @@ uart = UART(3, 115200, timeout_char=1)  # init with given baudrate
 color = [[0,0,0,0,0,0]]
 cl = (0,0,0)
 
+GAIN_SCALE = 0.1
+
 #color = [[58, 87, 18, 65, -10, 52]]
 
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.CIF)
 sensor.skip_frames(time = 2000)
-sensor.set_auto_gain(False) # must be turned off for color tracking
-sensor.set_auto_whitebal(False) # must be turned off for color tracking
 clock = time.clock()
+
+sensor.set_auto_whitebal(False)
+sensor.set_auto_exposure(False)
+sensor.skip_frames(time = 500)
+
+current_gain_in_decibels =  sensor.get_gain_db()
+sensor.set_auto_gain(False, \
+    gain_db = current_gain_in_decibels * GAIN_SCALE)
+
+
 
 def cal():
     tres = [0, 0, 0, 0, 0, 0]
@@ -48,8 +58,8 @@ def cal():
 while(True):
     clock.tick()
     img = sensor.snapshot()
-   # img.draw_circle(177, 144, 75, (0, 0, 0))
-    #img.draw_rectangle(123, 91, 106, 106, cl)
+    img.draw_circle(177, 144, 75, (0, 0, 0))
+    img.draw_rectangle(123, 91, 106, 106, cl)
 
     if (color[0] != [0,0,0,0,0,0]):
         x = []
@@ -59,8 +69,10 @@ while(True):
             x.append(blob.cx())
         for i in range(len(x)):
             x[i] = (176 - x[i]) / 528
-            #print(x[i])
+            print(x[i])
+            uart.write()
     else:
+        img = sensor.snapshot()
         color[0] = cal()
 
 

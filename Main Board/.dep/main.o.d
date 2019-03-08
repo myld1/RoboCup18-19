@@ -65,6 +65,7 @@ build/obj/main.o: main.c /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/pal.h \
  /home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/GPIOv2/pal_lld.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/adc.h \
+ /home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/ADCv2/adc_lld.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/can.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/dac.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/ext.h \
@@ -89,7 +90,7 @@ build/obj/main.o: main.c /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h config.h \
  includes/chprintf.h /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h \
- motor.h
+ motor.h analog.h
 
 /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h:
 
@@ -235,6 +236,8 @@ mcuconf.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/adc.h:
 
+/home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/ADCv2/adc_lld.h:
+
 /home/adam/ChibiOS_16.1.9/os/hal/include/can.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/dac.h:
@@ -288,3 +291,5 @@ includes/chprintf.h:
 /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h:
 
 motor.h:
+
+analog.h:

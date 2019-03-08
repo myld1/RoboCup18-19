@@ -66,6 +66,7 @@ build/obj/hal.o: /home/adam/ChibiOS_16.1.9/os/hal/src/hal.c \
  /home/adam/ChibiOS_16.1.9/os/hal/include/pal.h \
  /home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/GPIOv2/pal_lld.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/adc.h \
+ /home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/ADCv2/adc_lld.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/can.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/dac.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/ext.h \
@@ -233,6 +234,8 @@ mcuconf.h:
 /home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/GPIOv2/pal_lld.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/adc.h:
+
+/home/adam/ChibiOS_16.1.9/os/hal/ports/STM32/LLD/ADCv2/adc_lld.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/can.h:
 

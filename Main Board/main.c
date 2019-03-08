@@ -2,6 +2,7 @@
 #include "hal.h"
 #include "config.h"
 #include "motor.h"
+#include "analog.h"
 #include "includes/chprintf.h"
 ///home/adam/ChibiOS_16.1.9/os/hal/lib/streams/
 
@@ -9,15 +10,13 @@ int main(void) {
 
     board_init();
     init_pins();
-    move_motor(0, 200);
-    move_motor(1, 400);
-    move_motor(2, 600);
+    init_sensor_thread();
+    //move_motor(2, 400);
 
     while (true) {
-        motor_tick();
+
+        //motor_tick();
         chThdSleepMilliseconds(10);
-        //int16_t per[3];
-        //read_motors_period(per);
-        chprintf(&SD1,"d \r\n");      
+        //chprintf(&SD1, "dhfkja \r\n");
     }
 }

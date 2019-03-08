@@ -10,6 +10,7 @@
 #define MOTOR_BACKWARD 2
 #define MOTOR_BREAK 3
 #define MOTOR_OFF 0
+#define ENCODER_OFFSET 3
 
 
 void set_motor_state(int8_t dir,int8_t num);

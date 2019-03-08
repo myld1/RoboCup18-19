@@ -2,7 +2,7 @@
 #include "config.h"
 #include "includes/chprintf.h"
 
-int8_t main_timer[NUM_OF_MOTORS] = { -1, -1, -1 };
+int8_t main_timer[NUM_OF_MOTORS] = { -ENCODER_OFFSET, -ENCODER_OFFSET, -ENCODER_OFFSET };
 
 volatile int16_t rotations_per_sec[NUM_OF_MOTORS];
 int32_t motor_freqs[NUM_OF_MOTORS];
@@ -23,11 +23,11 @@ void encoder_pulse_captured(ICUDriver *icup) {
         sender = 2;
     }   
     if (sender >= 0) {
-        main_timer[sender] = 0;
+        main_timer[sender] = main_timer[sender] < 0 ? main_timer[sender]++ : 0;
 
         // stats
         rotations_per_sec[sender] = period_width;
-        period[0] = period_calc;
+        period[sender] = period_calc;
         
         if(period_calc < motor_freqs[sender]) {
             // −1,352813853 3270,562770563
@@ -75,7 +75,9 @@ void motor_tick() {
                 if (motor_actual_speeds[i] < 2048) {
                     pwmEnableChannel(&PWMD1, i, ++motor_actual_speeds[i]);
                 } else {
-                   //chprintf(&SD1, "Error: Battery error or bad powwer supply on motor %d /r/n", i);
+                    main_timer[i] = -ENCODER_OFFSET;
+                    motor_actual_speeds[i] = motor_freqs[i]; // set to default
+                    chprintf(&SD1, "_Error: Motor malfunction or bad power supply on motor %d \r \n", i);
                 }
             }
         }
@@ -138,8 +140,9 @@ void set_motor_state(int8_t dir, int8_t num) {
             pinA = 9;
             pinB = 8;
             break;
-            pinA = 0;
-            pinB = 0;
+        case 2:
+            pinA = 5;
+            pinB = 6;
             break;
     }
     
@@ -155,10 +158,6 @@ void set_motor_state(int8_t dir, int8_t num) {
         case 2:
             palSetPad(GPIOC, pinB);
             palClearPad(GPIOC, pinA);
-            break;
-        case 3:
-            palSetPad(GPIOC, pinA);
-            palSetPad(GPIOC, pinB);
             break;
     }
 }

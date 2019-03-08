@@ -47,18 +47,17 @@ static const ICUConfig icucfgC = {
     0   
 };
 
-static const SerialConfig usart_2_cfg = {
+static const SerialConfig usart_cfg = {
 	115200,
 	0,
 	0,
 	0
 };
 
-
 void init_pins() {
     // Serial
-    palSetPadMode(GPIOA,9,PAL_MODE_ALTERNATE(7));
-    palSetPadMode(GPIOA,10,PAL_MODE_ALTERNATE(7));
+    palSetPadMode(GPIOA,15,PAL_MODE_ALTERNATE(7));
+    palSetPadMode(GPIOB,3,PAL_MODE_ALTERNATE(7));
     // Motor 1
     palSetPadMode(GPIOC,10,PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOC,12,PAL_MODE_OUTPUT_PUSHPULL);
@@ -66,18 +65,21 @@ void init_pins() {
     // Motor 2
     palSetPadMode(GPIOC,8,PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOC,9,PAL_MODE_OUTPUT_PUSHPULL);
-    palSetPadMode(GPIOB,0,PAL_MODE_ALTERNATE(1));
+    palSetPadMode(GPIOA,9,PAL_MODE_ALTERNATE(1));
     // Motor 3
     palSetPadMode(GPIOC,5,PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOC,6,PAL_MODE_OUTPUT_PUSHPULL);
-    palSetPadMode(GPIOB,1,PAL_MODE_ALTERNATE(1));
+    palSetPadMode(GPIOA,10,PAL_MODE_ALTERNATE(1));
     // Input capture 
     palSetPadMode(GPIOA,0,PAL_MODE_ALTERNATE(1));
     palSetPadMode(GPIOA,1,PAL_MODE_ALTERNATE(2));
     palSetPadMode(GPIOB,4,PAL_MODE_ALTERNATE(2));
     // ADC
-    // PA6 + PA7
-    
+    palSetPadMode(GPIOA,6,PAL_MODE_INPUT_ANALOG);
+    palSetPadMode(GPIOA,7,PAL_MODE_INPUT_ANALOG);
+    palSetPadMode(GPIOA,5,PAL_MODE_OUTPUT_PUSHPULL);
+    palSetPadMode(GPIOB,6,PAL_MODE_OUTPUT_PUSHPULL);
+    palSetPadMode(GPIOC,7,PAL_MODE_OUTPUT_PUSHPULL);
     // Usta
     // PC0
 
@@ -85,19 +87,18 @@ void init_pins() {
 }
 
 void board_init() {
-    palSetPad(GPIOA,2);
     // System
     halInit();
     chSysInit();
     
     // Serial
     sdInit();
-    sdStart(&SD1, &usart_2_cfg);
+    sdStart(&SD1, &usart_cfg);
     
     // PWM
     pwmInit();
     pwmStart(&PWMD1,&pwmcfg);
-    
+
     // ICU
     icuInit();
     
@@ -108,6 +109,9 @@ void board_init() {
     icuStartCapture(&ICUD2);
     icuStartCapture(&ICUD5);
     icuStartCapture(&ICUD3);
+
+    //ADC
+    adcStart(&ADCD1, NULL);
     
     configure_icu_notifications(true);
 }
@@ -123,4 +127,3 @@ void configure_icu_notifications(bool state) {
         icuDisableNotifications(&ICUD3);
     }
 }
-
