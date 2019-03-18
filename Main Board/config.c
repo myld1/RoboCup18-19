@@ -111,7 +111,12 @@ void board_init() {
     icuStartCapture(&ICUD3);
 
     //ADC
+    palSetGroupMode(GPIOA, PAL_PORT_BIT(1) | PAL_PORT_BIT(2),
+                    0, PAL_MODE_INPUT_ANALOG);
+    palSetGroupMode(GPIOB, PAL_PORT_BIT(1) | PAL_PORT_BIT(2),
+                    0, PAL_MODE_INPUT_ANALOG);
     adcStart(&ADCD1, NULL);
+    adcSTM32EnableTSVREFE();
     
     configure_icu_notifications(true);
 }

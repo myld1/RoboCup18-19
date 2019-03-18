@@ -2,12 +2,17 @@
 #include "config.h"
 #include "includes/chprintf.h"
 
-int8_t main_timer[NUM_OF_MOTORS] = { -ENCODER_OFFSET, -ENCODER_OFFSET, -ENCODER_OFFSET };
+//int8_t main_timer[NUM_OF_MOTORS] = { -ENCODER_OFFSET, -ENCODER_OFFSET, -ENCODER_OFFSET };
+virtual_timer_t main_timer[NUM_OF_MOTORS];
+virtual_timer_t asd;
+int8_t index = -1;
 
 volatile int16_t rotations_per_sec[NUM_OF_MOTORS];
 int32_t motor_freqs[NUM_OF_MOTORS];
 int16_t motor_actual_speeds[NUM_OF_MOTORS] = { 0, 0, 0 };
 int16_t period[3];
+
+void motor_tick();
 
 void encoder_pulse_captured(ICUDriver *icup) {
     int16_t period_width = 1000000/icuGetPeriodX(icup);
@@ -23,8 +28,11 @@ void encoder_pulse_captured(ICUDriver *icup) {
         sender = 2;
     }   
     if (sender >= 0) {
-        main_timer[sender] = main_timer[sender] < 0 ? main_timer[sender]++ : 0;
-
+        index = sender;
+        palClearPad(GPIOA, GPIOA_LED_GREEN);
+        chVTSet(&main_timer[sender], MS2ST(2000), motor_tick, NULL);
+        //chprintf(&SD1, "%d %5d %5d %5d %5d \r\n",sender, main_timer[sender], motor_actual_speeds[sender], period[sender], motor_freqs[sender]);
+        
         // stats
         rotations_per_sec[sender] = period_width;
         period[sender] = period_calc;
@@ -42,19 +50,24 @@ void encoder_pulse_captured(ICUDriver *icup) {
 
 void move_motor(int8_t motor_number, int16_t speed) {
     if (speed < 0) {
-        set_motor_state(0, motor_number);
+        set_motor_state(2, motor_number);
         speed *= -1;
-    } else {
+    } else if (speed > 0) {
         set_motor_state(1, motor_number);
+    } else {
+        set_motor_state(0, motor_number);
     }
 
     motor_freqs[motor_number] = speed; 
     if (motor_actual_speeds[motor_number] == 0) {
         pwmEnableChannel(&PWMD1, motor_number, speed);
         motor_actual_speeds[motor_number] = speed;
-        main_timer[motor_number] = 0;
         //motor_checker(motor_number); 
     } 
+    index = motor_number;
+    
+    //chVTReset(&main_timer[motor_number]);
+    chVTSet(&main_timer[motor_number], MS2ST(2000), motor_tick, NULL);
 }
 
 /*void motor_checker(int8_t motor_number) {
@@ -66,24 +79,26 @@ void move_motor(int8_t motor_number, int16_t speed) {
 }*/
 
 void motor_tick() {
-    for(int8_t i = 0; i < NUM_OF_MOTORS; i++) {
-        if(main_timer[i] >= 0) {
-            chprintf(&SD1, "%d %5d %5d %5d %5d \r\n",i, main_timer[i], motor_actual_speeds[i], period[i], motor_freqs[i]);
-            if(main_timer[i] < 3) {    
-                 main_timer[i]++;   
-            } else {
-                if (motor_actual_speeds[i] < 2048) {
-                    pwmEnableChannel(&PWMD1, i, ++motor_actual_speeds[i]);
-                } else {
-                    main_timer[i] = -ENCODER_OFFSET;
-                    motor_actual_speeds[i] = motor_freqs[i]; // set to default
-                    chprintf(&SD1, "_Error: Motor malfunction or bad power supply on motor %d \r \n", i);
-                }
-            }
-        }
+    int8_t i = index;
+    index = -1;
+    palSetPad(GPIOA, GPIOA_LED_GREEN);
+    //chprintf(&SD1, "%d %5d %5d %5d %5d \r\n",i, main_timer[i], motor_actual_speeds[i], period[i], motor_freqs[i]);
+    if (motor_actual_speeds[i] < 2048) {
+        pwmEnableChannel(&PWMD1, i, ++motor_actual_speeds[i]);
+    } else {
+        chVTReset(&main_timer[i]);
+        motor_actual_speeds[i] = motor_freqs[i]; // set to default
+        //chprintf(&SD1, "_Error: Motor malfunction or bad power supply on motor %d \r \n", i);
+    }
+}
+
+void timer_init() {
+    for (int8_t i = 0; i < NUM_OF_MOTORS; i++) {
+     chVTObjectInit(&main_timer[i]);
     }
 }
  
+
 void calculate_speed(float alpha) {
     if(alpha != 0) {
     float target_motor = ceil(alpha / (2 / NUM_OF_MOTORS));

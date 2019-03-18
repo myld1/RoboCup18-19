@@ -10,13 +10,16 @@ int main(void) {
 
     board_init();
     init_pins();
-    init_sensor_thread();
-    //move_motor(2, 400);
+    chprintf(&SD1, "Loaded! \r\n");
+    //init_sensor_thread();
+    timer_init();
+    palClearPad(GPIOA, GPIOA_LED_GREEN);
+    move_motor(0, 300);
+    //move_motor(1,400);
+    //move_motor(2,-400);
+
 
     while (true) {
-
-        //motor_tick();
         chThdSleepMilliseconds(10);
-        //chprintf(&SD1, "dhfkja \r\n");
-    }
+    }   
 }

@@ -22,5 +22,6 @@ void read_motors_speed(int16_t *buff);
 void read_motors_period(int16_t *buff);
 void motor_tick(void);
 void motor_checker(int8_t motor_number);
+void timer_init(void);
 
 #endif
