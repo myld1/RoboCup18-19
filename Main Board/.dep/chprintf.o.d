@@ -1,13 +1,15 @@
 build/obj/chprintf.o: includes/chprintf.c \
  /home/adam/ChibiOS_16.1.9/os/hal/include/hal.h \
  /home/adam/ChibiOS_16.1.9/os/hal/osal/rt/osal.h \
- /usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h \
- /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdint.h \
- /usr/include/newlib/stdint.h \
- /usr/include/newlib/machine/_default_types.h \
- /usr/include/newlib/sys/features.h /usr/include/newlib/_newlib_version.h \
- /usr/include/newlib/sys/_intsup.h /usr/include/newlib/sys/_stdint.h \
- /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/8.3.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/8.3.0/include/stdint.h \
+ /usr/arm-none-eabi/include/stdint.h \
+ /usr/arm-none-eabi/include/machine/_default_types.h \
+ /usr/arm-none-eabi/include/sys/features.h \
+ /usr/arm-none-eabi/include/_newlib_version.h \
+ /usr/arm-none-eabi/include/sys/_intsup.h \
+ /usr/arm-none-eabi/include/sys/_stdint.h \
+ /usr/lib/gcc/arm-none-eabi/8.3.0/include/stdbool.h \
  /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h \
  /home/adam/ChibiOS_16.1.9/os/rt/ports/ARMCMx/compilers/GCC/chtypes.h \
  chconf.h /home/adam/ChibiOS_16.1.9/os/rt/include/chlicense.h \
@@ -90,30 +92,30 @@ build/obj/chprintf.o: includes/chprintf.c \
  /home/adam/ChibiOS_16.1.9/os/hal/include/st.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h \
- includes/chprintf.h /usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h \
+ includes/chprintf.h /usr/lib/gcc/arm-none-eabi/8.3.0/include/stdarg.h \
  includes/memstreams.h
 
 /home/adam/ChibiOS_16.1.9/os/hal/include/hal.h:
 
 /home/adam/ChibiOS_16.1.9/os/hal/osal/rt/osal.h:
 
-/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h:
+/usr/lib/gcc/arm-none-eabi/8.3.0/include/stddef.h:
 
-/usr/lib/gcc/arm-none-eabi/6.3.1/include/stdint.h:
+/usr/lib/gcc/arm-none-eabi/8.3.0/include/stdint.h:
 
-/usr/include/newlib/stdint.h:
+/usr/arm-none-eabi/include/stdint.h:
 
-/usr/include/newlib/machine/_default_types.h:
+/usr/arm-none-eabi/include/machine/_default_types.h:
 
-/usr/include/newlib/sys/features.h:
+/usr/arm-none-eabi/include/sys/features.h:
 
-/usr/include/newlib/_newlib_version.h:
+/usr/arm-none-eabi/include/_newlib_version.h:
 
-/usr/include/newlib/sys/_intsup.h:
+/usr/arm-none-eabi/include/sys/_intsup.h:
 
-/usr/include/newlib/sys/_stdint.h:
+/usr/arm-none-eabi/include/sys/_stdint.h:
 
-/usr/lib/gcc/arm-none-eabi/6.3.1/include/stdbool.h:
+/usr/lib/gcc/arm-none-eabi/8.3.0/include/stdbool.h:
 
 /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h:
 
@@ -287,6 +289,6 @@ mcuconf.h:
 
 includes/chprintf.h:
 
-/usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h:
+/usr/lib/gcc/arm-none-eabi/8.3.0/include/stdarg.h:
 
 includes/memstreams.h:

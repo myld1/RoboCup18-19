@@ -1,6 +1,7 @@
 #include "motor.h"
 #include "config.h"
 #include "includes/chprintf.h"
+#include "math.h"
 
 //int8_t main_timer[NUM_OF_MOTORS] = { -ENCODER_OFFSET, -ENCODER_OFFSET, -ENCODER_OFFSET };
 virtual_timer_t main_timer[NUM_OF_MOTORS];
@@ -100,9 +101,14 @@ void timer_init() {
  
 
 void calculate_speed(float alpha) {
+    int8_t speed_scaler = 1;
     if(alpha != 0) {
-    float target_motor = ceil(alpha / (2 / NUM_OF_MOTORS));
-    
+        float a = -1;
+        for (int8_t i = 0; i < NUM_OF_MOTORS; i++) {
+            a += MOTOR_CONST;
+            int16_t speed = sin((a-alpha)*PI)) * speed_scaler;
+            move_motor(i,speed);
+        }
     } else {
         set_motors_off();
     }

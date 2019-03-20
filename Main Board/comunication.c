@@ -2,6 +2,7 @@
 #include "config.h"
 #include "includes/chprintf.h"
 
-void get_camera_output() {
-    int output = sdGet(&SD1);
+float get_camera_output() {
+    float output = sdGet(&SD1)/10000;
+    return output;
 }
