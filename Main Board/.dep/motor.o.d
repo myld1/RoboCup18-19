@@ -93,7 +93,15 @@ build/obj/motor.o: motor.c motor.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h \
  includes/chprintf.h /usr/lib/gcc/arm-none-eabi/8.3.0/include/stdarg.h \
- config.h
+ /usr/arm-none-eabi/include/math.h /usr/arm-none-eabi/include/sys/reent.h \
+ /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
+ /usr/arm-none-eabi/include/sys/config.h \
+ /usr/arm-none-eabi/include/machine/ieeefp.h \
+ /usr/arm-none-eabi/include/sys/_types.h \
+ /usr/arm-none-eabi/include/machine/_types.h \
+ /usr/arm-none-eabi/include/sys/lock.h \
+ /usr/arm-none-eabi/include/sys/cdefs.h \
+ /usr/arm-none-eabi/include/_ansi.h config.h
 
 motor.h:
 
@@ -292,5 +300,27 @@ mcuconf.h:
 includes/chprintf.h:
 
 /usr/lib/gcc/arm-none-eabi/8.3.0/include/stdarg.h:
+
+/usr/arm-none-eabi/include/math.h:
+
+/usr/arm-none-eabi/include/sys/reent.h:
+
+/usr/arm-none-eabi/include/_ansi.h:
+
+/usr/arm-none-eabi/include/newlib.h:
+
+/usr/arm-none-eabi/include/sys/config.h:
+
+/usr/arm-none-eabi/include/machine/ieeefp.h:
+
+/usr/arm-none-eabi/include/sys/_types.h:
+
+/usr/arm-none-eabi/include/machine/_types.h:
+
+/usr/arm-none-eabi/include/sys/lock.h:
+
+/usr/arm-none-eabi/include/sys/cdefs.h:
+
+/usr/arm-none-eabi/include/_ansi.h:
 
 config.h:

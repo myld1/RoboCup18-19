@@ -3,22 +3,28 @@
 #include "config.h"
 #include "motor.h"
 #include "analog.h"
+#include "comunication.h"
 #include "includes/chprintf.h"
+#include <math.h>
+
 ///home/adam/ChibiOS_16.1.9/os/hal/lib/streams/
 
 int main(void) {
 
     board_init();
     init_pins();
-    chprintf(&SD1, "Loaded! \r\n");
-    //init_sensor_thread();
     timer_init();
+    init_sensor_thread();
+    init_moving_thread();
+    
     palClearPad(GPIOA, GPIOA_LED_GREEN);
-    move_motor(0, 600);
-    move_motor(1, 600);
-    move_motor(2, 600);
+    //move_motor(0, 300);
+    //move_motor(1, 400);
+    //move_motor(2, 300);
+
 
     while (true) {
-        chThdSleepMilliseconds(10);
-    }   
+    
+        chThdSleepMilliseconds(5);
+    }
 }

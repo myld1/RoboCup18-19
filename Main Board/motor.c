@@ -1,19 +1,45 @@
 #include "motor.h"
 #include "config.h"
 #include "includes/chprintf.h"
-#include "math.h"
+#include <math.h>
 
 //int8_t main_timer[NUM_OF_MOTORS] = { -ENCODER_OFFSET, -ENCODER_OFFSET, -ENCODER_OFFSET };
 virtual_timer_t main_timer[NUM_OF_MOTORS];
-virtual_timer_t asd;
-int8_t index = -1;
+int8_t main_visualizer[NUM_OF_MOTORS] = { 0, 0, 0 };
+
+static int8_t MOTOR_0 = 0;
+static int8_t MOTOR_1 = 1;
+static int8_t MOTOR_2 = 2;
 
 volatile int16_t rotations_per_sec[NUM_OF_MOTORS];
 int32_t motor_freqs[NUM_OF_MOTORS];
 int16_t motor_actual_speeds[NUM_OF_MOTORS] = { 0, 0, 0 };
 int16_t period[3];
 
-void motor_tick();
+void motor_tick(void *i);
+
+void timer_reset(int8_t sender) {
+    switch(sender) {
+        case 0:
+            chSysLockFromISR();
+            chVTResetI(&main_timer[sender]);
+            chVTSetI(&main_timer[sender], MS2ST(15), motor_tick, &MOTOR_0);
+            chSysUnlockFromISR();
+            break;
+        case 1:
+            chSysLockFromISR();
+            chVTResetI(&main_timer[sender]);
+            chVTSetI(&main_timer[sender], MS2ST(15), motor_tick, &MOTOR_1);
+            chSysUnlockFromISR();
+            break;
+        case 2:
+            chSysLockFromISR();
+            chVTResetI(&main_timer[sender]);
+            chVTSetI(&main_timer[sender], MS2ST(15), motor_tick, &MOTOR_2);
+            chSysUnlockFromISR();
+            break;
+    }
+}
 
 void encoder_pulse_captured(ICUDriver *icup) {
     int16_t period_width = 1000000/icuGetPeriodX(icup);
@@ -29,24 +55,20 @@ void encoder_pulse_captured(ICUDriver *icup) {
         sender = 2;
     }   
     if (sender >= 0) {
-        index = sender;
         palClearPad(GPIOA, GPIOA_LED_GREEN);
-        chVTSet(&main_timer[sender], MS2ST(2000), motor_tick, NULL);
-        //chprintf(&SD1, "%d %5d %5d %5d %5d \r\n",sender, main_timer[sender], motor_actual_speeds[sender], period[sender], motor_freqs[sender]);
-        
+        main_visualizer[sender] = 1;
+  
         // stats
         rotations_per_sec[sender] = period_width;
         period[sender] = period_calc;
         
-        if(period_calc < motor_freqs[sender]) {
-            // −1,352813853 3270,562770563
-            //motor_actual_speeds[0] += (motor_freqs[0] - period_calc)/256 //+ 1;
+        if(period_calc < motor_freqs[sender]) {;
             pwmEnableChannel(&PWMD1, sender, ++motor_actual_speeds[sender]);
         } else {
-            //motor_actual_speeds[0] -= (period_calc - motor_freqs[0])/256 //+ 1;
             pwmEnableChannel(&PWMD1, sender, --motor_actual_speeds[sender]);
         }
     }
+    timer_reset(sender);
 }
 
 void move_motor(int8_t motor_number, int16_t speed) {
@@ -63,12 +85,23 @@ void move_motor(int8_t motor_number, int16_t speed) {
     if (motor_actual_speeds[motor_number] == 0) {
         pwmEnableChannel(&PWMD1, motor_number, speed);
         motor_actual_speeds[motor_number] = speed;
-        //motor_checker(motor_number); 
     } 
-    index = motor_number;
-    
-    //chVTReset(&main_timer[motor_number]);
-    chVTSet(&main_timer[motor_number], MS2ST(2000), motor_tick, NULL);
+
+    switch(motor_number) {
+        case 0:
+            chVTReset(&main_timer[motor_number]);
+            chVTSet(&main_timer[motor_number], MS2ST(15), motor_tick, &MOTOR_0);
+            break;
+        case 1:
+            chVTReset(&main_timer[motor_number]);
+            chVTSet(&main_timer[motor_number], MS2ST(15), motor_tick, &MOTOR_1);
+            break;
+        case 2:
+            chVTReset(&main_timer[motor_number]);
+            chVTSet(&main_timer[motor_number], MS2ST(15), motor_tick, &MOTOR_2);
+            break;
+    }
+   
 }
 
 /*void motor_checker(int8_t motor_number) {
@@ -79,18 +112,43 @@ void move_motor(int8_t motor_number, int16_t speed) {
     chprintf(&SD1, "%d \r\n", motor_actual_speeds[motor_number]);
 }*/
 
-void motor_tick() {
-    int8_t i = index;
-    index = -1;
-    palSetPad(GPIOA, GPIOA_LED_GREEN);
-    //chprintf(&SD1, "%d %5d %5d %5d %5d \r\n",i, main_timer[i], motor_actual_speeds[i], period[i], motor_freqs[i]);
+THD_WORKING_AREA(waMotorBalanceThread, 128);
+THD_FUNCTION(MotorBalanceThread, arg) {
+
+    int8_t i = (*(int8_t*)arg);
+    (void)arg;
+
+    //chprintf((BaseSequentialStream*)&SD1, "%d\r\n", i);
+    //chprintf((BaseSequentialStream*)&SD1, "%d %5d %5d %5d %5d \r\n",i, main_timer[i], motor_actual_speeds[i], period[i], motor_freqs[i]);
     if (motor_actual_speeds[i] < 2048) {
         pwmEnableChannel(&PWMD1, i, ++motor_actual_speeds[i]);
     } else {
         chVTReset(&main_timer[i]);
         motor_actual_speeds[i] = motor_freqs[i]; // set to default
-        //chprintf(&SD1, "_Error: Motor malfunction or bad power supply on motor %d \r \n", i);
+        pwmEnableChannel(&PWMD1, i, motor_actual_speeds[i]);
+        chThdExit((msg_t)NULL);
     }
+    timer_reset(i);
+    chThdExit((msg_t)NULL);
+}
+
+
+void motor_tick(void *nm) {
+    int8_t i = (*(int8_t*)nm);
+    main_visualizer[i] = 0;
+    palSetPad(GPIOA, GPIOA_LED_GREEN);
+    switch(i) {
+        case 0:
+             chThdCreateStatic(waMotorBalanceThread, sizeof(waMotorBalanceThread), NORMALPRIO, MotorBalanceThread, &MOTOR_0);
+            break;
+        case 1:
+             chThdCreateStatic(waMotorBalanceThread, sizeof(waMotorBalanceThread), NORMALPRIO, MotorBalanceThread, &MOTOR_1);
+            break;
+        case 2:
+             chThdCreateStatic(waMotorBalanceThread, sizeof(waMotorBalanceThread), NORMALPRIO, MotorBalanceThread, &MOTOR_2);
+            break;
+    }
+   
 }
 
 void timer_init() {
@@ -99,23 +157,22 @@ void timer_init() {
     }
 }
  
-
-void calculate_speed(float alpha) {
-    int8_t speed_scaler = 1;
-    if(alpha != 0) {
-        float a = -1;
-        for (int8_t i = 0; i < NUM_OF_MOTORS; i++) {
-            a += MOTOR_CONST;
-            int16_t speed = sin((a-alpha)*PI)) * speed_scaler;
-            move_motor(i,speed);
+void calculate_speed(double smer, int8_t percent) {
+    if (percent <= 100 && percent > 0) {
+        if(smer != -2) {
+            double smer_motor = -1;
+            for (int8_t i = 0; i < NUM_OF_MOTORS; i++) {
+                smer_motor += MOTOR_CONST;
+                double speed = truncl(sin(((double)smer_motor-(double)smer)*(double)PI) * 17 * percent);
+                speed += ((speed < 0) ? speed*-1 : speed) < 5 ? -speed : (speed < 0 ? -300 : 300);
+                speed *= i == 2 ? 1.2 : 1;
+                move_motor(i,speed);
+                chprintf((BaseSequentialStream*)&SD1,"%d : %d \r\n", i, (int)speed);
+            }
+        } else {
+            set_motors_off();
         }
-    } else {
-        set_motors_off();
     }
-}
-
-void move_motors(float alpha) {
-    calculate_speed(alpha);
 }
 
 void set_motor_off(int8_t motor_number) {
@@ -154,16 +211,16 @@ void set_motor_state(int8_t dir, int8_t num) {
     
     switch(num) {
         case 0:
-            pinA = 12;
-            pinB = 10;
-            break;
-        case 1:
             pinA = 9;
             pinB = 8;
             break;
+        case 1:
+            pinA = 12;
+            pinB = 10;
+            break;
         case 2:
-            pinA = 5;
-            pinB = 6;
+            pinA = 6;
+            pinB = 5;
             break;
     }
     

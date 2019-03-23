@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccPmFxSh.s 			page 1
+ARM GAS  /tmp/ccfrduex.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
   55 0010 0C       		.byte	0xc
   56 0011 1F050000 		.4byte	.LASF319
   57 0015 050D0000 		.4byte	.LASF320
-ARM GAS  /tmp/ccPmFxSh.s 			page 2
+ARM GAS  /tmp/ccfrduex.s 			page 2
 
 
   58 0019 00000000 		.4byte	.Ldebug_line0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  112 007f 350D0000 		.4byte	.LASF10
  113 0083 02       		.byte	0x2
  114 0084 4D       		.byte	0x4d
-ARM GAS  /tmp/ccPmFxSh.s 			page 3
+ARM GAS  /tmp/ccfrduex.s 			page 3
 
 
  115 0085 18       		.byte	0x18
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  169 00f1 04       		.uleb128 0x4
  170 00f2 E5000000 		.4byte	0xe5
  171 00f6 03       		.uleb128 0x3
-ARM GAS  /tmp/ccPmFxSh.s 			page 4
+ARM GAS  /tmp/ccfrduex.s 			page 4
 
 
  172 00f7 540B0000 		.4byte	.LASF20
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  226 0163 B2040000 		.4byte	.LASF29
  227 0167 04       		.byte	0x4
  228 0168 45       		.byte	0x45
-ARM GAS  /tmp/ccPmFxSh.s 			page 5
+ARM GAS  /tmp/ccfrduex.s 			page 5
 
 
  229 0169 1D       		.byte	0x1d
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  283 01cf 92020000 		.4byte	0x292
  284 01d3 10       		.byte	0x10
  285 01d4 08       		.uleb128 0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 6
+ARM GAS  /tmp/ccfrduex.s 			page 6
 
 
  286 01d5 150A0000 		.4byte	.LASF37
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  340 023e 28       		.byte	0x28
  341 023f 0A       		.uleb128 0xa
  342 0240 7D0D0000 		.4byte	.LASF44
-ARM GAS  /tmp/ccPmFxSh.s 			page 7
+ARM GAS  /tmp/ccfrduex.s 			page 7
 
 
  343 0244 06       		.byte	0x6
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  397 02ac 08       		.byte	0x8
  398 02ad BF020000 		.4byte	0x2bf
  399 02b1 08       		.uleb128 0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 8
+ARM GAS  /tmp/ccfrduex.s 			page 8
 
 
  400 02b2 5C020000 		.4byte	.LASF32
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  454 031a 00       		.byte	0
  455 031b 0A       		.uleb128 0xa
  456 031c 8D0B0000 		.4byte	.LASF58
-ARM GAS  /tmp/ccPmFxSh.s 			page 9
+ARM GAS  /tmp/ccfrduex.s 			page 9
 
 
  457 0320 06       		.byte	0x6
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  511 0388 21       		.byte	0x21
  512 0389 8D030000 		.4byte	0x38d
  513 038d 0C       		.uleb128 0xc
-ARM GAS  /tmp/ccPmFxSh.s 			page 10
+ARM GAS  /tmp/ccfrduex.s 			page 10
 
 
  514 038e C2090000 		.4byte	.LASF65
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  568 03f8 35040000 		.4byte	0x435
  569 03fc 0A       		.uleb128 0xa
  570 03fd 2D070000 		.4byte	.LASF66
-ARM GAS  /tmp/ccPmFxSh.s 			page 11
+ARM GAS  /tmp/ccfrduex.s 			page 11
 
 
  571 0401 06       		.byte	0x6
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  625 046a 10       		.uleb128 0x10
  626 046b 580C0000 		.4byte	.LASF78
  627 046f 5001     		.2byte	0x150
-ARM GAS  /tmp/ccPmFxSh.s 			page 12
+ARM GAS  /tmp/ccfrduex.s 			page 12
 
 
  628 0471 06       		.byte	0x6
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  682 04db 9D050000 		.4byte	.LASF84
  683 04df 08       		.byte	0x8
  684 04e0 4C       		.byte	0x4c
-ARM GAS  /tmp/ccPmFxSh.s 			page 13
+ARM GAS  /tmp/ccfrduex.s 			page 13
 
 
  685 04e1 11       		.byte	0x11
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  739 0543 11       		.byte	0x11
  740 0544 F1000000 		.4byte	0xf1
  741 0548 18       		.byte	0x18
-ARM GAS  /tmp/ccPmFxSh.s 			page 14
+ARM GAS  /tmp/ccfrduex.s 			page 14
 
 
  742 0549 08       		.uleb128 0x8
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  796 05ac F1000000 		.4byte	0xf1
  797 05b0 38       		.byte	0x38
  798 05b1 08       		.uleb128 0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 15
+ARM GAS  /tmp/ccfrduex.s 			page 15
 
 
  799 05b2 C60B0000 		.4byte	.LASF95
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  853 0613 08       		.uleb128 0x8
  854 0614 5F0D0000 		.4byte	.LASF100
  855 0618 09       		.byte	0x9
-ARM GAS  /tmp/ccPmFxSh.s 			page 16
+ARM GAS  /tmp/ccfrduex.s 			page 16
 
 
  856 0619 ED       		.byte	0xed
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  910 0685 00       		.byte	0
  911 0686 04       		.uleb128 0x4
  912 0687 76060000 		.4byte	0x676
-ARM GAS  /tmp/ccPmFxSh.s 			page 17
+ARM GAS  /tmp/ccfrduex.s 			page 17
 
 
  913 068b 17       		.uleb128 0x17
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  967 06f4 18       		.byte	0x18
  968 06f5 00       		.byte	0
  969 06f6 18       		.uleb128 0x18
-ARM GAS  /tmp/ccPmFxSh.s 			page 18
+ARM GAS  /tmp/ccfrduex.s 			page 18
 
 
  970 06f7 47040000 		.4byte	.LASF105
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1024 075e 723600   		.ascii	"r6\000"
  1025 0761 0B       		.byte	0xb
  1026 0762 1201     		.2byte	0x112
-ARM GAS  /tmp/ccPmFxSh.s 			page 19
+ARM GAS  /tmp/ccfrduex.s 			page 19
 
 
  1027 0764 11       		.byte	0x11
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1081 07c7 E2080000 		.4byte	0x8e2
  1082 07cb 09       		.uleb128 0x9
  1083 07cc 43523100 		.ascii	"CR1\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 20
+ARM GAS  /tmp/ccfrduex.s 			page 20
 
 
  1084 07d0 0C       		.byte	0xc
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1138 083a 0A       		.uleb128 0xa
  1139 083b 570A0000 		.4byte	.LASF114
  1140 083f 0C       		.byte	0xc
-ARM GAS  /tmp/ccPmFxSh.s 			page 21
+ARM GAS  /tmp/ccfrduex.s 			page 21
 
 
  1141 0840 AA01     		.2byte	0x1aa
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1195 08ab 9F010000 		.4byte	.LASF116
  1196 08af 0C       		.byte	0xc
  1197 08b0 B201     		.2byte	0x1b2
-ARM GAS  /tmp/ccPmFxSh.s 			page 22
+ARM GAS  /tmp/ccfrduex.s 			page 22
 
 
  1198 08b2 19       		.byte	0x19
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1252 0915 FA       		.byte	0xfa
  1253 0916 03       		.byte	0x3
  1254 0917 77090000 		.4byte	0x977
-ARM GAS  /tmp/ccPmFxSh.s 			page 23
+ARM GAS  /tmp/ccfrduex.s 			page 23
 
 
  1255 091b 1A       		.uleb128 0x1a
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1309 098b 2B0B0000 		.4byte	.LASF130
  1310 098f 0E       		.byte	0xe
  1311 0990 35       		.byte	0x35
-ARM GAS  /tmp/ccPmFxSh.s 			page 24
+ARM GAS  /tmp/ccfrduex.s 			page 24
 
 
  1312 0991 19       		.byte	0x19
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1366 09f4 F5030000 		.4byte	.LASF136
  1367 09f8 06       		.uleb128 0x6
  1368 09f9 F1090000 		.4byte	0x9f1
-ARM GAS  /tmp/ccPmFxSh.s 			page 25
+ARM GAS  /tmp/ccfrduex.s 			page 25
 
 
  1369 09fd 0B       		.uleb128 0xb
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1423 0a63 0D       		.byte	0xd
  1424 0a64 B7000000 		.4byte	0xb7
  1425 0a68 08       		.byte	0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 26
+ARM GAS  /tmp/ccfrduex.s 			page 26
 
 
  1426 0a69 08       		.uleb128 0x8
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1480 0acc B7000000 		.4byte	0xb7
  1481 0ad0 10       		.byte	0x10
  1482 0ad1 08       		.uleb128 0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 27
+ARM GAS  /tmp/ccfrduex.s 			page 27
 
 
  1483 0ad2 77020000 		.4byte	.LASF150
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1537 0b3b 1D       		.byte	0x1d
  1538 0b3c 2F0B0000 		.4byte	0xb2f
  1539 0b40 03       		.uleb128 0x3
-ARM GAS  /tmp/ccPmFxSh.s 			page 28
+ARM GAS  /tmp/ccfrduex.s 			page 28
 
 
  1540 0b41 230C0000 		.4byte	.LASF157
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1594 0ba7 56010000 		.4byte	0x156
  1595 0bab 10       		.byte	0x10
  1596 0bac 00       		.byte	0
-ARM GAS  /tmp/ccPmFxSh.s 			page 29
+ARM GAS  /tmp/ccfrduex.s 			page 29
 
 
  1597 0bad 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1651 0c13 08       		.byte	0x8
  1652 0c14 08       		.uleb128 0x8
  1653 0c15 39020000 		.4byte	.LASF173
-ARM GAS  /tmp/ccPmFxSh.s 			page 30
+ARM GAS  /tmp/ccfrduex.s 			page 30
 
 
  1654 0c19 12       		.byte	0x12
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1708 0c7f 00       		.byte	0
  1709 0c80 0B       		.uleb128 0xb
  1710 0c81 04       		.byte	0x4
-ARM GAS  /tmp/ccPmFxSh.s 			page 31
+ARM GAS  /tmp/ccfrduex.s 			page 31
 
 
  1711 0c82 E10B0000 		.4byte	0xbe1
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1765 0cfd 04       		.byte	0x4
  1766 0cfe E80C0000 		.4byte	0xce8
  1767 0d02 1C       		.uleb128 0x1c
-ARM GAS  /tmp/ccPmFxSh.s 			page 32
+ARM GAS  /tmp/ccfrduex.s 			page 32
 
 
  1768 0d03 3E010000 		.4byte	0x13e
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1822 0d6f 04       		.byte	0x4
  1823 0d70 F1000000 		.4byte	0xf1
  1824 0d74 18       		.uleb128 0x18
-ARM GAS  /tmp/ccPmFxSh.s 			page 33
+ARM GAS  /tmp/ccfrduex.s 			page 33
 
 
  1825 0d75 10000000 		.4byte	.LASF187
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1879 0df5 24000000 		.4byte	0x24
  1880 0df9 0E       		.uleb128 0xe
  1881 0dfa 6E010000 		.4byte	0x16e
-ARM GAS  /tmp/ccPmFxSh.s 			page 34
+ARM GAS  /tmp/ccfrduex.s 			page 34
 
 
  1882 0dfe 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1936 0e67 6F647200 		.ascii	"odr\000"
  1937 0e6b 14       		.byte	0x14
  1938 0e6c FF       		.byte	0xff
-ARM GAS  /tmp/ccPmFxSh.s 			page 35
+ARM GAS  /tmp/ccfrduex.s 			page 35
 
 
  1939 0e6d 19       		.byte	0x19
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  1993 0ed7 1C01     		.2byte	0x11c
  1994 0ed9 19       		.byte	0x19
  1995 0eda 900E0000 		.4byte	0xe90
-ARM GAS  /tmp/ccPmFxSh.s 			page 36
+ARM GAS  /tmp/ccfrduex.s 			page 36
 
 
  1996 0ede 54       		.byte	0x54
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2050 0f48 20040000 		.4byte	.LASF209
  2051 0f4c 05       		.byte	0x5
  2052 0f4d 00       		.byte	0
-ARM GAS  /tmp/ccPmFxSh.s 			page 37
+ARM GAS  /tmp/ccfrduex.s 			page 37
 
 
  2053 0f4e 03       		.uleb128 0x3
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2107 0fbd 16       		.byte	0x16
  2108 0fbe AA01     		.2byte	0x1aa
  2109 0fc0 1D       		.byte	0x1d
-ARM GAS  /tmp/ccPmFxSh.s 			page 38
+ARM GAS  /tmp/ccfrduex.s 			page 38
 
 
  2110 0fc1 4E0F0000 		.4byte	0xf4e
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2164 102e D201     		.2byte	0x1d2
  2165 1030 1E       		.byte	0x1e
  2166 1031 90110000 		.4byte	0x1190
-ARM GAS  /tmp/ccPmFxSh.s 			page 39
+ARM GAS  /tmp/ccfrduex.s 			page 39
 
 
  2167 1035 2C       		.byte	0x2c
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2221 10a2 41110000 		.4byte	0x1141
  2222 10a6 0A       		.uleb128 0xa
  2223 10a7 5B040000 		.4byte	.LASF228
-ARM GAS  /tmp/ccPmFxSh.s 			page 40
+ARM GAS  /tmp/ccfrduex.s 			page 40
 
 
  2224 10ab 16       		.byte	0x16
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2278 1116 0A       		.uleb128 0xa
  2279 1117 2A000000 		.4byte	.LASF234
  2280 111b 16       		.byte	0x16
-ARM GAS  /tmp/ccPmFxSh.s 			page 41
+ARM GAS  /tmp/ccfrduex.s 			page 41
 
 
  2281 111c 8E01     		.2byte	0x18e
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2335 1186 4E110000 		.4byte	0x114e
  2336 118a 0B       		.uleb128 0xb
  2337 118b 04       		.byte	0x4
-ARM GAS  /tmp/ccPmFxSh.s 			page 42
+ARM GAS  /tmp/ccfrduex.s 			page 42
 
 
  2338 118c F2050000 		.4byte	0x5f2
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2392 11f7 43010000 		.4byte	.LASF217
  2393 11fb 18       		.byte	0x18
  2394 11fc 6F01     		.2byte	0x16f
-ARM GAS  /tmp/ccPmFxSh.s 			page 43
+ARM GAS  /tmp/ccfrduex.s 			page 43
 
 
  2395 11fe 1D       		.byte	0x1d
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2449 1269 04       		.byte	0x4
  2450 126a DC110000 		.4byte	0x11dc
  2451 126e 1F       		.uleb128 0x1f
-ARM GAS  /tmp/ccPmFxSh.s 			page 44
+ARM GAS  /tmp/ccfrduex.s 			page 44
 
 
  2452 126f 07       		.byte	0x7
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2506 12d8 5D0B0000 		.4byte	.LASF259
  2507 12dc 18       		.byte	0x18
  2508 12dd 4701     		.2byte	0x147
-ARM GAS  /tmp/ccPmFxSh.s 			page 45
+ARM GAS  /tmp/ccfrduex.s 			page 45
 
 
  2509 12df 1D       		.byte	0x1d
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2563 134c 0B       		.uleb128 0xb
  2564 134d 04       		.byte	0x4
  2565 134e 47130000 		.4byte	0x1347
-ARM GAS  /tmp/ccPmFxSh.s 			page 46
+ARM GAS  /tmp/ccfrduex.s 			page 46
 
 
  2566 1352 0B       		.uleb128 0xb
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2620 13be 1A       		.byte	0x1a
  2621 13bf B301     		.2byte	0x1b3
  2622 13c1 08       		.byte	0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 47
+ARM GAS  /tmp/ccfrduex.s 			page 47
 
 
  2623 13c2 29140000 		.4byte	0x1429
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2677 142f 5A       		.byte	0x5a
  2678 1430 10       		.byte	0x10
  2679 1431 35140000 		.4byte	0x1435
-ARM GAS  /tmp/ccPmFxSh.s 			page 48
+ARM GAS  /tmp/ccfrduex.s 			page 48
 
 
  2680 1435 0B       		.uleb128 0xb
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2734 14a5 04       		.byte	0x4
  2735 14a6 00       		.byte	0
  2736 14a7 18       		.uleb128 0x18
-ARM GAS  /tmp/ccPmFxSh.s 			page 49
+ARM GAS  /tmp/ccfrduex.s 			page 49
 
 
  2737 14a8 5F010000 		.4byte	.LASF284
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2791 1513 15       		.uleb128 0x15
  2792 1514 A7140000 		.4byte	0x14a7
  2793 1518 23150000 		.4byte	0x1523
-ARM GAS  /tmp/ccPmFxSh.s 			page 50
+ARM GAS  /tmp/ccfrduex.s 			page 50
 
 
  2794 151c 16       		.uleb128 0x16
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2848 1587 1B       		.byte	0x1b
  2849 1588 78       		.byte	0x78
  2850 1589 08       		.byte	0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 51
+ARM GAS  /tmp/ccfrduex.s 			page 51
 
 
  2851 158a F5150000 		.4byte	0x15f5
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2905 15ee 03       		.byte	0x3
  2906 15ef 93160000 		.4byte	0x1693
  2907 15f3 74       		.byte	0x74
-ARM GAS  /tmp/ccPmFxSh.s 			page 52
+ARM GAS  /tmp/ccfrduex.s 			page 52
 
 
  2908 15f4 00       		.byte	0
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  2962 1658 DB0D0000 		.4byte	0xddb
  2963 165c 14       		.byte	0x14
  2964 165d 08       		.uleb128 0x8
-ARM GAS  /tmp/ccPmFxSh.s 			page 53
+ARM GAS  /tmp/ccfrduex.s 			page 53
 
 
  2965 165e 31030000 		.4byte	.LASF301
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3019 16d0 20       		.uleb128 0x20
  3020 16d1 EB0B0000 		.4byte	.LASF304
  3021 16d5 1D       		.byte	0x1d
-ARM GAS  /tmp/ccPmFxSh.s 			page 54
+ARM GAS  /tmp/ccfrduex.s 			page 54
 
 
  3022 16d6 C0       		.byte	0xc0
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3076 174e 21       		.uleb128 0x21
  3077 174f B50A0000 		.4byte	.LASF305
  3078 1753 1D       		.byte	0x1d
-ARM GAS  /tmp/ccPmFxSh.s 			page 55
+ARM GAS  /tmp/ccfrduex.s 			page 55
 
 
  3079 1754 93       		.byte	0x93
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3133 17c9 15       		.uleb128 0x15
  3134 17ca F8090000 		.4byte	0x9f8
  3135 17ce D9170000 		.4byte	0x17d9
-ARM GAS  /tmp/ccPmFxSh.s 			page 56
+ARM GAS  /tmp/ccfrduex.s 			page 56
 
 
  3136 17d2 16       		.uleb128 0x16
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3190 1841 06       		.byte	0x6
  3191 1842 26       		.uleb128 0x26
  3192 1843 C6010000 		.4byte	.LASF312
-ARM GAS  /tmp/ccPmFxSh.s 			page 57
+ARM GAS  /tmp/ccfrduex.s 			page 57
 
 
  3193 1847 1E       		.byte	0x1e
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3247 18b2 00       		.byte	0
  3248              		.section	.gnu.debuglto_.debug_abbrev,"",%progbits
  3249              	.Ldebug_abbrev0:
-ARM GAS  /tmp/ccPmFxSh.s 			page 58
+ARM GAS  /tmp/ccfrduex.s 			page 58
 
 
  3250 0000 01       		.uleb128 0x1
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3304 0036 0B       		.uleb128 0xb
  3305 0037 03       		.uleb128 0x3
  3306 0038 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccPmFxSh.s 			page 59
+ARM GAS  /tmp/ccfrduex.s 			page 59
 
 
  3307 0039 00       		.byte	0
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3361 006f 49       		.uleb128 0x49
  3362 0070 13       		.uleb128 0x13
  3363 0071 38       		.uleb128 0x38
-ARM GAS  /tmp/ccPmFxSh.s 			page 60
+ARM GAS  /tmp/ccfrduex.s 			page 60
 
 
  3364 0072 0B       		.uleb128 0xb
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3418 00a8 00       		.byte	0
  3419 00a9 0E       		.uleb128 0xe
  3420 00aa 05       		.uleb128 0x5
-ARM GAS  /tmp/ccPmFxSh.s 			page 61
+ARM GAS  /tmp/ccfrduex.s 			page 61
 
 
  3421 00ab 00       		.byte	0
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3475 00e1 0B       		.uleb128 0xb
  3476 00e2 3B       		.uleb128 0x3b
  3477 00e3 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccPmFxSh.s 			page 62
+ARM GAS  /tmp/ccfrduex.s 			page 62
 
 
  3478 00e4 39       		.uleb128 0x39
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3532 011a 49       		.uleb128 0x49
  3533 011b 13       		.uleb128 0x13
  3534 011c 2F       		.uleb128 0x2f
-ARM GAS  /tmp/ccPmFxSh.s 			page 63
+ARM GAS  /tmp/ccfrduex.s 			page 63
 
 
  3535 011d 0B       		.uleb128 0xb
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3589 0153 0B       		.uleb128 0xb
  3590 0154 3B       		.uleb128 0x3b
  3591 0155 05       		.uleb128 0x5
-ARM GAS  /tmp/ccPmFxSh.s 			page 64
+ARM GAS  /tmp/ccfrduex.s 			page 64
 
 
  3592 0156 39       		.uleb128 0x39
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3646 018c 00       		.byte	0
  3647 018d 1E       		.uleb128 0x1e
  3648 018e 28       		.uleb128 0x28
-ARM GAS  /tmp/ccPmFxSh.s 			page 65
+ARM GAS  /tmp/ccfrduex.s 			page 65
 
 
  3649 018f 00       		.byte	0
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3703 01c5 39       		.uleb128 0x39
  3704 01c6 0B       		.uleb128 0xb
  3705 01c7 49       		.uleb128 0x49
-ARM GAS  /tmp/ccPmFxSh.s 			page 66
+ARM GAS  /tmp/ccfrduex.s 			page 66
 
 
  3706 01c8 13       		.uleb128 0x13
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3760 01fe 19       		.uleb128 0x19
  3761 01ff 03       		.uleb128 0x3
  3762 0200 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccPmFxSh.s 			page 67
+ARM GAS  /tmp/ccfrduex.s 			page 67
 
 
  3763 0201 3A       		.uleb128 0x3a
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3817 0237 19       		.uleb128 0x19
  3818 0238 00       		.byte	0
  3819 0239 00       		.byte	0
-ARM GAS  /tmp/ccPmFxSh.s 			page 68
+ARM GAS  /tmp/ccfrduex.s 			page 68
 
 
  3820 023a 29       		.uleb128 0x29
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3865      652F6164 
  3865      616D2F43 
  3865      68696269 
-ARM GAS  /tmp/ccPmFxSh.s 			page 69
+ARM GAS  /tmp/ccfrduex.s 			page 69
 
 
  3865      4F535F31 
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3886      4F535F31 
  3887 0233 00       		.byte	0
  3888 0234 2F686F6D 		.ascii	"/home/adam/ChibiOS_16.1.9/os/rt/ports/ARMCMx"
-ARM GAS  /tmp/ccPmFxSh.s 			page 70
+ARM GAS  /tmp/ccfrduex.s 			page 70
 
 
  3888      652F6164 
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3912      732F4743 
  3912      432F6368 
  3912      74797065 
-ARM GAS  /tmp/ccPmFxSh.s 			page 71
+ARM GAS  /tmp/ccfrduex.s 			page 71
 
 
  3913 034d 0C       		.uleb128 0xc
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3946 03ca 00       		.uleb128 0
  3947 03cb 00       		.uleb128 0
  3948 03cc 6368746D 		.ascii	"chtm.h\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 72
+ARM GAS  /tmp/ccfrduex.s 			page 72
 
 
  3948      2E6800
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  3986 0448 00       		.uleb128 0
  3987 0449 00       		.uleb128 0
  3988 044a 6963752E 		.ascii	"icu.h\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 73
+ARM GAS  /tmp/ccfrduex.s 			page 73
 
 
  3988      6800
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4026 04bf 00       		.uleb128 0
  4027 04c0 00       		.uleb128 0
  4028 04c1 00       		.byte	0
-ARM GAS  /tmp/ccPmFxSh.s 			page 74
+ARM GAS  /tmp/ccfrduex.s 			page 74
 
 
  4029              	.LELTP0:
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4060              	.LASF226:
  4061 007b 61646363 		.ascii	"adccallback_t\000"
  4061      616C6C62 
-ARM GAS  /tmp/ccPmFxSh.s 			page 75
+ARM GAS  /tmp/ccfrduex.s 			page 75
 
 
  4061      61636B5F 
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4087      735F6C69 
  4088              	.LASF306:
  4089 0118 5F5F6675 		.ascii	"__func__\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 76
+ARM GAS  /tmp/ccfrduex.s 			page 76
 
 
  4089      6E635F5F 
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4117 01a4 6572726F 		.ascii	"error_cb\000"
  4117      725F6362 
  4117      00
-ARM GAS  /tmp/ccPmFxSh.s 			page 77
+ARM GAS  /tmp/ccfrduex.s 			page 77
 
 
  4118              	.LASF265:
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4147 0233 72656164 		.ascii	"readt\000"
  4147      7400
  4148              	.LASF173:
-ARM GAS  /tmp/ccPmFxSh.s 			page 78
+ARM GAS  /tmp/ccfrduex.s 			page 78
 
 
  4149 0239 715F6275 		.ascii	"q_buffer\000"
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4176              	.LASF46:
  4177 02c7 705F6D74 		.ascii	"p_mtxlist\000"
  4177      786C6973 
-ARM GAS  /tmp/ccPmFxSh.s 			page 79
+ARM GAS  /tmp/ccfrduex.s 			page 79
 
 
  4177      7400
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4207      6E745F74 
  4207      00
  4208              	.LASF192:
-ARM GAS  /tmp/ccPmFxSh.s 			page 80
+ARM GAS  /tmp/ccfrduex.s 			page 80
 
 
  4209 035b 70757064 		.ascii	"pupdr\000"
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4237      3100
  4238              	.LASF113:
  4239 03e9 43434D52 		.ascii	"CCMR2\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 81
+ARM GAS  /tmp/ccfrduex.s 			page 81
 
 
  4239      3200
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4269      7400
  4270              	.LASF310:
  4271 046e 69637553 		.ascii	"icuStart\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 82
+ARM GAS  /tmp/ccfrduex.s 			page 82
 
 
  4271      74617274 
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4300              	.LASF198:
  4301 04fe 50434461 		.ascii	"PCData\000"
  4301      746100
-ARM GAS  /tmp/ccPmFxSh.s 			page 83
+ARM GAS  /tmp/ccfrduex.s 			page 83
 
 
  4302              	.LASF166:
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4330              	.LASF129:
  4331 05ad 63685F73 		.ascii	"ch_semaphore\000"
  4331      656D6170 
-ARM GAS  /tmp/ccPmFxSh.s 			page 84
+ARM GAS  /tmp/ccfrduex.s 			page 84
 
 
  4331      686F7265 
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4357      616C4472 
  4357      69766572 
  4357      564D5400 
-ARM GAS  /tmp/ccPmFxSh.s 			page 85
+ARM GAS  /tmp/ccfrduex.s 			page 85
 
 
  4358              	.LASF119:
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4382              	.LASF267:
  4383 06ef 49435544 		.ascii	"ICUD2\000"
  4383      3200
-ARM GAS  /tmp/ccPmFxSh.s 			page 86
+ARM GAS  /tmp/ccfrduex.s 			page 86
 
 
  4384              	.LASF268:
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4412              	.LASF197:
  4413 0781 50424461 		.ascii	"PBData\000"
  4413      746100
-ARM GAS  /tmp/ccPmFxSh.s 			page 87
+ARM GAS  /tmp/ccfrduex.s 			page 87
 
 
  4414              	.LASF225:
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4443      7300
  4444              	.LASF278:
  4445 0813 70776D63 		.ascii	"pwmcallback_t\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 88
+ARM GAS  /tmp/ccfrduex.s 			page 88
 
 
  4445      616C6C62 
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4471      5F7400
  4472              	.LASF47:
  4473 08a9 705F7265 		.ascii	"p_realprio\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 89
+ARM GAS  /tmp/ccfrduex.s 			page 89
 
 
  4473      616C7072 
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4494      696D6572 
  4494      00
  4495              	.LASF131:
-ARM GAS  /tmp/ccPmFxSh.s 			page 90
+ARM GAS  /tmp/ccfrduex.s 			page 90
 
 
  4496 09d3 735F636E 		.ascii	"s_cnt\000"
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4522      7272656E 
  4522      7400
  4523              	.LASF216:
-ARM GAS  /tmp/ccPmFxSh.s 			page 91
+ARM GAS  /tmp/ccfrduex.s 			page 91
 
 
  4524 0a66 41444344 		.ascii	"ADCDriver\000"
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4552      00
  4553              	.LASF289:
  4554 0aee 53445F52 		.ascii	"SD_READY\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 92
+ARM GAS  /tmp/ccfrduex.s 			page 92
 
 
  4554      45414459 
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4582      00
  4583              	.LASF87:
  4584 0b75 4A4F4652 		.ascii	"JOFR1\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 93
+ARM GAS  /tmp/ccfrduex.s 			page 93
 
 
  4584      3100
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4614      69666963 
  4614      6174696F 
  4615              	.LASF80:
-ARM GAS  /tmp/ccPmFxSh.s 			page 94
+ARM GAS  /tmp/ccfrduex.s 			page 94
 
 
  4616 0c02 76746C69 		.ascii	"vtlist\000"
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4642      657200
  4643              	.LASF122:
  4644 0c98 7264796D 		.ascii	"rdymsg\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 95
+ARM GAS  /tmp/ccfrduex.s 			page 95
 
 
  4644      736700
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4668      63617469 
  4669              	.LASF100:
  4670 0d5f 4E445452 		.ascii	"NDTR\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 96
+ARM GAS  /tmp/ccfrduex.s 			page 96
 
 
  4670      00
@@ -5729,13 +5729,13 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4686 0d99 705F7374 		.ascii	"p_state\000"
  4686      61746500 
  4687              		.text
- 4688              		.section	.gnu.lto_.profile.2fb302a856cd8b19,"",%progbits
+ 4688              		.section	.gnu.lto_.profile.2b5179629ef18839,"",%progbits
  4689 0000 789C6367 		.ascii	"x\234cg`\004B \000\000\000T\000\012"
  4689      60044220 
  4689      00000054 
  4689      000A
  4690              		.text
- 4691              		.section	.gnu.lto_.icf.2fb302a856cd8b19,"",%progbits
+ 4691              		.section	.gnu.lto_.icf.2b5179629ef18839,"",%progbits
  4692 0000 789C6367 		.ascii	"x\234cg`d0a@\000N\206\311\255\007\02602~?\373\315\231"
  4692      60643061 
  4692      40004E86 
@@ -5755,10 +5755,10 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4695      009BFF18 
  4695      95
  4696              		.text
- 4697              		.section	.gnu.lto_.jmpfuncs.2fb302a856cd8b19,"",%progbits
+ 4697              		.section	.gnu.lto_.jmpfuncs.2b5179629ef18839,"",%progbits
  4698 0000 789C6367 		.ascii	"x\234cg`d\270\316\200\000\234 \202\021\010\352g2301"
  4698      6064B8CE 
-ARM GAS  /tmp/ccPmFxSh.s 			page 97
+ARM GAS  /tmp/ccfrduex.s 			page 97
 
 
  4698      80009C20 
@@ -5779,7 +5779,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4701      C7000028 
  4701      0F34C9
  4702              		.text
- 4703              		.section	.gnu.lto_.inline.2fb302a856cd8b19,"",%progbits
+ 4703              		.section	.gnu.lto_.inline.2b5179629ef18839,"",%progbits
  4704 0000 789C8DCC 		.ascii	"x\234\215\314\321\015\302 \024F\341\003\005.Xgs\011"
  4704      D10DC220 
  4704      1446E103 
@@ -5815,10 +5815,10 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4710      533EC0A6 
  4710      55F1
  4711              		.text
- 4712              		.section	.gnu.lto_.pureconst.2fb302a856cd8b19,"",%progbits
+ 4712              		.section	.gnu.lto_.pureconst.2b5179629ef18839,"",%progbits
  4713 0000 789C05C1 		.ascii	"x\234\005\301\201\021\000 \010\003\261\242\274\340\016"
  4713      81110020 
-ARM GAS  /tmp/ccPmFxSh.s 			page 98
+ARM GAS  /tmp/ccfrduex.s 			page 98
 
 
  4713      0803B1A2 
@@ -5832,7 +5832,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4715      035E7806 
  4715      C5
  4716              		.text
- 4717              		.section	.gnu.lto_icuInit.2fb302a856cd8b19,"",%progbits
+ 4717              		.section	.gnu.lto_icuInit.2b5179629ef18839,"",%progbits
  4718 0000 789C6367 		.ascii	"x\234cg`d\330\313\300\300\240\013\304\262@\314\310\314"
  4718      6064D8CB 
  4718      C0C0A00B 
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4727      C8319399 
  4727      713233D0 
  4727      4CC6BD8C 
-ARM GAS  /tmp/ccPmFxSh.s 			page 99
+ARM GAS  /tmp/ccfrduex.s 			page 99
 
 
  4727      2D8C
@@ -5903,7 +5903,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4732 00f5 0037FB4D 		.ascii	"\0007\373M*"
  4732      2A
  4733              		.text
- 4734              		.section	.gnu.lto_icuObjectInit.2fb302a856cd8b19,"",%progbits
+ 4734              		.section	.gnu.lto_icuObjectInit.2b5179629ef18839,"",%progbits
  4735 0000 789C9550 		.ascii	"x\234\225P\277K\034A\030\375\336~{\353\025\036\327\246"
  4735      BF4B1C41 
  4735      18FDDE7E 
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4741      38BB78FF 
  4741      2BD53427 
  4741      2F2AAE4C 
-ARM GAS  /tmp/ccPmFxSh.s 			page 100
+ARM GAS  /tmp/ccfrduex.s 			page 100
 
 
  4741      39C3AAF4 
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4752      1B993BCF 
  4753 015f 083BC23A 		.ascii	"\010;\302:A8}4\006\243\243WIzLr\213\250\331\313\367"
  4753      41387D34 
-ARM GAS  /tmp/ccPmFxSh.s 			page 101
+ARM GAS  /tmp/ccfrduex.s 			page 101
 
 
  4753      06A3A357 
@@ -6020,7 +6020,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4756      4696
  4757 01a9 A842     		.ascii	"\250B"
  4758              		.text
- 4759              		.section	.gnu.lto_icuStart.2fb302a856cd8b19,"",%progbits
+ 4759              		.section	.gnu.lto_icuStart.2b5179629ef18839,"",%progbits
  4760 0000 789C9554 		.ascii	"x\234\225T_LSg\024\377\316\375n\3770l\360\3018\037\234"
  4760      5F4C5367 
  4760      14FFCEFD 
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4767      A300C02C 
  4767      51310239 
  4767      20C00138 
-ARM GAS  /tmp/ccPmFxSh.s 			page 102
+ARM GAS  /tmp/ccfrduex.s 			page 102
 
 
  4767      448F5178 
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4778      D6
  4779 015e 3AE865AC 		.ascii	":\350e\254E\2155\\\001+\272\363\232\355\014va:\\k\332"
  4779      458D355C 
-ARM GAS  /tmp/ccPmFxSh.s 			page 103
+ARM GAS  /tmp/ccfrduex.s 			page 103
 
 
  4779      012BBAF3 
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4791 0233 38431800 		.ascii	"8C\030\000\013\357\311\245\226\337\343\314\003?\201"
  4791      0BEFC9A5 
  4791      96DFE3CC 
-ARM GAS  /tmp/ccPmFxSh.s 			page 104
+ARM GAS  /tmp/ccfrduex.s 			page 104
 
 
  4791      033F81
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4803 030a 78ABBA8E 		.ascii	"x\253\272\216L\246\243\232\204\036\252\022J\313\035"
  4803      4CA6A39A 
  4803      841EAA12 
-ARM GAS  /tmp/ccPmFxSh.s 			page 105
+ARM GAS  /tmp/ccfrduex.s 			page 105
 
 
  4803      4ACB1D
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4815      6C96ED44 
  4815      2F7B8B3F 
  4815      727F9CFB 
-ARM GAS  /tmp/ccPmFxSh.s 			page 106
+ARM GAS  /tmp/ccfrduex.s 			page 106
 
 
  4815      D273
@@ -6332,7 +6332,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4822 0455 B78FFC07 		.ascii	"\267\217\374\007 \017l\350"
  4822      200F6CE8 
  4823              		.text
- 4824              		.section	.gnu.lto_icuStop.2fb302a856cd8b19,"",%progbits
+ 4824              		.section	.gnu.lto_icuStop.2b5179629ef18839,"",%progbits
  4825 0000 789C8553 		.ascii	"x\234\205SmlSe\024>\347\276\267\037C\353\374\245\374"
  4825      6D6C5365 
  4825      143EE7BE 
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4829      ABE77DEF 
  4829      EDA56C09 
  4829      BB497BCF 
-ARM GAS  /tmp/ccPmFxSh.s 			page 107
+ARM GAS  /tmp/ccfrduex.s 			page 107
 
 
  4830 0068 E73CEF79 		.ascii	"\347<\357y\3169\317k\003\204\036\013\300k\010\360\034"
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4841      561E6ABE 
  4841      3915E5AC 
  4841      65FC96B3 
-ARM GAS  /tmp/ccPmFxSh.s 			page 108
+ARM GAS  /tmp/ccfrduex.s 			page 108
 
 
  4841      96
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4853 020f B43DFC01 		.ascii	"\264=\374\001]b\032\343\003\263y\356\301\037Q\026\207"
  4853      5D621AE3 
  4853      03B379EE 
-ARM GAS  /tmp/ccPmFxSh.s 			page 109
+ARM GAS  /tmp/ccfrduex.s 			page 109
 
 
  4853      C11F5116 
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4864      C5B2
  4865 02e9 A4006684 		.ascii	"\244\000f\204,3\306\234\346On5\355\374IV\260]\2463\251"
  4865      2C33C69C 
-ARM GAS  /tmp/ccPmFxSh.s 			page 110
+ARM GAS  /tmp/ccfrduex.s 			page 110
 
 
  4865      E64F6E35 
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4876      C89E0801 
  4876      2CBBBCF5 
  4876      4DBE57
-ARM GAS  /tmp/ccPmFxSh.s 			page 111
+ARM GAS  /tmp/ccfrduex.s 			page 111
 
 
  4877 03c6 1F0BF3ED 		.ascii	"\037\013\363\355nT\252kj\267\326>D\207\302\276\355j"
@@ -6623,7 +6623,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4881 040d DE03FF03 		.ascii	"\336\003\377\003\276\3408\261"
  4881      BEE038B1 
  4882              		.text
- 4883              		.section	.gnu.lto_icuStartCapture.2fb302a856cd8b19,"",%progbits
+ 4883              		.section	.gnu.lto_icuStartCapture.2b5179629ef18839,"",%progbits
  4884 0000 789C8553 		.ascii	"x\234\205SmlSe\024>\247\357\355\307\320Zc\214\362\003"
  4884      6D6C5365 
  4884      143EA7EF 
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4890      8973BEC1 
  4890      1AB199
  4891 0083 1085A570 		.ascii	"\020\205\245p\033\302.\023\356\302\026\266\237\341\355"
-ARM GAS  /tmp/ccPmFxSh.s 			page 112
+ARM GAS  /tmp/ccfrduex.s 			page 112
 
 
  4891      1BC22E13 
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4903 0152 57A524EC 		.ascii	"W\245$\354\364q\347\354\344\025\316\017p4p0\017'zZ\300"
  4903      F471E7EC 
  4903      E415CE0F 
-ARM GAS  /tmp/ccPmFxSh.s 			page 113
+ARM GAS  /tmp/ccfrduex.s 			page 113
 
 
  4903      70347030 
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4915 022d 45E4A67E 		.ascii	"E\344\246~\037\3523K\364\017\002\215?\242\"\210^\220"
  4915      1FEA334B 
  4915      F40F028D 
-ARM GAS  /tmp/ccPmFxSh.s 			page 114
+ARM GAS  /tmp/ccfrduex.s 			page 114
 
 
  4915      3FA22288 
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4927      D169BF18 
  4927      2A6B5FA9 
  4927      AB6CC13D 
-ARM GAS  /tmp/ccPmFxSh.s 			page 115
+ARM GAS  /tmp/ccfrduex.s 			page 115
 
 
  4927      1BBDB7
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4939 03d2 662DF05A 		.ascii	"f-\360Z\3436\215\316xi\251\242\365\301PCX}uSuU\365\016"
  4939      E3368DCE 
  4939      7869A9A2 
-ARM GAS  /tmp/ccPmFxSh.s 			page 116
+ARM GAS  /tmp/ccfrduex.s 			page 116
 
 
  4939      F5C15043 
@@ -6915,7 +6915,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4942 040c 07C97937 		.ascii	"\007\311y7\002"
  4942      02
  4943              		.text
- 4944              		.section	.gnu.lto_icuWaitCapture.2fb302a856cd8b19,"",%progbits
+ 4944              		.section	.gnu.lto_icuWaitCapture.2b5179629ef18839,"",%progbits
  4945 0000 789C8554 		.ascii	"x\234\205T]LSg\030\376\336\363}\247-L\2067s^\020i\352"
  4945      5D4C5367 
  4945      18FEDEF3 
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4953 0095 1C902883 		.ascii	"\034\220(\203\003PE\217Ph\274\022\234N\332\324\256\252"
  4953      0350458F 
  4953      5068BC12 
-ARM GAS  /tmp/ccPmFxSh.s 			page 117
+ARM GAS  /tmp/ccfrduex.s 			page 117
 
 
  4953      9C4EDAD4 
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4965      167A9274 
  4965      C0374E66 
  4965      1DAE7830 
-ARM GAS  /tmp/ccPmFxSh.s 			page 118
+ARM GAS  /tmp/ccfrduex.s 			page 118
 
 
  4965      E2E7A8
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4977      D97AA546 
  4977      B5DE1AA1 
  4977      263E95A1 
-ARM GAS  /tmp/ccPmFxSh.s 			page 119
+ARM GAS  /tmp/ccfrduex.s 			page 119
 
 
  4977      B1CF
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  4988      497174F3 
  4989 0319 AEA3E751 		.ascii	"\256\243\347Q\355 \177\005G\030\317\2077\031_\246\321"
  4989      ED207F05 
-ARM GAS  /tmp/ccPmFxSh.s 			page 120
+ARM GAS  /tmp/ccfrduex.s 			page 120
 
 
  4989      4718CF87 
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5000      7017
  5001 03ed D2F0231B 		.ascii	"\322\360#\033B\334\202oX\361M\245\310\343v)\205\273"
  5001      42DC826F 
-ARM GAS  /tmp/ccPmFxSh.s 			page 121
+ARM GAS  /tmp/ccfrduex.s 			page 121
 
 
  5001      58F14DA5 
@@ -7249,7 +7249,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5010      1EEF7EF2 
  5010      2FD45387 
  5011              		.text
- 5012              		.section	.gnu.lto_icuStopCapture.2fb302a856cd8b19,"",%progbits
+ 5012              		.section	.gnu.lto_icuStopCapture.2b5179629ef18839,"",%progbits
  5013 0000 789C8553 		.ascii	"x\234\205SoLSW\024?\347\335\327?\250\015~B?\270\331"
  5013      6F4C5357 
  5013      143FE7DD 
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5014 0015 D4618833 		.ascii	"\324a\2103}4\032\367'Y\346B\262\304\017d\211|\334\007"
  5014      7D341AF7 
  5014      2759E642 
-ARM GAS  /tmp/ccPmFxSh.s 			page 122
+ARM GAS  /tmp/ccfrduex.s 			page 122
 
 
  5014      B2C40F64 
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5026      00E4DBD0 
  5026      E604FC11 
  5026      2B40806E 
-ARM GAS  /tmp/ccPmFxSh.s 			page 123
+ARM GAS  /tmp/ccfrduex.s 			page 123
 
 
  5026      F5
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5037      2B75F0
  5038 01bb FBD59077 		.ascii	"\373\325\220w\015\351\256\376\326\177\312t\327\260\356"
  5038      0DE9AEFE 
-ARM GAS  /tmp/ccPmFxSh.s 			page 124
+ARM GAS  /tmp/ccfrduex.s 			page 124
 
 
  5038      D67FCA74 
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5049      C16E715A 
  5049      D4420941 
  5050 0297 547448B1 		.ascii	"TtH\261\231\223\211C6W\037\317\207\226\340o\224x8\177"
-ARM GAS  /tmp/ccPmFxSh.s 			page 125
+ARM GAS  /tmp/ccfrduex.s 			page 125
 
 
  5050      99938943 
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5061      AFE6DEE1 
  5061      0E68553E 
  5061      FF76FF3B 
-ARM GAS  /tmp/ccPmFxSh.s 			page 126
+ARM GAS  /tmp/ccfrduex.s 			page 126
 
 
  5061      35DB
@@ -7544,7 +7544,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5070      03C9D137 
  5070      3B
  5071              		.text
- 5072              		.section	.gnu.lto_icuEnableNotifications.2fb302a856cd8b19,"",%progbits
+ 5072              		.section	.gnu.lto_icuEnableNotifications.2b5179629ef18839,"",%progbits
  5073 0000 789C8553 		.ascii	"x\234\205S]hTW\020\236\271\347\356\217\3244>\265>D]"
  5073      5D685457 
  5073      109EB9E7 
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5075 0026 83ACD7C5 		.ascii	"\203\254\327\305]\310\272a7\021}\020\317n\022\255\250"
  5075      5DC8BA61 
  5075      37117D10 
-ARM GAS  /tmp/ccPmFxSh.s 			page 127
+ARM GAS  /tmp/ccfrduex.s 			page 127
 
 
  5075      CF6E12AD 
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5087 00f9 2A8D09B4 		.ascii	"*\215\011\264\243\025\250\226\374\036v\331\245\277\216"
  5087      A315A896 
  5087      FC1E76D9 
-ARM GAS  /tmp/ccPmFxSh.s 			page 128
+ARM GAS  /tmp/ccfrduex.s 			page 128
 
 
  5087      A5BF8E
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5099      A04E84F7 
  5099      F51D39A4 
  5099      0A21A8E8 
-ARM GAS  /tmp/ccPmFxSh.s 			page 129
+ARM GAS  /tmp/ccfrduex.s 			page 129
 
 
  5100 01de C28BD4AC 		.ascii	"\302\213\324\254\314?o\346\377\335\320\244\3136\036"
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5111      27161C14 
  5111      059D
  5112 02b6 74DB0D6B 		.ascii	"t\333\015k\325\015\263\314U\217\023\373\300\177\323"
-ARM GAS  /tmp/ccPmFxSh.s 			page 130
+ARM GAS  /tmp/ccfrduex.s 			page 130
 
 
  5112      D50DB3CC 
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5123      2A7D870E 
  5124 0388 857D6BF4 		.ascii	"\205}k\364\340\312\312\015:\335\261l\262\242\345\241"
  5124      E0CACA0D 
-ARM GAS  /tmp/ccPmFxSh.s 			page 131
+ARM GAS  /tmp/ccfrduex.s 			page 131
 
 
  5124      3ADDB16C 
@@ -7816,7 +7816,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5127      8537C3FF 
  5127      015610B3 
  5128              		.text
- 5129              		.section	.gnu.lto_icuDisableNotifications.2fb302a856cd8b19,"",%progbits
+ 5129              		.section	.gnu.lto_icuDisableNotifications.2b5179629ef18839,"",%progbits
  5130 0000 789C8553 		.ascii	"x\234\205SmhSg\024>\347\2767\037\262u\335\257\331\037"
  5130      6D685367 
  5130      143EE7BE 
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5138 0093 73967751 		.ascii	"s\226wQ\204'Z\306?\332\315\353\363\242\014\240\221~"
  5138      84275AC6 
  5138      3FDACDEB 
-ARM GAS  /tmp/ccPmFxSh.s 			page 132
+ARM GAS  /tmp/ccfrduex.s 			page 132
 
 
  5138      F3A20CA0 
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5150 0167 15877019 		.ascii	"\025\207p\031\340\240 \246f\317\001\360\002\265\177"
  5150      E0A020A6 
  5150      66CF01F0 
-ARM GAS  /tmp/ccPmFxSh.s 			page 133
+ARM GAS  /tmp/ccfrduex.s 			page 133
 
 
  5150      02B57F
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5162 0241 6A986E5E 		.ascii	"j\230n^*\315\216W\361\025i\337\276\263\337\314\036\322"
  5162      2ACD8E57 
  5162      F11569DF 
-ARM GAS  /tmp/ccPmFxSh.s 			page 134
+ARM GAS  /tmp/ccfrduex.s 			page 134
 
 
  5162      BEB3DFCC 
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5174 031d 1D11EA33 		.ascii	"\035\021\3523\315\033\360{4\3676\267_+\361\372\266\372"
  5174      CD1BF07B 
  5174      34F736B7 
-ARM GAS  /tmp/ccPmFxSh.s 			page 135
+ARM GAS  /tmp/ccfrduex.s 			page 135
 
 
  5174      5F2BF1FA 
@@ -8083,7 +8083,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5182      B01ADE00 
  5183 03c4 AD6011B3 		.ascii	"\255`\021\263"
  5184              		.text
- 5185              		.section	.gnu.lto_.symbol_nodes.2fb302a856cd8b19,"",%progbits
+ 5185              		.section	.gnu.lto_.symbol_nodes.2b5179629ef18839,"",%progbits
  5186 0000 789C6DCF 		.ascii	"x\234m\317\313\011\302P\020\205\341\311\271y\337\304"
  5186      CB09C250 
  5186      1085E1C9 
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5188      33DF6C26 
  5188      124FFA10 
  5188      112C4099 
-ARM GAS  /tmp/ccPmFxSh.s 			page 136
+ARM GAS  /tmp/ccfrduex.s 			page 136
 
 
  5189 0038 3AE77C6F 		.ascii	":\347|o\376\022\241\310\303\215j\254e\011z\272\254@"
@@ -8132,13 +8132,13 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5195      5CFE53BE 
  5195      349EAF81 
  5196              		.text
- 5197              		.section	.gnu.lto_.refs.2fb302a856cd8b19,"",%progbits
+ 5197              		.section	.gnu.lto_.refs.2b5179629ef18839,"",%progbits
  5198 0000 789C6367 		.ascii	"x\234cg`\004B \000\000\000T\000\012"
  5198      60044220 
  5198      00000054 
  5198      000A
  5199              		.text
- 5200              		.section	.gnu.lto_.decls.2fb302a856cd8b19,"",%progbits
+ 5200              		.section	.gnu.lto_.decls.2b5179629ef18839,"",%progbits
  5201 0000 789CB55A 		.ascii	"x\234\265Z\011PTW\272\276\347\236\356\006\272\033\360"
  5201      09505457 
  5201      BABEE79E 
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5204      DCA61144 
  5204      44595C00 
  5204      17501014 
-ARM GAS  /tmp/ccPmFxSh.s 			page 137
+ARM GAS  /tmp/ccfrduex.s 			page 137
 
 
  5204      15
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5216      17
  5217 010c 280F68B7 		.ascii	"(\017h\267\350\303!\033\037\256\002\220\306\201}\271"
  5217      E8C3211B 
-ARM GAS  /tmp/ccPmFxSh.s 			page 138
+ARM GAS  /tmp/ccfrduex.s 			page 138
 
 
  5217      1FAE0290 
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5229 01dc 3308531F 		.ascii	"3\010S\037>\326\220\376=\271);Ux.\225\315\211\275\274"
  5229      3ED690FE 
  5229      3DB9293B 
-ARM GAS  /tmp/ccPmFxSh.s 			page 139
+ARM GAS  /tmp/ccfrduex.s 			page 139
 
 
  5229      55782E95 
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5241      106C0AC8 
  5241      C71B5D66 
  5241      6933166F 
-ARM GAS  /tmp/ccPmFxSh.s 			page 140
+ARM GAS  /tmp/ccfrduex.s 			page 140
 
 
  5241      E85011E9 
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5253      2DDC4F52 
  5253      E1A6D1
  5254 039d 2AA47624 		.ascii	"*\244v$\014j\355\252p\026\304k\250\370\000M\353ORZ;"
-ARM GAS  /tmp/ccPmFxSh.s 			page 141
+ARM GAS  /tmp/ccfrduex.s 			page 141
 
 
  5254      0C6AEDAA 
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5265      289ACC59 
  5265      D22BF3B0 
  5265      D77131E4 
-ARM GAS  /tmp/ccPmFxSh.s 			page 142
+ARM GAS  /tmp/ccfrduex.s 			page 142
 
 
  5265      E9EA
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5276      25F0D211 
  5277 054f 3EE3459B 		.ascii	">\343E\233\0076\261C\322\275\321\003w\0258\2011\373"
  5277      0736B143 
-ARM GAS  /tmp/ccPmFxSh.s 			page 143
+ARM GAS  /tmp/ccfrduex.s 			page 143
 
 
  5277      D2BDD103 
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5288      5B832ABC 
  5289 0630 8D311BEA 		.ascii	"\2151\033\352\356\326`\234\317\230\261\227\351\3334"
  5289      EED6609C 
-ARM GAS  /tmp/ccPmFxSh.s 			page 144
+ARM GAS  /tmp/ccfrduex.s 			page 144
 
 
  5289      CF98B197 
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5300      D2BC
  5301 0705 1E02FB07 		.ascii	"\036\002\373\007y\226\330\312\2437\013\334\360v&QW`"
  5301      7996D8CA 
-ARM GAS  /tmp/ccPmFxSh.s 			page 145
+ARM GAS  /tmp/ccfrduex.s 			page 145
 
 
  5301      A3370BDC 
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5313      9D30999E 
  5313      20A74CE1 
  5313      C97318AF 
-ARM GAS  /tmp/ccPmFxSh.s 			page 146
+ARM GAS  /tmp/ccfrduex.s 			page 146
 
 
  5313      45CB
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5325 08ba 96D5A205 		.ascii	"\226\325\242\005R\225n\347\232\254t\262T]\346'X6\210"
  5325      52956EE7 
  5325      9AAC74B2 
-ARM GAS  /tmp/ccPmFxSh.s 			page 147
+ARM GAS  /tmp/ccfrduex.s 			page 147
 
 
  5325      545DE627 
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5337 0993 928B48A6 		.ascii	"\222\213H\246b\347-g\356\346\314\240R\224H\3328v\365"
  5337      62E72D67 
  5337      EEE6CCA0 
-ARM GAS  /tmp/ccPmFxSh.s 			page 148
+ARM GAS  /tmp/ccfrduex.s 			page 148
 
 
  5337      529448DA 
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5349 0a72 B955A4C4 		.ascii	"\271U\244\304\203\314\307\261\247-\347=D\264\307\336"
  5349      83CCC7B1 
  5349      A72DE73D 
-ARM GAS  /tmp/ccPmFxSh.s 			page 149
+ARM GAS  /tmp/ccfrduex.s 			page 149
 
 
  5349      44B4C7DE 
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5360      41A1
  5361 0b46 03E3030C 		.ascii	"\003\343\003\014\355\344\232\364\253\236\"Z\305L+\264"
  5361      EDE49AF4 
-ARM GAS  /tmp/ccPmFxSh.s 			page 150
+ARM GAS  /tmp/ccfrduex.s 			page 150
 
 
  5361      AB9E225A 
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5372      0D3EC4F4 
  5373 0c21 7FCA7FF9 		.ascii	"\177\312\177\371D\212\277\325b?N\246\037g\326\217\247"
  5373      448ABFD5 
-ARM GAS  /tmp/ccPmFxSh.s 			page 151
+ARM GAS  /tmp/ccfrduex.s 			page 151
 
 
  5373      623F4EA6 
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5384      4C608F1F 
  5384      6A1D4276 
  5384      DE6C04
-ARM GAS  /tmp/ccPmFxSh.s 			page 152
+ARM GAS  /tmp/ccfrduex.s 			page 152
 
 
  5385 0cf8 B7376082 		.ascii	"\2677`\202\266\211zC1)Cj`\352nq\301q\354\347\254\326"
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5396      617CEC14 
  5396      2287B649 
  5396      1EA32CAC 
-ARM GAS  /tmp/ccPmFxSh.s 			page 153
+ARM GAS  /tmp/ccfrduex.s 			page 153
 
 
  5397 0dd6 403BC1E9 		.ascii	"@;\301\351m6No\001\247wR\247\257\027\334\270\255\302"
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5408      E55BB942 
  5408      53393D86 
  5409 0eb2 EB89158C 		.ascii	"\353\211\025\214q\240u\020{\241}\200\017\307.\231\362"
-ARM GAS  /tmp/ccPmFxSh.s 			page 154
+ARM GAS  /tmp/ccfrduex.s 			page 154
 
 
  5409      71A07510 
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5420      AC76B652 
  5420      71672BA5 
  5420      3BDB60E3 
-ARM GAS  /tmp/ccPmFxSh.s 			page 155
+ARM GAS  /tmp/ccfrduex.s 			page 155
 
 
  5420      F1070A
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5433      76A2E1AE 
  5433      83B9E44C 
  5433      7C243F29 
-ARM GAS  /tmp/ccPmFxSh.s 			page 156
+ARM GAS  /tmp/ccfrduex.s 			page 156
 
 
  5433      DB4DCC
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5445      E7178003 
  5445      806605
  5446 1132 04E02F03 		.ascii	"\004\340/\003\375\260\337\374\005\012?\2779\001T~:\375"
-ARM GAS  /tmp/ccPmFxSh.s 			page 157
+ARM GAS  /tmp/ccfrduex.s 			page 157
 
 
  5446      FDB0DFFC 
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5457      F3
  5458 1201 BF5CB840 		.ascii	"\277\\\270@7\313o\201\377\177\315\321\315\375\342\253"
  5458      37CB6F81 
-ARM GAS  /tmp/ccPmFxSh.s 			page 158
+ARM GAS  /tmp/ccfrduex.s 			page 158
 
 
  5458      FF7FCDD1 
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5469      88FE0D34 
  5469      CF0E8DB6 
  5470 12e0 6BD78A25 		.ascii	"k\327\212%\327\205\202\003\356\022\023M\214j-\\\344"
-ARM GAS  /tmp/ccPmFxSh.s 			page 159
+ARM GAS  /tmp/ccfrduex.s 			page 159
 
 
  5470      D7858203 
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5481      9FF19EAB 
  5481      C4
  5482 13ae 5935CF90 		.ascii	"Y5\317\220s3}\255\270\017\344\334\207\323\254\270\367"
-ARM GAS  /tmp/ccPmFxSh.s 			page 160
+ARM GAS  /tmp/ccfrduex.s 			page 160
 
 
  5482      73337DAD 
@@ -9549,7 +9549,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5483      0FF88D6A 
  5483      46
  5484              		.text
- 5485              		.section	.gnu.lto_.symtab.2fb302a856cd8b19,"",%progbits
+ 5485              		.section	.gnu.lto_.symtab.2b5179629ef18839,"",%progbits
  5486 0000 69637549 		.ascii	"icuInit\000"
  5486      6E697400 
  5487 0008 00       		.ascii	"\000"
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5516 0082 69637557 		.ascii	"icuWaitCapture\000"
  5516      61697443 
  5516      61707475 
-ARM GAS  /tmp/ccPmFxSh.s 			page 161
+ARM GAS  /tmp/ccfrduex.s 			page 161
 
 
  5516      726500
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5548 0136 02       		.ascii	"\002"
  5549 0137 00       		.ascii	"\000"
  5550 0138 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 162
+ARM GAS  /tmp/ccfrduex.s 			page 162
 
 
  5550      00000000 
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5580      00000000 
  5581 01f5 89010000 		.ascii	"\211\001\000\000"
  5582 01f9 6963755F 		.ascii	"icu_lld_disable_notifications\000"
-ARM GAS  /tmp/ccPmFxSh.s 			page 163
+ARM GAS  /tmp/ccfrduex.s 			page 163
 
 
  5582      6C6C645F 
@@ -9762,12 +9762,12 @@ ARM GAS  /tmp/ccPmFxSh.s 			page 1
  5596              		.comm	__gnu_lto_v1,1,1
  5597              		.comm	__gnu_lto_slim,1,1
  5598              		.ident	"GCC: (Arch Repository) 8.3.0"
-ARM GAS  /tmp/ccPmFxSh.s 			page 164
+ARM GAS  /tmp/ccfrduex.s 			page 164
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 icu.c
-     /tmp/ccPmFxSh.s:48     .gnu.debuglto_.debug_info:0000000000000000 icu.c.08ec64c1
+     /tmp/ccfrduex.s:48     .gnu.debuglto_.debug_info:0000000000000000 icu.c.08ec64c1
                             *COM*:0000000000000001 __gnu_lto_v1
                             *COM*:0000000000000001 __gnu_lto_slim
 

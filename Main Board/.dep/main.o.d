@@ -92,7 +92,16 @@ build/obj/main.o: main.c /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/mmc_spi.h \
  /home/adam/ChibiOS_16.1.9/os/hal/include/serial_usb.h config.h \
  includes/chprintf.h /usr/lib/gcc/arm-none-eabi/8.3.0/include/stdarg.h \
- motor.h analog.h
+ motor.h /usr/arm-none-eabi/include/math.h \
+ /usr/arm-none-eabi/include/sys/reent.h \
+ /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
+ /usr/arm-none-eabi/include/sys/config.h \
+ /usr/arm-none-eabi/include/machine/ieeefp.h \
+ /usr/arm-none-eabi/include/sys/_types.h \
+ /usr/arm-none-eabi/include/machine/_types.h \
+ /usr/arm-none-eabi/include/sys/lock.h \
+ /usr/arm-none-eabi/include/sys/cdefs.h \
+ /usr/arm-none-eabi/include/_ansi.h analog.h comunication.h
 
 /home/adam/ChibiOS_16.1.9/os/rt/include/ch.h:
 
@@ -294,4 +303,28 @@ includes/chprintf.h:
 
 motor.h:
 
+/usr/arm-none-eabi/include/math.h:
+
+/usr/arm-none-eabi/include/sys/reent.h:
+
+/usr/arm-none-eabi/include/_ansi.h:
+
+/usr/arm-none-eabi/include/newlib.h:
+
+/usr/arm-none-eabi/include/sys/config.h:
+
+/usr/arm-none-eabi/include/machine/ieeefp.h:
+
+/usr/arm-none-eabi/include/sys/_types.h:
+
+/usr/arm-none-eabi/include/machine/_types.h:
+
+/usr/arm-none-eabi/include/sys/lock.h:
+
+/usr/arm-none-eabi/include/sys/cdefs.h:
+
+/usr/arm-none-eabi/include/_ansi.h:
+
 analog.h:
+
+comunication.h:

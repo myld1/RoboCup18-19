@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccUpTyAp.s 			page 1
+ARM GAS  /tmp/ccaRoubj.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
   55 0030 04       		.uleb128 0x4
   56 0031 04       		.byte	0x4
   57 0032 07       		.byte	0x7
-ARM GAS  /tmp/ccUpTyAp.s 			page 2
+ARM GAS  /tmp/ccaRoubj.s 			page 2
 
 
   58 0033 7D020000 		.4byte	.LASF0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  112 0099 04       		.byte	0x4
  113 009a 07       		.byte	0x7
  114 009b 93050000 		.4byte	.LASF13
-ARM GAS  /tmp/ccUpTyAp.s 			page 3
+ARM GAS  /tmp/ccaRoubj.s 			page 3
 
 
  115 009f 03       		.uleb128 0x3
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  169 010b 03       		.uleb128 0x3
  170 010c 12020000 		.4byte	.LASF23
  171 0110 04       		.byte	0x4
-ARM GAS  /tmp/ccUpTyAp.s 			page 4
+ARM GAS  /tmp/ccaRoubj.s 			page 4
 
 
  172 0111 3D       		.byte	0x3d
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  226 017d 06       		.byte	0x6
  227 017e C3       		.byte	0xc3
  228 017f 1A       		.byte	0x1a
-ARM GAS  /tmp/ccUpTyAp.s 			page 5
+ARM GAS  /tmp/ccaRoubj.s 			page 5
 
 
  229 0180 77020000 		.4byte	0x277
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  283 01e6 E1       		.byte	0xe1
  284 01e7 19       		.byte	0x19
  285 01e8 FF000000 		.4byte	0xff
-ARM GAS  /tmp/ccUpTyAp.s 			page 6
+ARM GAS  /tmp/ccaRoubj.s 			page 6
 
 
  286 01ec 1D       		.byte	0x1d
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  340 0256 19       		.byte	0x19
  341 0257 23010000 		.4byte	0x123
  342 025b 3C       		.byte	0x3c
-ARM GAS  /tmp/ccUpTyAp.s 			page 7
+ARM GAS  /tmp/ccaRoubj.s 			page 7
 
 
  343 025c 09       		.uleb128 0x9
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  397 02c3 B8       		.byte	0xb8
  398 02c4 1A       		.byte	0x1a
  399 02c5 77020000 		.4byte	0x277
-ARM GAS  /tmp/ccUpTyAp.s 			page 8
+ARM GAS  /tmp/ccaRoubj.s 			page 8
 
 
  400 02c9 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  454 0332 1A       		.byte	0x1a
  455 0333 77020000 		.4byte	0x277
  456 0337 14       		.byte	0x14
-ARM GAS  /tmp/ccUpTyAp.s 			page 9
+ARM GAS  /tmp/ccaRoubj.s 			page 9
 
 
  457 0338 09       		.uleb128 0x9
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  511 03a2 72050000 		.4byte	.LASF67
  512 03a6 06       		.byte	0x6
  513 03a7 6E01     		.2byte	0x16e
-ARM GAS  /tmp/ccUpTyAp.s 			page 10
+ARM GAS  /tmp/ccaRoubj.s 			page 10
 
 
  514 03a9 19       		.byte	0x19
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  568 0415 06       		.byte	0x6
  569 0416 8801     		.2byte	0x188
  570 0418 19       		.byte	0x19
-ARM GAS  /tmp/ccUpTyAp.s 			page 11
+ARM GAS  /tmp/ccaRoubj.s 			page 11
 
 
  571 0419 53010000 		.4byte	0x153
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  625 0485 CE01     		.2byte	0x1ce
  626 0487 19       		.byte	0x19
  627 0488 1F040000 		.4byte	0x41f
-ARM GAS  /tmp/ccUpTyAp.s 			page 12
+ARM GAS  /tmp/ccaRoubj.s 			page 12
 
 
  628 048c 28       		.byte	0x28
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  682 04f5 13       		.uleb128 0x13
  683 04f6 72313300 		.ascii	"r13\000"
  684 04fa 09       		.byte	0x9
-ARM GAS  /tmp/ccUpTyAp.s 			page 13
+ARM GAS  /tmp/ccaRoubj.s 			page 13
 
 
  685 04fb 8A       		.byte	0x8a
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  739 055e 08       		.uleb128 0x8
  740 055f 72313000 		.ascii	"r10\000"
  741 0563 0A       		.byte	0xa
-ARM GAS  /tmp/ccUpTyAp.s 			page 14
+ARM GAS  /tmp/ccaRoubj.s 			page 14
 
 
  742 0564 1601     		.2byte	0x116
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  796 05c7 16       		.uleb128 0x16
  797 05c8 41010000 		.4byte	.LASF91
  798 05cc 06       		.byte	0x6
-ARM GAS  /tmp/ccUpTyAp.s 			page 15
+ARM GAS  /tmp/ccaRoubj.s 			page 15
 
 
  799 05cd 0801     		.2byte	0x108
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  853 063c 37       		.byte	0x37
  854 063d 19       		.byte	0x19
  855 063e 47010000 		.4byte	0x147
-ARM GAS  /tmp/ccUpTyAp.s 			page 16
+ARM GAS  /tmp/ccaRoubj.s 			page 16
 
 
  856 0642 08       		.byte	0x8
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  910 06ab 18       		.uleb128 0x18
  911 06ac 30000000 		.4byte	0x30
  912 06b0 1A       		.byte	0x1a
-ARM GAS  /tmp/ccUpTyAp.s 			page 17
+ARM GAS  /tmp/ccaRoubj.s 			page 17
 
 
  913 06b1 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  967 0714 09       		.byte	0x9
  968 0715 07       		.uleb128 0x7
  969 0716 6D000000 		.4byte	.LASF111
-ARM GAS  /tmp/ccUpTyAp.s 			page 18
+ARM GAS  /tmp/ccaRoubj.s 			page 18
 
 
  970 071a 0E       		.byte	0xe
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1024 077d 07       		.uleb128 0x7
  1025 077e D5010000 		.4byte	.LASF119
  1026 0782 0E       		.byte	0xe
-ARM GAS  /tmp/ccUpTyAp.s 			page 19
+ARM GAS  /tmp/ccaRoubj.s 			page 19
 
 
  1027 0783 44       		.byte	0x44
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1081 07ec 04       		.byte	0x4
  1082 07ed DF070000 		.4byte	0x7df
  1083 07f1 04       		.uleb128 0x4
-ARM GAS  /tmp/ccUpTyAp.s 			page 20
+ARM GAS  /tmp/ccaRoubj.s 			page 20
 
 
  1084 07f2 01       		.byte	0x1
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1138 0855 45       		.byte	0x45
  1139 0856 05       		.byte	0x5
  1140 0857 91080000 		.4byte	0x891
-ARM GAS  /tmp/ccUpTyAp.s 			page 21
+ARM GAS  /tmp/ccaRoubj.s 			page 21
 
 
  1141 085b 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1195 08c1 0B       		.byte	0xb
  1196 08c2 C7080000 		.4byte	0x8c7
  1197 08c6 00       		.byte	0
-ARM GAS  /tmp/ccUpTyAp.s 			page 22
+ARM GAS  /tmp/ccaRoubj.s 			page 22
 
 
  1198 08c7 17       		.uleb128 0x17
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1252 0939 5A       		.byte	0x5a
  1253 093a 1A       		.byte	0x1a
  1254 093b 3A080000 		.4byte	0x83a
-ARM GAS  /tmp/ccUpTyAp.s 			page 23
+ARM GAS  /tmp/ccaRoubj.s 			page 23
 
 
  1255 093f 17       		.uleb128 0x17
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1309 09ab 11       		.byte	0x11
  1310 09ac 60       		.byte	0x60
  1311 09ad 15       		.byte	0x15
-ARM GAS  /tmp/ccUpTyAp.s 			page 24
+ARM GAS  /tmp/ccaRoubj.s 			page 24
 
 
  1312 09ae 2F010000 		.4byte	0x12f
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1366 001e 0E       		.uleb128 0xe
  1367 001f 3A       		.uleb128 0x3a
  1368 0020 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccUpTyAp.s 			page 25
+ARM GAS  /tmp/ccaRoubj.s 			page 25
 
 
  1369 0021 3B       		.uleb128 0x3b
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1423 0057 49       		.uleb128 0x49
  1424 0058 13       		.uleb128 0x13
  1425 0059 38       		.uleb128 0x38
-ARM GAS  /tmp/ccUpTyAp.s 			page 26
+ARM GAS  /tmp/ccaRoubj.s 			page 26
 
 
  1426 005a 0B       		.uleb128 0xb
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1480 0090 0B       		.uleb128 0xb
  1481 0091 3B       		.uleb128 0x3b
  1482 0092 05       		.uleb128 0x5
-ARM GAS  /tmp/ccUpTyAp.s 			page 27
+ARM GAS  /tmp/ccaRoubj.s 			page 27
 
 
  1483 0093 39       		.uleb128 0x39
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1537 00c9 34       		.uleb128 0x34
  1538 00ca 00       		.byte	0
  1539 00cb 03       		.uleb128 0x3
-ARM GAS  /tmp/ccUpTyAp.s 			page 28
+ARM GAS  /tmp/ccaRoubj.s 			page 28
 
 
  1540 00cc 0E       		.uleb128 0xe
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1594 0102 0B       		.uleb128 0xb
  1595 0103 0B       		.uleb128 0xb
  1596 0104 3A       		.uleb128 0x3a
-ARM GAS  /tmp/ccUpTyAp.s 			page 29
+ARM GAS  /tmp/ccaRoubj.s 			page 29
 
 
  1597 0105 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1651 013b 0B       		.uleb128 0xb
  1652 013c 00       		.byte	0
  1653 013d 00       		.byte	0
-ARM GAS  /tmp/ccUpTyAp.s 			page 30
+ARM GAS  /tmp/ccaRoubj.s 			page 30
 
 
  1654 013e 19       		.uleb128 0x19
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1708 0174 38       		.uleb128 0x38
  1709 0175 05       		.uleb128 0x5
  1710 0176 00       		.byte	0
-ARM GAS  /tmp/ccUpTyAp.s 			page 31
+ARM GAS  /tmp/ccaRoubj.s 			page 31
 
 
  1711 0177 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1765 01ad 05       		.uleb128 0x5
  1766 01ae 00       		.byte	0
  1767 01af 00       		.byte	0
-ARM GAS  /tmp/ccUpTyAp.s 			page 32
+ARM GAS  /tmp/ccaRoubj.s 			page 32
 
 
  1768 01b0 21       		.uleb128 0x21
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1822 01e6 01       		.uleb128 0x1
  1823 01e7 13       		.uleb128 0x13
  1824 01e8 00       		.byte	0
-ARM GAS  /tmp/ccUpTyAp.s 			page 33
+ARM GAS  /tmp/ccaRoubj.s 			page 33
 
 
  1825 01e9 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1879 021f 0E       		.uleb128 0xe
  1880 0220 3A       		.uleb128 0x3a
  1881 0221 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccUpTyAp.s 			page 34
+ARM GAS  /tmp/ccaRoubj.s 			page 34
 
 
  1882 0222 3B       		.uleb128 0x3b
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1924 00a7 2F686F6D 		.ascii	"/home/adam/ChibiOS_16.1.9/os/rt/ports/ARMCMx"
  1924      652F6164 
  1924      616D2F43 
-ARM GAS  /tmp/ccUpTyAp.s 			page 35
+ARM GAS  /tmp/ccaRoubj.s 			page 35
 
 
  1924      68696269 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1948 01c8 00       		.uleb128 0
  1949 01c9 00       		.uleb128 0
  1950 01ca 636F6D70 		.ascii	"compilers/GCC/chtypes.h\000"
-ARM GAS  /tmp/ccUpTyAp.s 			page 36
+ARM GAS  /tmp/ccaRoubj.s 			page 36
 
 
  1950      696C6572 
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  1983 0253 03       		.uleb128 0x3
  1984 0254 00       		.uleb128 0
  1985 0255 00       		.uleb128 0
-ARM GAS  /tmp/ccUpTyAp.s 			page 37
+ARM GAS  /tmp/ccaRoubj.s 			page 37
 
 
  1986 0256 63686D74 		.ascii	"chmtx.h\000"
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2022              	.LASF20:
  2023 0028 75696E74 		.ascii	"uint64_t\000"
  2023      36345F74 
-ARM GAS  /tmp/ccUpTyAp.s 			page 38
+ARM GAS  /tmp/ccaRoubj.s 			page 38
 
 
  2023      00
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2043              	.LASF135:
  2044 0155 74657374 		.ascii	"test\000"
  2044      00
-ARM GAS  /tmp/ccUpTyAp.s 			page 39
+ARM GAS  /tmp/ccaRoubj.s 			page 39
 
 
  2045              	.LASF70:
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2069              	.LASF79:
  2070 01f2 76746C69 		.ascii	"vtlist\000"
  2070      737400
-ARM GAS  /tmp/ccUpTyAp.s 			page 40
+ARM GAS  /tmp/ccaRoubj.s 			page 40
 
 
  2071              	.LASF93:
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2102 027d 756E7369 		.ascii	"unsigned int\000"
  2102      676E6564 
  2102      20696E74 
-ARM GAS  /tmp/ccUpTyAp.s 			page 41
+ARM GAS  /tmp/ccaRoubj.s 			page 41
 
 
  2102      00
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2130      747800
  2131              	.LASF122:
  2132 0314 63665F6F 		.ascii	"cf_off_time\000"
-ARM GAS  /tmp/ccUpTyAp.s 			page 42
+ARM GAS  /tmp/ccaRoubj.s 			page 42
 
 
  2132      66665F74 
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2158      20646F75 
  2158      626C6500 
  2159              	.LASF110:
-ARM GAS  /tmp/ccUpTyAp.s 			page 43
+ARM GAS  /tmp/ccaRoubj.s 			page 43
 
 
  2160 03bd 63685F74 		.ascii	"ch_timesize\000"
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2187              	.LASF32:
  2188 0452 705F7072 		.ascii	"p_prev\000"
  2188      657600
-ARM GAS  /tmp/ccUpTyAp.s 			page 44
+ARM GAS  /tmp/ccaRoubj.s 			page 44
 
 
  2189              	.LASF131:
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2219              	.LASF22:
  2220 04e7 746D6F64 		.ascii	"tmode_t\000"
  2220      655F7400 
-ARM GAS  /tmp/ccUpTyAp.s 			page 45
+ARM GAS  /tmp/ccaRoubj.s 			page 45
 
 
  2221              	.LASF121:
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2246      68726561 
  2246      64735F6C 
  2246      69737400 
-ARM GAS  /tmp/ccUpTyAp.s 			page 46
+ARM GAS  /tmp/ccaRoubj.s 			page 46
 
 
  2247              	.LASF107:
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2274      657400
  2275              	.LASF86:
  2276 0617 636F6E74 		.ascii	"context\000"
-ARM GAS  /tmp/ccUpTyAp.s 			page 47
+ARM GAS  /tmp/ccaRoubj.s 			page 47
 
 
  2276      65787400 
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2304 06c5 705F6D73 		.ascii	"p_msg\000"
  2304      6700
  2305              	.LASF144:
-ARM GAS  /tmp/ccUpTyAp.s 			page 48
+ARM GAS  /tmp/ccaRoubj.s 			page 48
 
 
  2306 06cb 2F686F6D 		.ascii	"/home/adam/ChibiOS_16.1.9/test/rt/testmsg.c\000"
@@ -2838,13 +2838,13 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2312 070d 76745F66 		.ascii	"vt_func\000"
  2312      756E6300 
  2313              		.text
- 2314              		.section	.gnu.lto_.profile.5ef570ab2d1bd1f1,"",%progbits
+ 2314              		.section	.gnu.lto_.profile.67659286f1591988,"",%progbits
  2315 0000 789C6367 		.ascii	"x\234cg`\004B \000\000\000T\000\012"
  2315      60044220 
  2315      00000054 
  2315      000A
  2316              		.text
- 2317              		.section	.gnu.lto_.icf.5ef570ab2d1bd1f1,"",%progbits
+ 2317              		.section	.gnu.lto_.icf.67659286f1591988,"",%progbits
  2318 0000 789C6367 		.ascii	"x\234cg`d\020g@\000\026\206\317;\247Lgb\3761\343W6\353"
  2318      60641067 
  2318      40001686 
@@ -2856,7 +2856,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2319      8A1A0B
  2320 0027 5D       		.ascii	"]"
  2321              		.text
- 2322              		.section	.gnu.lto_.jmpfuncs.5ef570ab2d1bd1f1,"",%progbits
+ 2322              		.section	.gnu.lto_.jmpfuncs.67659286f1591988,"",%progbits
  2323 0000 789CB590 		.ascii	"x\234\265\220=K\003A\024E\357\235\231\305U\224\264\026"
  2323      3D4B0341 
  2323      1445EF9D 
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2326      2016
  2327 0049 1510213C 		.ascii	"\025\020!<\362\012\303\256\346[\273?4m\235h\220\274"
  2327      F20AC3AE 
-ARM GAS  /tmp/ccUpTyAp.s 			page 49
+ARM GAS  /tmp/ccaRoubj.s 			page 49
 
 
  2327      E65BBB3F 
@@ -2934,11 +2934,11 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2338 010b 2BF806DC 		.ascii	"+\370\006\334\224\232\275"
  2338      949ABD
  2339              		.text
- 2340              		.section	.gnu.lto_.inline.5ef570ab2d1bd1f1,"",%progbits
+ 2340              		.section	.gnu.lto_.inline.67659286f1591988,"",%progbits
  2341 0000 789C6367 		.ascii	"x\234cg`d8\310\200\000L\014\014Z\015\015\015\033X2\031"
  2341      606438C8 
  2341      80004C0C 
-ARM GAS  /tmp/ccUpTyAp.s 			page 50
+ARM GAS  /tmp/ccaRoubj.s 			page 50
 
 
  2341      0C5A0D0D 
@@ -2965,14 +2965,14 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2346      180008EF 
  2346      1E33
  2347              		.text
- 2348              		.section	.gnu.lto_.pureconst.5ef570ab2d1bd1f1,"",%progbits
+ 2348              		.section	.gnu.lto_.pureconst.67659286f1591988,"",%progbits
  2349 0000 789C6367 		.ascii	"x\234cg`d`g```b\230\311\302<\203\005\000\005*\001N"
  2349      60646067 
  2349      60606062 
  2349      98C9C23C 
  2349      83050005 
  2350              		.text
- 2351              		.section	.gnu.lto_msg1_execute.5ef570ab2d1bd1f1,"",%progbits
+ 2351              		.section	.gnu.lto_msg1_execute.67659286f1591988,"",%progbits
  2352 0000 789CA596 		.ascii	"x\234\245\226_P\324U\024\307\357\371\335\337.\213\356"
  2352      5F50D455 
  2352      14C7EFF9 
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2356      9CFBFBB1 
  2356      6CECA6CC 
  2357 005d B4337BF7 		.ascii	"\2643{\367\376\356\275\347{\357\367s\356\236\335\004"
-ARM GAS  /tmp/ccUpTyAp.s 			page 51
+ARM GAS  /tmp/ccaRoubj.s 			page 51
 
 
  2357      FEEEBDE7 
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2369 0134 A46063E6 		.ascii	"\244`c\346\330\250*6\011&j\314\324Xh\314\312(\322.["
  2369      D8A82A36 
  2369      09266ACC 
-ARM GAS  /tmp/ccUpTyAp.s 			page 52
+ARM GAS  /tmp/ccaRoubj.s 			page 52
 
 
  2369      D45868CC 
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2381 020f 730B8E04 		.ascii	"s\013\216\004\350p88\333v\252~\005:\007\215\333\340"
  2381      E8703838 
  2381      DB76AA7E 
-ARM GAS  /tmp/ccUpTyAp.s 			page 53
+ARM GAS  /tmp/ccaRoubj.s 			page 53
 
 
  2381      053A078D 
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2392      EF8C3C01 
  2393 02ed 3F534606 		.ascii	"?SF\006\015(\355\363\235\015\253\361*\022\360\035D\360"
  2393      0D28EDF3 
-ARM GAS  /tmp/ccUpTyAp.s 			page 54
+ARM GAS  /tmp/ccaRoubj.s 			page 54
 
 
  2393      9D0DABF1 
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2405      27672280 
  2405      2BA5AFA5 
  2405      B94CF3F2 
-ARM GAS  /tmp/ccUpTyAp.s 			page 55
+ARM GAS  /tmp/ccaRoubj.s 			page 55
 
 
  2405      04D4
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2417      823FC189 
  2417      43830F3B 
  2417      43EA
-ARM GAS  /tmp/ccUpTyAp.s 			page 56
+ARM GAS  /tmp/ccaRoubj.s 			page 56
 
 
  2418 04a4 864E6814 		.ascii	"\206Nh\024~d\3734\255\332\267wf\310J\002~\311;\035n"
@@ -3342,7 +3342,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2426 0536 76F60FF7 		.ascii	"v\366\017\367\201H\241"
  2426      8148A1
  2427              		.text
- 2428              		.section	.gnu.lto_thread.5ef570ab2d1bd1f1,"",%progbits
+ 2428              		.section	.gnu.lto_thread.67659286f1591988,"",%progbits
  2429 0000 789C8D8F 		.ascii	"x\234\215\217;K\003A\024\205\357\331\273IV!\225\215"
  2429      3B4B0341 
  2429      1485EFD9 
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2431      59C428BE 
  2431      102C8CB5 
  2432 0037 AFF55988 		.ascii	"\257\365Y\210\205hgg\320Fl\0041Xh\234\335\025\323\346"
-ARM GAS  /tmp/ccUpTyAp.s 			page 57
+ARM GAS  /tmp/ccaRoubj.s 			page 57
 
 
  2432      85686767 
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2443      56E4697E 
  2443      AFF8A8D9 
  2443      493C3823 
-ARM GAS  /tmp/ccUpTyAp.s 			page 58
+ARM GAS  /tmp/ccaRoubj.s 			page 58
 
 
  2443      9C2360B2 
@@ -3453,7 +3453,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2449      A4
  2450 018d 21       		.ascii	"!"
  2451              		.text
- 2452              		.section	.gnu.lto_patternmsg.5ef570ab2d1bd1f1,"",%progbits
+ 2452              		.section	.gnu.lto_patternmsg.67659286f1591988,"",%progbits
  2453 0000 789C6367 		.ascii	"x\234cg`d\010d``\320c\200\200\211\314\214\215\375\023"
  2453      60640864 
  2453      6060D063 
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2457      46462319 
  2457      C6DD8C32 
  2457      0C8C7B19 
-ARM GAS  /tmp/ccUpTyAp.s 			page 59
+ARM GAS  /tmp/ccaRoubj.s 			page 59
 
 
  2457      AD
@@ -3496,7 +3496,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2460      0300CB6B 
  2460      293D
  2461              		.text
- 2462              		.section	.gnu.lto_testmsg1.5ef570ab2d1bd1f1,"",%progbits
+ 2462              		.section	.gnu.lto_testmsg1.67659286f1591988,"",%progbits
  2463 0000 789C6367 		.ascii	"x\234cg`d\350a``\260c\200\200\211\314\214sW\234\371"
  2463      6064E861 
  2463      6060B063 
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2471      DF392333 
  2471      29D33F38 
  2472 00a6 B844BFA8 		.ascii	"\270D\277\250\004L\347\026\247\353%3\360\373\246\026"
-ARM GAS  /tmp/ccUpTyAp.s 			page 60
+ARM GAS  /tmp/ccaRoubj.s 			page 60
 
 
  2472      044CE716 
@@ -3550,7 +3550,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2473      000079ED 
  2474 00c6 4214     		.ascii	"B\024"
  2475              		.text
- 2476              		.section	.gnu.lto_.symbol_nodes.5ef570ab2d1bd1f1,"",%progbits
+ 2476              		.section	.gnu.lto_.symbol_nodes.67659286f1591988,"",%progbits
  2477 0000 789C758F 		.ascii	"x\234u\2179\016\302@\014E\377\217\023\302&\220(HG\020"
  2477      390EC240 
  2477      0C45FF8F 
@@ -3598,12 +3598,12 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2486 00a7 62916E85 		.ascii	"b\221n\2053K)-\346\304\027\177f\207\303"
  2486      334B292D 
  2486      E6C4177F 
-ARM GAS  /tmp/ccUpTyAp.s 			page 61
+ARM GAS  /tmp/ccaRoubj.s 			page 61
 
 
  2486      6687C3
  2487              		.text
- 2488              		.section	.gnu.lto_.refs.5ef570ab2d1bd1f1,"",%progbits
+ 2488              		.section	.gnu.lto_.refs.67659286f1591988,"",%progbits
  2489 0000 789C05C1 		.ascii	"x\234\005\301\261\021\000 \014\003\261\2671\341hH\231"
  2489      B1110020 
  2489      0C03B1B7 
@@ -3616,7 +3616,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2490      0107
  2491 0023 420072   		.ascii	"B\000r"
  2492              		.text
- 2493              		.section	.gnu.lto_.decls.5ef570ab2d1bd1f1,"",%progbits
+ 2493              		.section	.gnu.lto_.decls.67659286f1591988,"",%progbits
  2494 0000 789CB55B 		.ascii	"x\234\265[\013P\224\331\225\376\357\177\233\356\246"
  2494      0B5094D9 
  2494      95FEEF7F 
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2502      ED40BB80 
  2502      BA04F6A7 
  2502      04EA01
-ARM GAS  /tmp/ccUpTyAp.s 			page 62
+ARM GAS  /tmp/ccaRoubj.s 			page 62
 
 
  2503 009f EA071A07 		.ascii	"\352\007\032\007\272\015t\010\011B\034\320I\240L \""
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2514      B8BE05E4 
  2514      0EF4B7
  2515 016e 22EBDF6F 		.ascii	"\"\353\337o9\234\020\217\321\211\376\225\010\247\375"
-ARM GAS  /tmp/ccUpTyAp.s 			page 63
+ARM GAS  /tmp/ccaRoubj.s 			page 63
 
 
  2515      399C108F 
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2526      3C2FCC5F 
  2526      2956C988 
  2527 0246 7D7739A2 		.ascii	"}w9\242=2\322te\340x\216\013\263\237\010l\367\300\275"
-ARM GAS  /tmp/ccUpTyAp.s 			page 64
+ARM GAS  /tmp/ccaRoubj.s 			page 64
 
 
  2527      3D32D274 
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2538 0312 0B6D05C3 		.ascii	"\013m\005\303c\301 T?K\244_7\331\223\255\355h\034\215"
  2538      63C12054 
  2538      3F4BA45F 
-ARM GAS  /tmp/ccUpTyAp.s 			page 65
+ARM GAS  /tmp/ccaRoubj.s 			page 65
 
 
  2538      37D993AD 
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2550      87B0F437 
  2550      91213D0C 
  2550      81EA
-ARM GAS  /tmp/ccUpTyAp.s 			page 66
+ARM GAS  /tmp/ccaRoubj.s 			page 66
 
 
  2551 03f8 E4918046 		.ascii	"\344\221\200F\241\3030O\017\244\005\204^m\252\231v\222"
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2562      C3734911 
  2562      729CC1BA 
  2562      A7
-ARM GAS  /tmp/ccUpTyAp.s 			page 67
+ARM GAS  /tmp/ccaRoubj.s 			page 67
 
 
  2563 04db D71C4AE2 		.ascii	"\327\034J\342\033\214\022\330\345\362\373\251r\234\317"
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2574      E1966267 
  2574      3CC098AA 
  2574      A7
-ARM GAS  /tmp/ccUpTyAp.s 			page 68
+ARM GAS  /tmp/ccaRoubj.s 			page 68
 
 
  2575 05b0 C7AB5CF0 		.ascii	"\307\253\\\360\030c:&\327\027T\370.c\256\207\234\002"
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2586      1F63CE87 
  2586      479C45D6 
  2586      E4A65B97 
-ARM GAS  /tmp/ccUpTyAp.s 			page 69
+ARM GAS  /tmp/ccaRoubj.s 			page 69
 
 
  2586      5B1D
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2598 0752 31B7DBBA 		.ascii	"1\267\333\272\"\021\013\266\357\000[^}\355\256\202\005"
  2598      22110BB6 
  2598      EF005B5E 
-ARM GAS  /tmp/ccUpTyAp.s 			page 70
+ARM GAS  /tmp/ccaRoubj.s 			page 70
 
 
  2598      7DEDAE82 
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2610      59158237 
  2610      6C7D5029 
  2610      8D745370 
-ARM GAS  /tmp/ccUpTyAp.s 			page 71
+ARM GAS  /tmp/ccaRoubj.s 			page 71
 
 
  2610      9361815D 
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2622      40DD52C3 
  2622      AE
  2623 0907 75B866D2 		.ascii	"u\270f\322\230]\207\323\331\376\227\214\306\340K\355"
-ARM GAS  /tmp/ccUpTyAp.s 			page 72
+ARM GAS  /tmp/ccaRoubj.s 			page 72
 
 
  2623      985D87D3 
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2634      E821D003 
  2634      A0
  2635 09d2 FB40B780 		.ascii	"\373@\267\200\306\201FM\264\377#\323\0366\273N\260\373"
-ARM GAS  /tmp/ccUpTyAp.s 			page 73
+ARM GAS  /tmp/ccaRoubj.s 			page 73
 
 
  2635      C681464D 
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2646      80AE9A4F 
  2646      68E237C6 
  2647 0aa5 F98472B8 		.ascii	"\371\204r\270q>!\242\031|\341\327L\372\034\300\302-"
-ARM GAS  /tmp/ccUpTyAp.s 			page 74
+ARM GAS  /tmp/ccaRoubj.s 			page 74
 
 
  2647      713E21A2 
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2658      B464B162 
  2658      2C0E8683 
  2658      1F986E47 
-ARM GAS  /tmp/ccUpTyAp.s 			page 75
+ARM GAS  /tmp/ccaRoubj.s 			page 75
 
 
  2658      56E092
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2669      4E26CA18 
  2670 0c45 478CC5D2 		.ascii	"G\214\305\322z\362jgB\253~\300\331{\230V*\001\201b\260"
  2670      7AF26A67 
-ARM GAS  /tmp/ccUpTyAp.s 			page 76
+ARM GAS  /tmp/ccaRoubj.s 			page 76
 
 
  2670      42AB7EC0 
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2681      17
  2682 0d1b A5BA11BC 		.ascii	"\245\272\021\274Q\267\014\252\333)\275nE'\216\217;\030"
  2682      51B70CAA 
-ARM GAS  /tmp/ccUpTyAp.s 			page 77
+ARM GAS  /tmp/ccaRoubj.s 			page 77
 
 
  2682      DB29BD6E 
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2693      7733A6FA 
  2693      C8F45164 
  2693      3D484BB0 
-ARM GAS  /tmp/ccUpTyAp.s 			page 78
+ARM GAS  /tmp/ccaRoubj.s 			page 78
 
 
  2694 0dfc 62332E0F 		.ascii	"b3.\017y>\214\320fw7\226\232nT\331=+!\271\373\002\266"
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2705 0ecd B4291FF6 		.ascii	"\264)\037\366\367!v\344l\000H\275\304\350\265\314\350"
  2705      F72176E4 
  2705      6C0048BD 
-ARM GAS  /tmp/ccUpTyAp.s 			page 79
+ARM GAS  /tmp/ccaRoubj.s 			page 79
 
 
  2705      C4E8B5CC 
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2717      467DE09B 
  2717      61EEA741 
  2717      B8BF89DD 
-ARM GAS  /tmp/ccUpTyAp.s 			page 80
+ARM GAS  /tmp/ccaRoubj.s 			page 80
 
 
  2718 0fb0 D110D028 		.ascii	"\321\020\320(\320\000\320\015lZ\027\231n\347G*\310}"
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2729      CD536696 
  2729      B33645BD 
  2729      E512DA4A 
-ARM GAS  /tmp/ccUpTyAp.s 			page 81
+ARM GAS  /tmp/ccaRoubj.s 			page 81
 
 
  2730 1084 F8263596 		.ascii	"\370&5\226\230\334TZ-\032r<\244\234\316\260$\222r\246"
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2741      DC876430 
  2741      4392C102 
  2741      87935878 
-ARM GAS  /tmp/ccUpTyAp.s 			page 82
+ARM GAS  /tmp/ccaRoubj.s 			page 82
 
 
  2742 1167 B1F01462 		.ascii	"\261\360\024b`\011\3501\3202\3203\240\347\206\230\270"
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2753      05741686 
  2753      38434CBC 
  2753      CEF1
-ARM GAS  /tmp/ccUpTyAp.s 			page 83
+ARM GAS  /tmp/ccaRoubj.s 			page 83
 
 
  2754 1245 C4C431B2 		.ascii	"\304\3041\262\315\350\240\314\035E\003\305\002\035\000"
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2765 1312 1C94D95C 		.ascii	"\034\224\331\\\016G\364\313\341\022}\225A\263\0039q"
  2765      0E47F4CB 
  2765      E1127D95 
-ARM GAS  /tmp/ccUpTyAp.s 			page 84
+ARM GAS  /tmp/ccaRoubj.s 			page 84
 
 
  2765      41B30339 
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2776      E028FBDA 
  2777 13e9 22DD7289 		.ascii	"\"\335r\211\220S\224TX\212\015e\365K$\361\346x\203\235"
  2777      90539454 
-ARM GAS  /tmp/ccUpTyAp.s 			page 85
+ARM GAS  /tmp/ccaRoubj.s 			page 85
 
 
  2777      588A0D65 
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2789      37AC9DCA 
  2789      729282C9 
  2789      8A3782CF 
-ARM GAS  /tmp/ccUpTyAp.s 			page 86
+ARM GAS  /tmp/ccaRoubj.s 			page 86
 
 
  2789      71F0
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2801      CEB35AC6 
  2801      27FAF0D1 
  2801      AD3A3BAE 
-ARM GAS  /tmp/ccUpTyAp.s 			page 87
+ARM GAS  /tmp/ccaRoubj.s 			page 87
 
 
  2801      D47A
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2813      0972AD8F 
  2814 1681 46EDE9FD 		.ascii	"F\355\351\375\375\2571\224\340\010\227m\036\352\275"
  2814      FDAF3194 
-ARM GAS  /tmp/ccUpTyAp.s 			page 88
+ARM GAS  /tmp/ccaRoubj.s 			page 88
 
 
  2814      E008976D 
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2826 174c BBE5EA2F 		.ascii	"\273\345\352/\210\030\371\027ZP>\010.\301j\377 \273"
  2826      8818F917 
  2826      5A503E08 
-ARM GAS  /tmp/ccUpTyAp.s 			page 89
+ARM GAS  /tmp/ccaRoubj.s 			page 89
 
 
  2826      2EC16AFF 
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2838      0C00FB6B 
  2838      DFFF3F88 
  2838      80EED4
-ARM GAS  /tmp/ccUpTyAp.s 			page 90
+ARM GAS  /tmp/ccaRoubj.s 			page 90
 
 
  2839 1828 BFBE81F6 		.ascii	"\277\276\201\366\006g\300t\374\203 \026\225\334~\332"
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2850      7BF2D8D7 
  2851 18f5 9FAC0768 		.ascii	"\237\254\007h\")\201\\\211\011\000\302,A\032\3649d\217"
  2851      2229815C 
-ARM GAS  /tmp/ccUpTyAp.s 			page 91
+ARM GAS  /tmp/ccaRoubj.s 			page 91
 
 
  2851      890900C2 
@@ -5453,12 +5453,12 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2861      BFFBAA98 
  2861      A9
  2862              		.text
- 2863              		.section	.gnu.lto_.symtab.5ef570ab2d1bd1f1,"",%progbits
+ 2863              		.section	.gnu.lto_.symtab.67659286f1591988,"",%progbits
  2864 0000 70617474 		.ascii	"patternmsg\000"
  2864      65726E6D 
  2864      736700
  2865 000b 00       		.ascii	"\000"
-ARM GAS  /tmp/ccUpTyAp.s 			page 92
+ARM GAS  /tmp/ccaRoubj.s 			page 92
 
 
  2866 000c 00       		.ascii	"\000"
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2904 00a5 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
  2904      00000000 
  2905 00ad E4000000 		.ascii	"\344\000\000\000"
-ARM GAS  /tmp/ccUpTyAp.s 			page 93
+ARM GAS  /tmp/ccaRoubj.s 			page 93
 
 
  2906 00b1 63684D73 		.ascii	"chMsgRelease\000"
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2934      7263683D 
  2934      61726D76 
  2935 0099 65722720 		.ascii	"er' '-falign-functions=16' '-ffunction-sections' '-"
-ARM GAS  /tmp/ccUpTyAp.s 			page 94
+ARM GAS  /tmp/ccaRoubj.s 			page 94
 
 
  2935      272D6661 
@@ -5594,12 +5594,12 @@ ARM GAS  /tmp/ccUpTyAp.s 			page 1
  2938              		.comm	__gnu_lto_v1,1,1
  2939              		.comm	__gnu_lto_slim,1,1
  2940              		.ident	"GCC: (Arch Repository) 8.3.0"
-ARM GAS  /tmp/ccUpTyAp.s 			page 95
+ARM GAS  /tmp/ccaRoubj.s 			page 95
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 testmsg.c
-     /tmp/ccUpTyAp.s:34     .gnu.debuglto_.debug_info:0000000000000000 testmsg.c.cc9dfab8
+     /tmp/ccaRoubj.s:34     .gnu.debuglto_.debug_info:0000000000000000 testmsg.c.cc9dfab8
                             *COM*:0000000000000001 __gnu_lto_v1
                             *COM*:0000000000000001 __gnu_lto_slim
 
