@@ -9,6 +9,8 @@ uart = UART(3, 115200, timeout_char=1)  # init with given baudrate
 color = [[0,0,0,0,0,0]]
 cl = (0,0,0)
 
+GAIN_SCALE = 0.1
+
 #color = [[58, 87, 18, 65, -10, 52]]
 color = [(17, 25, 13, 42, 22, 37)]
 color = [(30, 90, 56, 87, 50, 75)]
@@ -20,6 +22,7 @@ zltabranka = [(34, 51, -12, 22, 41, 63)]
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.CIF)
+<<<<<<< HEAD
 sensor.set_auto_gain(False, 9) # must be turned off for color tracking
 sensor.set_auto_whitebal(False) # must be turned off for color tracking
 sensor.set_auto_exposure(False, 30000000)
@@ -43,6 +46,20 @@ def vbrane(area):
     if area > 7500:
         return True
     return False
+=======
+sensor.skip_frames(time = 2000)
+clock = time.clock()
+
+sensor.set_auto_whitebal(False)
+sensor.set_auto_exposure(False)
+sensor.skip_frames(time = 500)
+
+current_gain_in_decibels =  sensor.get_gain_db()
+sensor.set_auto_gain(False, \
+    gain_db = current_gain_in_decibels * GAIN_SCALE)
+
+
+>>>>>>> e70b03c78425fefbdef0bf6d58f85f436e9bec57
 
 def cal():
     tres = [0, 0, 0, 0, 0, 0]

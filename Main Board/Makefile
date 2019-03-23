@@ -116,6 +116,7 @@ CSRC = $(STARTUPSRC) \
        main.c \
        config.c \
        motor.c \
+       analog.c \
        includes/chprintf.c \
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
