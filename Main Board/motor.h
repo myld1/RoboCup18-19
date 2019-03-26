@@ -20,7 +20,7 @@
 
 void set_motor_state(int8_t dir,int8_t num);
 void move_motor(int8_t motor_number, int16_t speed);
-void calculate_speed(double vect, int8_t percent);
+void calculate_speed(double vect, double brana, int8_t percent);
 void set_motor_off(int8_t motor_number);
 void set_motors_off(void);
 void encoder_pulse_captured(ICUDriver *icup);

@@ -3,6 +3,7 @@
 #include "includes/chprintf.h"
 
 double get_camera_output() {
-    double output = 0.5;//sdGet(&SD1)/10000;
+    int8_t output = sdGet(&SD1);
+    //chprintf((BaseSequentialStream*)&SD1,"%d \r\n", output);
     return output;
 }

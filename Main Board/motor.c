@@ -19,7 +19,7 @@ int16_t period[3];
 void motor_tick(void *i);
 
 void timer_reset(int8_t sender) {
-    switch(sender) {
+    /*switch(sender) {
         case 0:
             chSysLockFromISR();
             chVTResetI(&main_timer[sender]);
@@ -38,11 +38,11 @@ void timer_reset(int8_t sender) {
             chVTSetI(&main_timer[sender], MS2ST(15), motor_tick, &MOTOR_2);
             chSysUnlockFromISR();
             break;
-    }
+    }*/
 }
 
 void encoder_pulse_captured(ICUDriver *icup) {
-    int16_t period_width = 1000000/icuGetPeriodX(icup);
+    /*int16_t period_width = 1000000/icuGetPeriodX(icup);
     int16_t period_calc = (1848*period_width-281984)/1667;
 
     //ICUD sender
@@ -55,8 +55,8 @@ void encoder_pulse_captured(ICUDriver *icup) {
         sender = 2;
     }   
     if (sender >= 0) {
-        palClearPad(GPIOA, GPIOA_LED_GREEN);
-        main_visualizer[sender] = 1;
+        //palClearPad(GPIOA, GPIOA_LED_GREEN);
+        //main_visualizer[sender] = 1;
   
         // stats
         rotations_per_sec[sender] = period_width;
@@ -68,7 +68,8 @@ void encoder_pulse_captured(ICUDriver *icup) {
             pwmEnableChannel(&PWMD1, sender, --motor_actual_speeds[sender]);
         }
     }
-    timer_reset(sender);
+    //timer_reset(sender);
+    */
 }
 
 void move_motor(int8_t motor_number, int16_t speed) {
@@ -87,7 +88,7 @@ void move_motor(int8_t motor_number, int16_t speed) {
         motor_actual_speeds[motor_number] = speed;
     } 
 
-    switch(motor_number) {
+    /*switch(motor_number) {
         case 0:
             chVTReset(&main_timer[motor_number]);
             chVTSet(&main_timer[motor_number], MS2ST(15), motor_tick, &MOTOR_0);
@@ -100,13 +101,13 @@ void move_motor(int8_t motor_number, int16_t speed) {
             chVTReset(&main_timer[motor_number]);
             chVTSet(&main_timer[motor_number], MS2ST(15), motor_tick, &MOTOR_2);
             break;
-    }
+    }*/
    
 }
 
 /*void motor_checker(int8_t motor_number) {
     if(main_timer[motor_number] < 0 && motor_actual_speeds[motor_number] != 0) {
-    pwmEnableChannel(&PWMD1, motor_number, ++motor_actual_speeds[motor_number]);
+    pwmEnableChannel(&PWMD1, motor_number, ++motor_actual_spee4ds[motor_number]);
     } else { return; }
     motor_checker(motor_number);
     chprintf(&SD1, "%d \r\n", motor_actual_speeds[motor_number]);
@@ -157,7 +158,11 @@ void timer_init() {
     }
 }
  
-void calculate_speed(double smer, int8_t percent) {
+void calculate_speed(double smer, double brana, int8_t percent) {
+    brana /= 20;
+    chprintf((BaseSequentialStream*)&SD1,"%d : %d \r\n", (int)smer, (int)brana);
+    // calculate move angle
+    smer /= 127;
     if (percent <= 100 && percent > 0) {
         if(smer != -2) {
             double smer_motor = -1;
@@ -165,10 +170,11 @@ void calculate_speed(double smer, int8_t percent) {
                 smer_motor += MOTOR_CONST;
                 double speed = truncl(sin(((double)smer_motor-(double)smer)*(double)PI) * 17 * percent);
                 speed += ((speed < 0) ? speed*-1 : speed) < 5 ? -speed : (speed < 0 ? -300 : 300);
-                speed *= i == 2 ? 1.2 : 1;
-                move_motor(i,speed);
-                chprintf((BaseSequentialStream*)&SD1,"%d : %d \r\n", i, (int)speed);
+                //speed *= i == 2 ? 1.2 : 1;
+                move_motor(i,speed+brana);
+                chprintf((BaseSequentialStream*)&SD1,"%d ", (int)speed);
             }
+            chprintf((BaseSequentialStream*)&SD1,"\r\n");
         } else {
             set_motors_off();
         }
