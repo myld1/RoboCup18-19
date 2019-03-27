@@ -70,21 +70,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  25 .comment      0000001d  00000000  00000000  00020863  2**0
                   CONTENTS, READONLY
- 26 .debug_info   0004c9c7  00000000  00000000  00020880  2**0
+ 26 .debug_info   0004c8ee  00000000  00000000  00020880  2**0
                   CONTENTS, READONLY, DEBUGGING
- 27 .debug_abbrev 00009084  00000000  00000000  0006d247  2**0
+ 27 .debug_abbrev 00009075  00000000  00000000  0006d16e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 28 .debug_line   0001242e  00000000  00000000  000762cb  2**0
+ 28 .debug_line   0001241d  00000000  00000000  000761e3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 29 .debug_str    00004edd  00000000  00000000  000886f9  2**0
+ 29 .debug_str    00004edd  00000000  00000000  00088600  2**0
                   CONTENTS, READONLY, DEBUGGING
- 30 .debug_loc    00005179  00000000  00000000  0008d5d6  2**0
+ 30 .debug_loc    00005179  00000000  00000000  0008d4dd  2**0
                   CONTENTS, READONLY, DEBUGGING
- 31 .debug_aranges 00000250  00000000  00000000  0009274f  2**0
+ 31 .debug_aranges 00000250  00000000  00000000  00092656  2**0
                   CONTENTS, READONLY, DEBUGGING
- 32 .debug_ranges 00002bc8  00000000  00000000  0009299f  2**0
+ 32 .debug_ranges 00002b68  00000000  00000000  000928a6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 33 .debug_frame  00000d78  00000000  00000000  00095568  2**2
+ 33 .debug_frame  00000d78  00000000  00000000  00095410  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -1685,101 +1685,101 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 0003bb25 l       .debug_info	00000000 
 0003bb25 l       .debug_info	00000000 
 0003bb25 l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003db8e l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0003fca5 l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-0004211d l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
-00044420 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003da95 l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+0003fbac l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00042024 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
+00044327 l       .debug_info	00000000 
 00006403  w      .debug_info	00000000 .hidden chsem.c.d6dc95fc
 08000b44 g     F .text	00000012 .hidden __aeabi_dcmple
-0004211d  w      .debug_info	00000000 .hidden analog.c.5f8ea2ff
+00042024  w      .debug_info	00000000 .hidden analog.c.5f8ea2ff
 00000000  w      .debug_info	00000000 .hidden crt1.c.405e5b9d
 080033b0 g     F .text	00000044 chThdExit
 08000a80 g     F .text	0000007a .hidden __cmpdf2
@@ -1807,7 +1807,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 20000fa0 g       .ram0	00000000 __ram0_free__
 08003580 g     F .text	00000004 truncl
 20000fa0 g       .heap	00000000 __heap_base__
-0003db8e  w      .debug_info	00000000 .hidden config.c.7649b8ba
+0003da95  w      .debug_info	00000000 .hidden config.c.7649b8ba
 080045e0 g     F .text	00000108 floor
 00011b4f  w      .debug_info	00000000 .hidden hal_buffers.c.40e15258
 08000b0c g     F .text	00000010 .hidden __aeabi_cdcmple
@@ -1868,7 +1868,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 08000c70 g     F .text	0000006e .hidden __gtsf2
 08004d44 g       *ABS*	00000000 __ram6_init_text__
 080002cc g     F .text	00000276 .hidden __aeabi_dadd
-00044420  w      .debug_info	00000000 .hidden comunication.c.c159f559
+00044327  w      .debug_info	00000000 .hidden comunication.c.c159f559
 08000a78 g     F .text	00000082 .hidden __ledf2
 00000000 g       .ram3	00000000 __ram3_clear__
 080034b0 g     F .text	00000002 __default_exit
@@ -1886,7 +1886,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 0000da80  w      .debug_info	00000000 .hidden chcore_v7m.c.1c647813
 08000b6c g     F .text	00000012 .hidden __aeabi_dcmpgt
 00000000 g       .ram6	00000000 __ram6_noinit__
-0003fca5  w      .debug_info	00000000 .hidden motor.c.c8e7034b
+0003fbac  w      .debug_info	00000000 .hidden motor.c.c8e7034b
 00000000 g       .ram4_init	00000000 __ram4_init__
 00002ad5  w      .debug_info	00000000 .hidden chschd.c.6292d637
 08000b58 g     F .text	00000012 .hidden __aeabi_dcmpge
@@ -1920,7 +1920,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 00000000 g       *ABS*	00000000 __ram2_size__
 08000c80 g     F .text	0000005e .hidden __cmpsf2
 00000000 g       startup	00000000 __ram1_start__
-08002a70 g     F .text	0000087c main
+08002a70 g     F .text	00000878 main
 00000000 g       *ABS*	00000000 __ram6_size__
 08000c78 g     F .text	00000066 .hidden __ltsf2
 08004d44 g       *ABS*	00000000 __ram2_init_text__
@@ -1951,7 +1951,6 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 20000fa0 g       .ram0	00000000 __ram0_clear__
 08000cf8 g     F .text	00000012 .hidden __aeabi_fcmpeq
 080046f0 g     F .text	000000f4 scalbn
-0003bb25  w      .debug_info	00000000 .hidden main.c.93cc8cff
 0003a09b  w      .debug_info	00000000 .hidden chprintf.c.0896cf81
 00000000 g       .ram3	00000000 __ram3_noinit__
 08000ce0 g     F .text	00000018 .hidden __aeabi_cfrcmple
@@ -1960,6 +1959,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 08003440 g     F .text	00000068 __init_ram_areas
 000103db  w      .debug_info	00000000 .hidden st.c.1aac281a
 00000000 g       startup	00000000 __ram2_start__
+0003bb25  w      .debug_info	00000000 .hidden main.c.fc207770
 00006f6e  w      .debug_info	00000000 .hidden chmtx.c.d99a3b3c
 080002b0 g     F .text	00000000 _port_switch_from_isr
 00000000 g       *ABS*	00000000 __ram7_end__

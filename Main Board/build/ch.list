@@ -5538,9 +5538,9 @@ void calculate_speed(double smer, double brana, int8_t percent) {
  8002830:	f7fd ff06 	bl	8000640 <__aeabi_dmul>
  8002834:	e9cd 0100 	strd	r0, r1, [sp]
     /*if (brana < -20) {
-        brana -= 20;
+        brana -= 10;
     }  else if (brana > 20) {
-        brana += 20;
+        brana += 10;
     }*/
     chprintf((BaseSequentialStream*)&SD1,"%d : %d \r\n", (int)smer, (int)brana);
  8002838:	f7fe f9a2 	bl	8000b80 <__aeabi_d2iz>
@@ -6452,14 +6452,14 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
   (void)u->DR;  /* SR reset step 2.*/
  8002eaa:	6852      	ldr	r2, [r2, #4]
   sdp->state = SD_READY;
- 8002eac:	4ab2      	ldr	r2, [pc, #712]	; (8003178 <main+0x708>)
+ 8002eac:	4ab1      	ldr	r2, [pc, #708]	; (8003174 <main+0x704>)
  8002eae:	2002      	movs	r0, #2
  8002eb0:	7210      	strb	r0, [r2, #8]
  8002eb2:	f383 8811 	msr	BASEPRI, r3
   PWMD1.channels = STM32_TIM1_CHANNELS;
  8002eb6:	2004      	movs	r0, #4
   PWMD1.tim = STM32_TIM1;
- 8002eb8:	4ab0      	ldr	r2, [pc, #704]	; (800317c <main+0x70c>)
+ 8002eb8:	4aaf      	ldr	r2, [pc, #700]	; (8003178 <main+0x708>)
  8002eba:	61b2      	str	r2, [r6, #24]
   pwmp->state    = PWM_STOP;
  8002ebc:	7031      	strb	r1, [r6, #0]
@@ -6472,14 +6472,14 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
  8002ec4:	2220      	movs	r2, #32
  8002ec6:	f382 8811 	msr	BASEPRI, r2
   pwmp->config = config;
- 8002eca:	49ad      	ldr	r1, [pc, #692]	; (8003180 <main+0x710>)
+ 8002eca:	49ac      	ldr	r1, [pc, #688]	; (800317c <main+0x70c>)
   if (pwmp->state == PWM_STOP) {
  8002ecc:	7832      	ldrb	r2, [r6, #0]
   pwmp->period = config->period;
  8002ece:	684c      	ldr	r4, [r1, #4]
  8002ed0:	2a01      	cmp	r2, #1
  8002ed2:	e9c6 1401 	strd	r1, r4, [r6, #4]
- 8002ed6:	f000 81cd 	beq.w	8003274 <main+0x804>
+ 8002ed6:	f000 81cb 	beq.w	8003270 <main+0x800>
     pwmp->tim->CR1    = 0;                  /* Timer disabled.              */
  8002eda:	69b2      	ldr	r2, [r6, #24]
  8002edc:	6013      	str	r3, [r2, #0]
@@ -6518,32 +6518,32 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
   pwmp->tim->CR2  = pwmp->config->cr2;
  8002f04:	6055      	str	r5, [r2, #4]
   switch (pwmp->config->channels[0].mode & PWM_OUTPUT_MASK) {
- 8002f06:	f000 8123 	beq.w	8003150 <main+0x6e0>
+ 8002f06:	f000 8122 	beq.w	800314e <main+0x6de>
  8002f0a:	2b02      	cmp	r3, #2
- 8002f0c:	f000 8121 	beq.w	8003152 <main+0x6e2>
+ 8002f0c:	f000 8120 	beq.w	8003150 <main+0x6e0>
   ccer = 0;
  8002f10:	2300      	movs	r3, #0
   switch (pwmp->config->channels[1].mode & PWM_OUTPUT_MASK) {
  8002f12:	6948      	ldr	r0, [r1, #20]
  8002f14:	f000 000f 	and.w	r0, r0, #15
  8002f18:	2801      	cmp	r0, #1
- 8002f1a:	f000 811f 	beq.w	800315c <main+0x6ec>
+ 8002f1a:	f000 811e 	beq.w	800315a <main+0x6ea>
  8002f1e:	2802      	cmp	r0, #2
- 8002f20:	f000 811a 	beq.w	8003158 <main+0x6e8>
+ 8002f20:	f000 8119 	beq.w	8003156 <main+0x6e6>
   switch (pwmp->config->channels[2].mode & PWM_OUTPUT_MASK) {
  8002f24:	69c8      	ldr	r0, [r1, #28]
  8002f26:	f000 000f 	and.w	r0, r0, #15
  8002f2a:	2801      	cmp	r0, #1
- 8002f2c:	f000 811b 	beq.w	8003166 <main+0x6f6>
+ 8002f2c:	f000 811a 	beq.w	8003164 <main+0x6f4>
  8002f30:	2802      	cmp	r0, #2
- 8002f32:	f000 8116 	beq.w	8003162 <main+0x6f2>
+ 8002f32:	f000 8115 	beq.w	8003160 <main+0x6f0>
   switch (pwmp->config->channels[3].mode & PWM_OUTPUT_MASK) {
  8002f36:	6a48      	ldr	r0, [r1, #36]	; 0x24
  8002f38:	f000 000f 	and.w	r0, r0, #15
  8002f3c:	2801      	cmp	r0, #1
- 8002f3e:	f000 8117 	beq.w	8003170 <main+0x700>
+ 8002f3e:	f000 8116 	beq.w	800316e <main+0x6fe>
  8002f42:	2802      	cmp	r0, #2
- 8002f44:	f000 8112 	beq.w	800316c <main+0x6fc>
+ 8002f44:	f000 8111 	beq.w	800316a <main+0x6fa>
   pwmp->tim->DIER  = pwmp->config->dier &   /* DMA-related DIER settings.   */
  8002f48:	6b09      	ldr	r1, [r1, #48]	; 0x30
   pwmp->tim->CCER  = ccer;
@@ -6579,8 +6579,8 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
  8002f76:	2520      	movs	r5, #32
  8002f78:	f385 8811 	msr	BASEPRI, r5
   icup->config = config;
- 8002f7c:	f8df a220 	ldr.w	sl, [pc, #544]	; 80031a0 <main+0x730>
- 8002f80:	4b80      	ldr	r3, [pc, #512]	; (8003184 <main+0x714>)
+ 8002f7c:	f8df a21c 	ldr.w	sl, [pc, #540]	; 800319c <main+0x72c>
+ 8002f80:	4b7f      	ldr	r3, [pc, #508]	; (8003180 <main+0x710>)
  8002f82:	f8ca 3004 	str.w	r3, [sl, #4]
   icu_lld_start(icup);
  8002f86:	4650      	mov	r0, sl
@@ -6590,8 +6590,8 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
  8002f90:	f384 8811 	msr	BASEPRI, r4
  8002f94:	f385 8811 	msr	BASEPRI, r5
   icup->config = config;
- 8002f98:	f8df 9208 	ldr.w	r9, [pc, #520]	; 80031a4 <main+0x734>
- 8002f9c:	4b7a      	ldr	r3, [pc, #488]	; (8003188 <main+0x718>)
+ 8002f98:	f8df 9204 	ldr.w	r9, [pc, #516]	; 80031a0 <main+0x730>
+ 8002f9c:	4b79      	ldr	r3, [pc, #484]	; (8003184 <main+0x714>)
  8002f9e:	f8c9 3004 	str.w	r3, [r9, #4]
   icu_lld_start(icup);
  8002fa2:	4648      	mov	r0, r9
@@ -6601,8 +6601,8 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
  8002fac:	f384 8811 	msr	BASEPRI, r4
  8002fb0:	f385 8811 	msr	BASEPRI, r5
   icup->config = config;
- 8002fb4:	4e75      	ldr	r6, [pc, #468]	; (800318c <main+0x71c>)
- 8002fb6:	4b76      	ldr	r3, [pc, #472]	; (8003190 <main+0x720>)
+ 8002fb4:	4e74      	ldr	r6, [pc, #464]	; (8003188 <main+0x718>)
+ 8002fb6:	4b75      	ldr	r3, [pc, #468]	; (800318c <main+0x71c>)
  8002fb8:	6073      	str	r3, [r6, #4]
   icu_lld_start(icup);
  8002fba:	4630      	mov	r0, r6
@@ -6629,13 +6629,13 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
     palSetGroupMode(GPIOA, PAL_PORT_BIT(1) | PAL_PORT_BIT(2),
  8002fda:	2203      	movs	r2, #3
  8002fdc:	2106      	movs	r1, #6
- 8002fde:	486d      	ldr	r0, [pc, #436]	; (8003194 <main+0x724>)
+ 8002fde:	486c      	ldr	r0, [pc, #432]	; (8003190 <main+0x720>)
  8002fe0:	f7fe f8c6 	bl	8001170 <_pal_lld_setgroupmode>
                     0, PAL_MODE_INPUT_ANALOG);
     palSetGroupMode(GPIOB, PAL_PORT_BIT(1) | PAL_PORT_BIT(2),
  8002fe4:	2203      	movs	r2, #3
  8002fe6:	2106      	movs	r1, #6
- 8002fe8:	486b      	ldr	r0, [pc, #428]	; (8003198 <main+0x728>)
+ 8002fe8:	486a      	ldr	r0, [pc, #424]	; (8003194 <main+0x724>)
  8002fea:	f7fe f8c1 	bl	8001170 <_pal_lld_setgroupmode>
  8002fee:	f385 8811 	msr	BASEPRI, r5
   if (adcp->state == ADC_STOP) {
@@ -6643,404 +6643,398 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
   adcp->config = config;
  8002ff4:	607c      	str	r4, [r7, #4]
  8002ff6:	2b01      	cmp	r3, #1
- 8002ff8:	f000 80e4 	beq.w	80031c4 <main+0x754>
+ 8002ff8:	f000 80e2 	beq.w	80031c0 <main+0x750>
   adcp->state = ADC_READY;
- 8002ffc:	f04f 0802 	mov.w	r8, #2
- 8003000:	f887 8000 	strb.w	r8, [r7]
- 8003004:	2400      	movs	r4, #0
- 8003006:	f384 8811 	msr	BASEPRI, r4
+ 8002ffc:	2602      	movs	r6, #2
+ 8002ffe:	703e      	strb	r6, [r7, #0]
+ 8003000:	2500      	movs	r5, #0
+ 8003002:	f385 8811 	msr	BASEPRI, r5
  *          temperature sensor and internal reference voltage.
  * @note    This is an STM32-only functionality.
  */
 void adcSTM32EnableTSVREFE(void) {
 
   ADC->CCR |= ADC_CCR_TSVREFE;
- 800300a:	4a64      	ldr	r2, [pc, #400]	; (800319c <main+0x72c>)
- 800300c:	6853      	ldr	r3, [r2, #4]
- 800300e:	f443 0300 	orr.w	r3, r3, #8388608	; 0x800000
- 8003012:	6053      	str	r3, [r2, #4]
- 8003014:	2620      	movs	r6, #32
- 8003016:	f386 8811 	msr	BASEPRI, r6
+ 8003006:	4a64      	ldr	r2, [pc, #400]	; (8003198 <main+0x728>)
+ 8003008:	6853      	ldr	r3, [r2, #4]
+ 800300a:	f443 0300 	orr.w	r3, r3, #8388608	; 0x800000
+ 800300e:	6053      	str	r3, [r2, #4]
+ 8003010:	2420      	movs	r4, #32
+ 8003012:	f384 8811 	msr	BASEPRI, r4
   osalDbgCheck(icup != NULL);
 
   osalSysLock();
   osalDbgAssert((icup->state == ICU_WAITING) || (icup->state == ICU_ACTIVE),
                 "invalid state");
   icuEnableNotificationsI(icup);
- 800301a:	4861      	ldr	r0, [pc, #388]	; (80031a0 <main+0x730>)
- 800301c:	f7fd ffc8 	bl	8000fb0 <icu_lld_enable_notifications>
+ 8003016:	4861      	ldr	r0, [pc, #388]	; (800319c <main+0x72c>)
+ 8003018:	f7fd ffca 	bl	8000fb0 <icu_lld_enable_notifications>
+ 800301c:	f385 8811 	msr	BASEPRI, r5
  8003020:	f384 8811 	msr	BASEPRI, r4
- 8003024:	f386 8811 	msr	BASEPRI, r6
- 8003028:	485e      	ldr	r0, [pc, #376]	; (80031a4 <main+0x734>)
- 800302a:	f7fd ffc1 	bl	8000fb0 <icu_lld_enable_notifications>
+ 8003024:	485e      	ldr	r0, [pc, #376]	; (80031a0 <main+0x730>)
+ 8003026:	f7fd ffc3 	bl	8000fb0 <icu_lld_enable_notifications>
+ 800302a:	f385 8811 	msr	BASEPRI, r5
  800302e:	f384 8811 	msr	BASEPRI, r4
- 8003032:	f386 8811 	msr	BASEPRI, r6
- 8003036:	4855      	ldr	r0, [pc, #340]	; (800318c <main+0x71c>)
- 8003038:	f7fd ffba 	bl	8000fb0 <icu_lld_enable_notifications>
- 800303c:	f384 8811 	msr	BASEPRI, r4
+ 8003032:	4855      	ldr	r0, [pc, #340]	; (8003188 <main+0x718>)
+ 8003034:	f7fd ffbc 	bl	8000fb0 <icu_lld_enable_notifications>
+ 8003038:	f385 8811 	msr	BASEPRI, r5
     palSetPadMode(GPIOA,15,PAL_MODE_ALTERNATE(7));
- 8003040:	4d54      	ldr	r5, [pc, #336]	; (8003194 <main+0x724>)
-  vtp->vt_func = NULL;
- 8003042:	4f59      	ldr	r7, [pc, #356]	; (80031a8 <main+0x738>)
- 8003044:	f240 3282 	movw	r2, #898	; 0x382
- 8003048:	4628      	mov	r0, r5
- 800304a:	f44f 4100 	mov.w	r1, #32768	; 0x8000
- 800304e:	f7fe f88f 	bl	8001170 <_pal_lld_setgroupmode>
+ 800303c:	f240 3282 	movw	r2, #898	; 0x382
+ 8003040:	f44f 4100 	mov.w	r1, #32768	; 0x8000
+ 8003044:	4852      	ldr	r0, [pc, #328]	; (8003190 <main+0x720>)
+ 8003046:	f7fe f893 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOB,3,PAL_MODE_ALTERNATE(7));
- 8003052:	f240 3282 	movw	r2, #898	; 0x382
- 8003056:	2108      	movs	r1, #8
- 8003058:	484f      	ldr	r0, [pc, #316]	; (8003198 <main+0x728>)
- 800305a:	f7fe f889 	bl	8001170 <_pal_lld_setgroupmode>
+ 800304a:	f240 3282 	movw	r2, #898	; 0x382
+ 800304e:	2108      	movs	r1, #8
+ 8003050:	4850      	ldr	r0, [pc, #320]	; (8003194 <main+0x724>)
+ 8003052:	f7fe f88d 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,10,PAL_MODE_OUTPUT_PUSHPULL);
- 800305e:	2201      	movs	r2, #1
- 8003060:	f44f 6180 	mov.w	r1, #1024	; 0x400
- 8003064:	4851      	ldr	r0, [pc, #324]	; (80031ac <main+0x73c>)
- 8003066:	f7fe f883 	bl	8001170 <_pal_lld_setgroupmode>
+ 8003056:	2201      	movs	r2, #1
+ 8003058:	f44f 6180 	mov.w	r1, #1024	; 0x400
+ 800305c:	4851      	ldr	r0, [pc, #324]	; (80031a4 <main+0x734>)
+ 800305e:	f7fe f887 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,12,PAL_MODE_OUTPUT_PUSHPULL);
- 800306a:	2201      	movs	r2, #1
- 800306c:	f44f 5180 	mov.w	r1, #4096	; 0x1000
- 8003070:	484e      	ldr	r0, [pc, #312]	; (80031ac <main+0x73c>)
- 8003072:	f7fe f87d 	bl	8001170 <_pal_lld_setgroupmode>
+ 8003062:	2201      	movs	r2, #1
+ 8003064:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+ 8003068:	484e      	ldr	r0, [pc, #312]	; (80031a4 <main+0x734>)
+ 800306a:	f7fe f881 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,8,PAL_MODE_ALTERNATE(1));
- 8003076:	4628      	mov	r0, r5
- 8003078:	2282      	movs	r2, #130	; 0x82
- 800307a:	f44f 7180 	mov.w	r1, #256	; 0x100
- 800307e:	f7fe f877 	bl	8001170 <_pal_lld_setgroupmode>
+ 800306e:	2282      	movs	r2, #130	; 0x82
+ 8003070:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 8003074:	4846      	ldr	r0, [pc, #280]	; (8003190 <main+0x720>)
+ 8003076:	f7fe f87b 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,8,PAL_MODE_OUTPUT_PUSHPULL);
- 8003082:	2201      	movs	r2, #1
- 8003084:	f44f 7180 	mov.w	r1, #256	; 0x100
- 8003088:	4848      	ldr	r0, [pc, #288]	; (80031ac <main+0x73c>)
- 800308a:	f7fe f871 	bl	8001170 <_pal_lld_setgroupmode>
+ 800307a:	2201      	movs	r2, #1
+ 800307c:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 8003080:	4848      	ldr	r0, [pc, #288]	; (80031a4 <main+0x734>)
+ 8003082:	f7fe f875 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,9,PAL_MODE_OUTPUT_PUSHPULL);
- 800308e:	2201      	movs	r2, #1
- 8003090:	f44f 7100 	mov.w	r1, #512	; 0x200
- 8003094:	4845      	ldr	r0, [pc, #276]	; (80031ac <main+0x73c>)
- 8003096:	f7fe f86b 	bl	8001170 <_pal_lld_setgroupmode>
+ 8003086:	2201      	movs	r2, #1
+ 8003088:	f44f 7100 	mov.w	r1, #512	; 0x200
+ 800308c:	4845      	ldr	r0, [pc, #276]	; (80031a4 <main+0x734>)
+ 800308e:	f7fe f86f 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,9,PAL_MODE_ALTERNATE(1));
- 800309a:	4628      	mov	r0, r5
- 800309c:	2282      	movs	r2, #130	; 0x82
- 800309e:	f44f 7100 	mov.w	r1, #512	; 0x200
- 80030a2:	f7fe f865 	bl	8001170 <_pal_lld_setgroupmode>
+ 8003092:	2282      	movs	r2, #130	; 0x82
+ 8003094:	f44f 7100 	mov.w	r1, #512	; 0x200
+ 8003098:	483d      	ldr	r0, [pc, #244]	; (8003190 <main+0x720>)
+ 800309a:	f7fe f869 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,5,PAL_MODE_OUTPUT_PUSHPULL);
- 80030a6:	4631      	mov	r1, r6
- 80030a8:	2201      	movs	r2, #1
- 80030aa:	4840      	ldr	r0, [pc, #256]	; (80031ac <main+0x73c>)
- 80030ac:	f7fe f860 	bl	8001170 <_pal_lld_setgroupmode>
+ 800309e:	4621      	mov	r1, r4
+ 80030a0:	2201      	movs	r2, #1
+ 80030a2:	4840      	ldr	r0, [pc, #256]	; (80031a4 <main+0x734>)
+ 80030a4:	f7fe f864 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,6,PAL_MODE_OUTPUT_PUSHPULL);
- 80030b0:	2201      	movs	r2, #1
- 80030b2:	2140      	movs	r1, #64	; 0x40
- 80030b4:	483d      	ldr	r0, [pc, #244]	; (80031ac <main+0x73c>)
- 80030b6:	f7fe f85b 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030a8:	2201      	movs	r2, #1
+ 80030aa:	2140      	movs	r1, #64	; 0x40
+ 80030ac:	483d      	ldr	r0, [pc, #244]	; (80031a4 <main+0x734>)
+ 80030ae:	f7fe f85f 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,10,PAL_MODE_ALTERNATE(1));
- 80030ba:	4628      	mov	r0, r5
- 80030bc:	2282      	movs	r2, #130	; 0x82
- 80030be:	f44f 6180 	mov.w	r1, #1024	; 0x400
- 80030c2:	f7fe f855 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030b2:	2282      	movs	r2, #130	; 0x82
+ 80030b4:	f44f 6180 	mov.w	r1, #1024	; 0x400
+ 80030b8:	4835      	ldr	r0, [pc, #212]	; (8003190 <main+0x720>)
+ 80030ba:	f7fe f859 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,0,PAL_MODE_ALTERNATE(1));
- 80030c6:	2282      	movs	r2, #130	; 0x82
- 80030c8:	2101      	movs	r1, #1
- 80030ca:	f7fe f851 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030be:	2282      	movs	r2, #130	; 0x82
+ 80030c0:	2101      	movs	r1, #1
+ 80030c2:	4833      	ldr	r0, [pc, #204]	; (8003190 <main+0x720>)
+ 80030c4:	f7fe f854 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,1,PAL_MODE_ALTERNATE(2));
- 80030ce:	4641      	mov	r1, r8
- 80030d0:	f44f 7281 	mov.w	r2, #258	; 0x102
- 80030d4:	f7fe f84c 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030c8:	4631      	mov	r1, r6
+ 80030ca:	f44f 7281 	mov.w	r2, #258	; 0x102
+ 80030ce:	4830      	ldr	r0, [pc, #192]	; (8003190 <main+0x720>)
+  vtp->vt_func = NULL;
+ 80030d0:	4e35      	ldr	r6, [pc, #212]	; (80031a8 <main+0x738>)
+ 80030d2:	f7fe f84d 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOB,4,PAL_MODE_ALTERNATE(2));
- 80030d8:	f44f 7281 	mov.w	r2, #258	; 0x102
- 80030dc:	2110      	movs	r1, #16
- 80030de:	482e      	ldr	r0, [pc, #184]	; (8003198 <main+0x728>)
- 80030e0:	f7fe f846 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030d6:	f44f 7281 	mov.w	r2, #258	; 0x102
+ 80030da:	2110      	movs	r1, #16
+ 80030dc:	482d      	ldr	r0, [pc, #180]	; (8003194 <main+0x724>)
+ 80030de:	f7fe f847 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,6,PAL_MODE_INPUT_ANALOG);
- 80030e4:	4628      	mov	r0, r5
- 80030e6:	2203      	movs	r2, #3
- 80030e8:	2140      	movs	r1, #64	; 0x40
- 80030ea:	f7fe f841 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030e2:	2203      	movs	r2, #3
+ 80030e4:	2140      	movs	r1, #64	; 0x40
+ 80030e6:	482a      	ldr	r0, [pc, #168]	; (8003190 <main+0x720>)
+ 80030e8:	f7fe f842 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,7,PAL_MODE_INPUT_ANALOG);
- 80030ee:	2203      	movs	r2, #3
- 80030f0:	2180      	movs	r1, #128	; 0x80
+ 80030ec:	2203      	movs	r2, #3
+ 80030ee:	2180      	movs	r1, #128	; 0x80
+ 80030f0:	4827      	ldr	r0, [pc, #156]	; (8003190 <main+0x720>)
  80030f2:	f7fe f83d 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOA,5,PAL_MODE_OUTPUT_PUSHPULL);
- 80030f6:	4631      	mov	r1, r6
+ 80030f6:	4621      	mov	r1, r4
  80030f8:	2201      	movs	r2, #1
- 80030fa:	f7fe f839 	bl	8001170 <_pal_lld_setgroupmode>
+ 80030fa:	4825      	ldr	r0, [pc, #148]	; (8003190 <main+0x720>)
+ 80030fc:	f7fe f838 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOB,6,PAL_MODE_OUTPUT_PUSHPULL);
- 80030fe:	2201      	movs	r2, #1
- 8003100:	2140      	movs	r1, #64	; 0x40
- 8003102:	4825      	ldr	r0, [pc, #148]	; (8003198 <main+0x728>)
- 8003104:	f7fe f834 	bl	8001170 <_pal_lld_setgroupmode>
+ 8003100:	2201      	movs	r2, #1
+ 8003102:	2140      	movs	r1, #64	; 0x40
+ 8003104:	4823      	ldr	r0, [pc, #140]	; (8003194 <main+0x724>)
+ 8003106:	f7fe f833 	bl	8001170 <_pal_lld_setgroupmode>
     palSetPadMode(GPIOC,7,PAL_MODE_OUTPUT_PUSHPULL);
- 8003108:	2201      	movs	r2, #1
- 800310a:	2180      	movs	r1, #128	; 0x80
- 800310c:	4827      	ldr	r0, [pc, #156]	; (80031ac <main+0x73c>)
- 800310e:	f7fe f82f 	bl	8001170 <_pal_lld_setgroupmode>
+ 800310a:	2201      	movs	r2, #1
+ 800310c:	2180      	movs	r1, #128	; 0x80
+ 800310e:	4825      	ldr	r0, [pc, #148]	; (80031a4 <main+0x734>)
+ 8003110:	f7fe f82e 	bl	8001170 <_pal_lld_setgroupmode>
 
     for (int8_t i = 0; i < NUM_OF_SENSORS; i++) {
 		sensors[i] = 0;
     }
 
     sensor_thread = chThdCreateStatic(waSensorThread, sizeof(waSensorThread), NORMALPRIO, SensorThread, NULL);
- 8003112:	4b27      	ldr	r3, [pc, #156]	; (80031b0 <main+0x740>)
- 8003114:	60fc      	str	r4, [r7, #12]
- 8003116:	2240      	movs	r2, #64	; 0x40
- 8003118:	f44f 7132 	mov.w	r1, #712	; 0x2c8
- 800311c:	623c      	str	r4, [r7, #32]
- 800311e:	637c      	str	r4, [r7, #52]	; 0x34
- 8003120:	4824      	ldr	r0, [pc, #144]	; (80031b4 <main+0x744>)
- 8003122:	f7fe fdbd 	bl	8001ca0 <chThdCreateStatic.constprop.36>
+ 8003114:	4b25      	ldr	r3, [pc, #148]	; (80031ac <main+0x73c>)
+ 8003116:	4826      	ldr	r0, [pc, #152]	; (80031b0 <main+0x740>)
+ 8003118:	60f5      	str	r5, [r6, #12]
+ 800311a:	2240      	movs	r2, #64	; 0x40
+ 800311c:	f44f 7132 	mov.w	r1, #712	; 0x2c8
+ 8003120:	6235      	str	r5, [r6, #32]
+ 8003122:	6375      	str	r5, [r6, #52]	; 0x34
+ 8003124:	f7fe fdbc 	bl	8001ca0 <chThdCreateStatic.constprop.36>
 }
 
 void init_moving_thread() {
     moving_thread = chThdCreateStatic(waMoveThread, sizeof(waMoveThread), NORMALPRIO, MoveThread, NULL);
- 8003126:	4b24      	ldr	r3, [pc, #144]	; (80031b8 <main+0x748>)
- 8003128:	4824      	ldr	r0, [pc, #144]	; (80031bc <main+0x74c>)
- 800312a:	2240      	movs	r2, #64	; 0x40
- 800312c:	f44f 71a4 	mov.w	r1, #328	; 0x148
- 8003130:	f7fe fdb6 	bl	8001ca0 <chThdCreateStatic.constprop.36>
- 8003134:	4b22      	ldr	r3, [pc, #136]	; (80031c0 <main+0x750>)
- 8003136:	4634      	mov	r4, r6
+ 8003128:	4b22      	ldr	r3, [pc, #136]	; (80031b4 <main+0x744>)
+ 800312a:	4823      	ldr	r0, [pc, #140]	; (80031b8 <main+0x748>)
+ 800312c:	2240      	movs	r2, #64	; 0x40
+ 800312e:	f44f 71a4 	mov.w	r1, #328	; 0x148
+ 8003132:	f7fe fdb5 	bl	8001ca0 <chThdCreateStatic.constprop.36>
+ 8003136:	4b21      	ldr	r3, [pc, #132]	; (80031bc <main+0x74c>)
  8003138:	6018      	str	r0, [r3, #0]
-    init_pins();
-    timer_init();
-    init_sensor_thread();
-    init_moving_thread();
-    
-    palClearPad(GPIOA, GPIOA_LED_GREEN);
- 800313a:	836e      	strh	r6, [r5, #26]
- 800313c:	f384 8811 	msr	BASEPRI, r4
- 8003140:	2132      	movs	r1, #50	; 0x32
- 8003142:	2008      	movs	r0, #8
- 8003144:	f7fe fdf4 	bl	8001d30 <chSchGoSleepTimeoutS>
- 8003148:	2300      	movs	r3, #0
- 800314a:	f383 8811 	msr	BASEPRI, r3
- 800314e:	e7f5      	b.n	800313c <main+0x6cc>
+ 800313a:	f384 8811 	msr	BASEPRI, r4
+ 800313e:	2132      	movs	r1, #50	; 0x32
+ 8003140:	2008      	movs	r0, #8
+ 8003142:	f7fe fdf5 	bl	8001d30 <chSchGoSleepTimeoutS>
+ 8003146:	2300      	movs	r3, #0
+ 8003148:	f383 8811 	msr	BASEPRI, r3
+ 800314c:	e7f5      	b.n	800313a <main+0x6ca>
   ccer = 0;
- 8003150:	2300      	movs	r3, #0
+ 800314e:	2300      	movs	r3, #0
     ccer |= STM32_TIM_CCER_CC1E;
- 8003152:	f043 0301 	orr.w	r3, r3, #1
- 8003156:	e6dc      	b.n	8002f12 <main+0x4a2>
+ 8003150:	f043 0301 	orr.w	r3, r3, #1
+ 8003154:	e6dd      	b.n	8002f12 <main+0x4a2>
     ccer |= STM32_TIM_CCER_CC2P;
- 8003158:	f043 0320 	orr.w	r3, r3, #32
+ 8003156:	f043 0320 	orr.w	r3, r3, #32
     ccer |= STM32_TIM_CCER_CC2E;
- 800315c:	f043 0310 	orr.w	r3, r3, #16
- 8003160:	e6e0      	b.n	8002f24 <main+0x4b4>
+ 800315a:	f043 0310 	orr.w	r3, r3, #16
+ 800315e:	e6e1      	b.n	8002f24 <main+0x4b4>
     ccer |= STM32_TIM_CCER_CC3P;
- 8003162:	f443 7300 	orr.w	r3, r3, #512	; 0x200
+ 8003160:	f443 7300 	orr.w	r3, r3, #512	; 0x200
     ccer |= STM32_TIM_CCER_CC3E;
- 8003166:	f443 7380 	orr.w	r3, r3, #256	; 0x100
- 800316a:	e6e4      	b.n	8002f36 <main+0x4c6>
+ 8003164:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+ 8003168:	e6e5      	b.n	8002f36 <main+0x4c6>
     ccer |= STM32_TIM_CCER_CC4P;
- 800316c:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+ 800316a:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
     ccer |= STM32_TIM_CCER_CC4E;
- 8003170:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
- 8003174:	e6e8      	b.n	8002f48 <main+0x4d8>
- 8003176:	bf00      	nop
- 8003178:	200008d0 	.word	0x200008d0
- 800317c:	40010000 	.word	0x40010000
- 8003180:	20000800 	.word	0x20000800
- 8003184:	08004990 	.word	0x08004990
- 8003188:	080049b0 	.word	0x080049b0
- 800318c:	20000884 	.word	0x20000884
- 8003190:	080049d0 	.word	0x080049d0
- 8003194:	40020000 	.word	0x40020000
- 8003198:	40020400 	.word	0x40020400
- 800319c:	40012300 	.word	0x40012300
- 80031a0:	2000086c 	.word	0x2000086c
- 80031a4:	2000089c 	.word	0x2000089c
+ 800316e:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
+ 8003172:	e6e9      	b.n	8002f48 <main+0x4d8>
+ 8003174:	200008d0 	.word	0x200008d0
+ 8003178:	40010000 	.word	0x40010000
+ 800317c:	20000800 	.word	0x20000800
+ 8003180:	08004990 	.word	0x08004990
+ 8003184:	080049b0 	.word	0x080049b0
+ 8003188:	20000884 	.word	0x20000884
+ 800318c:	080049d0 	.word	0x080049d0
+ 8003190:	40020000 	.word	0x40020000
+ 8003194:	40020400 	.word	0x40020400
+ 8003198:	40012300 	.word	0x40012300
+ 800319c:	2000086c 	.word	0x2000086c
+ 80031a0:	2000089c 	.word	0x2000089c
+ 80031a4:	40020800 	.word	0x40020800
  80031a8:	20000b40 	.word	0x20000b40
- 80031ac:	40020800 	.word	0x40020800
- 80031b0:	080020c1 	.word	0x080020c1
- 80031b4:	20000cd8 	.word	0x20000cd8
- 80031b8:	080027d1 	.word	0x080027d1
- 80031bc:	20000b90 	.word	0x20000b90
- 80031c0:	20000b84 	.word	0x20000b84
+ 80031ac:	080020c1 	.word	0x080020c1
+ 80031b0:	20000cd8 	.word	0x20000cd8
+ 80031b4:	080027d1 	.word	0x080027d1
+ 80031b8:	20000b90 	.word	0x20000b90
+ 80031bc:	20000b84 	.word	0x20000b84
       b = dmaStreamAllocate(adcp->dmastp,
- 80031c4:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 80031c0:	6afa      	ldr	r2, [r7, #44]	; 0x2c
                        void *param) {
 
   osalDbgCheck(dmastp != NULL);
 
   /* Checks if the stream is already taken.*/
   if ((dma_streams_mask & (1U << dmastp->selfindex)) != 0U)
- 80031c6:	4d41      	ldr	r5, [pc, #260]	; (80032cc <main+0x85c>)
- 80031c8:	7a51      	ldrb	r1, [r2, #9]
- 80031ca:	6828      	ldr	r0, [r5, #0]
- 80031cc:	408b      	lsls	r3, r1
- 80031ce:	4203      	tst	r3, r0
- 80031d0:	d13a      	bne.n	8003248 <main+0x7d8>
+ 80031c2:	4d41      	ldr	r5, [pc, #260]	; (80032c8 <main+0x858>)
+ 80031c4:	7a51      	ldrb	r1, [r2, #9]
+ 80031c6:	6828      	ldr	r0, [r5, #0]
+ 80031c8:	408b      	lsls	r3, r1
+ 80031ca:	4203      	tst	r3, r0
+ 80031cc:	d13a      	bne.n	8003244 <main+0x7d4>
     return true;
 
   /* Marks the stream as allocated.*/
   dma_isr_redir[dmastp->selfindex].dma_func  = func;
   dma_isr_redir[dmastp->selfindex].dma_param = param;
- 80031d2:	4e3f      	ldr	r6, [pc, #252]	; (80032d0 <main+0x860>)
+ 80031ce:	4e3f      	ldr	r6, [pc, #252]	; (80032cc <main+0x85c>)
   dma_streams_mask |= (1U << dmastp->selfindex);
- 80031d4:	4303      	orrs	r3, r0
+ 80031d0:	4303      	orrs	r3, r0
   dma_isr_redir[dmastp->selfindex].dma_param = param;
- 80031d6:	eb06 04c1 	add.w	r4, r6, r1, lsl #3
+ 80031d2:	eb06 04c1 	add.w	r4, r6, r1, lsl #3
   dma_isr_redir[dmastp->selfindex].dma_func  = func;
- 80031da:	483e      	ldr	r0, [pc, #248]	; (80032d4 <main+0x864>)
+ 80031d6:	483e      	ldr	r0, [pc, #248]	; (80032d0 <main+0x860>)
   dma_streams_mask |= (1U << dmastp->selfindex);
- 80031dc:	602b      	str	r3, [r5, #0]
+ 80031d8:	602b      	str	r3, [r5, #0]
 
   /* Enabling DMA clocks required by the current streams set.*/
   if ((dma_streams_mask & STM32_DMA1_STREAMS_MASK) != 0U) {
- 80031de:	f013 0fff 	tst.w	r3, #255	; 0xff
+ 80031da:	f013 0fff 	tst.w	r3, #255	; 0xff
   dma_isr_redir[dmastp->selfindex].dma_param = param;
- 80031e2:	6067      	str	r7, [r4, #4]
+ 80031de:	6067      	str	r7, [r4, #4]
   dma_isr_redir[dmastp->selfindex].dma_func  = func;
- 80031e4:	f846 0031 	str.w	r0, [r6, r1, lsl #3]
+ 80031e0:	f846 0031 	str.w	r0, [r6, r1, lsl #3]
   if ((dma_streams_mask & STM32_DMA1_STREAMS_MASK) != 0U) {
- 80031e8:	d004      	beq.n	80031f4 <main+0x784>
+ 80031e4:	d004      	beq.n	80031f0 <main+0x780>
     rccEnableDMA1(false);
- 80031ea:	483b      	ldr	r0, [pc, #236]	; (80032d8 <main+0x868>)
- 80031ec:	6b01      	ldr	r1, [r0, #48]	; 0x30
- 80031ee:	f441 1100 	orr.w	r1, r1, #2097152	; 0x200000
- 80031f2:	6301      	str	r1, [r0, #48]	; 0x30
+ 80031e6:	483b      	ldr	r0, [pc, #236]	; (80032d4 <main+0x864>)
+ 80031e8:	6b01      	ldr	r1, [r0, #48]	; 0x30
+ 80031ea:	f441 1100 	orr.w	r1, r1, #2097152	; 0x200000
+ 80031ee:	6301      	str	r1, [r0, #48]	; 0x30
   }
   if ((dma_streams_mask & STM32_DMA2_STREAMS_MASK) != 0U) {
- 80031f4:	f413 4f7f 	tst.w	r3, #65280	; 0xff00
- 80031f8:	d161      	bne.n	80032be <main+0x84e>
+ 80031f0:	f413 4f7f 	tst.w	r3, #65280	; 0xff00
+ 80031f4:	d161      	bne.n	80032ba <main+0x84a>
     rccEnableDMA2(false);
   }
 
   /* Putting the stream in a safe state.*/
   dmaStreamDisable(dmastp);
- 80031fa:	6813      	ldr	r3, [r2, #0]
- 80031fc:	6819      	ldr	r1, [r3, #0]
- 80031fe:	f021 011f 	bic.w	r1, r1, #31
- 8003202:	6019      	str	r1, [r3, #0]
- 8003204:	6819      	ldr	r1, [r3, #0]
- 8003206:	f011 0101 	ands.w	r1, r1, #1
- 800320a:	d1fb      	bne.n	8003204 <main+0x794>
- 800320c:	7a14      	ldrb	r4, [r2, #8]
- 800320e:	6855      	ldr	r5, [r2, #4]
- 8003210:	203d      	movs	r0, #61	; 0x3d
- 8003212:	40a0      	lsls	r0, r4
+ 80031f6:	6813      	ldr	r3, [r2, #0]
+ 80031f8:	6819      	ldr	r1, [r3, #0]
+ 80031fa:	f021 011f 	bic.w	r1, r1, #31
+ 80031fe:	6019      	str	r1, [r3, #0]
+ 8003200:	6819      	ldr	r1, [r3, #0]
+ 8003202:	f011 0101 	ands.w	r1, r1, #1
+ 8003206:	d1fb      	bne.n	8003200 <main+0x790>
+ 8003208:	7a14      	ldrb	r4, [r2, #8]
+ 800320a:	6855      	ldr	r5, [r2, #4]
+ 800320c:	203d      	movs	r0, #61	; 0x3d
+ 800320e:	40a0      	lsls	r0, r4
   dmastp->stream->CR = STM32_DMA_CR_RESET_VALUE;
   dmastp->stream->FCR = STM32_DMA_FCR_RESET_VALUE;
- 8003214:	2421      	movs	r4, #33	; 0x21
+ 8003210:	2421      	movs	r4, #33	; 0x21
   dmaStreamDisable(dmastp);
- 8003216:	6028      	str	r0, [r5, #0]
+ 8003212:	6028      	str	r0, [r5, #0]
   dmastp->stream->CR = STM32_DMA_CR_RESET_VALUE;
- 8003218:	6019      	str	r1, [r3, #0]
+ 8003214:	6019      	str	r1, [r3, #0]
   dmastp->stream->FCR = STM32_DMA_FCR_RESET_VALUE;
- 800321a:	615c      	str	r4, [r3, #20]
+ 8003216:	615c      	str	r4, [r3, #20]
 
   /* Enables the associated IRQ vector if a callback is defined.*/
   if (func != NULL) {
     nvicEnableVector(dmastp->vector, priority);
- 800321c:	7a91      	ldrb	r1, [r2, #10]
+ 8003218:	7a91      	ldrb	r1, [r2, #10]
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 800321e:	094b      	lsrs	r3, r1, #5
- 8003220:	009b      	lsls	r3, r3, #2
+ 800321a:	094b      	lsrs	r3, r1, #5
+ 800321c:	009b      	lsls	r3, r3, #2
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
- 8003222:	f101 4460 	add.w	r4, r1, #3758096384	; 0xe0000000
- 8003226:	f103 4360 	add.w	r3, r3, #3758096384	; 0xe0000000
- 800322a:	f503 4361 	add.w	r3, r3, #57600	; 0xe100
- 800322e:	f504 4461 	add.w	r4, r4, #57600	; 0xe100
+ 800321e:	f101 4460 	add.w	r4, r1, #3758096384	; 0xe0000000
+ 8003222:	f103 4360 	add.w	r3, r3, #3758096384	; 0xe0000000
+ 8003226:	f503 4361 	add.w	r3, r3, #57600	; 0xe100
+ 800322a:	f504 4461 	add.w	r4, r4, #57600	; 0xe100
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 8003232:	f001 011f 	and.w	r1, r1, #31
- 8003236:	2001      	movs	r0, #1
- 8003238:	fa00 f101 	lsl.w	r1, r0, r1
+ 800322e:	f001 011f 	and.w	r1, r1, #31
+ 8003232:	2001      	movs	r0, #1
+ 8003234:	fa00 f101 	lsl.w	r1, r0, r1
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
- 800323c:	2560      	movs	r5, #96	; 0x60
- 800323e:	f884 5300 	strb.w	r5, [r4, #768]	; 0x300
+ 8003238:	2560      	movs	r5, #96	; 0x60
+ 800323a:	f884 5300 	strb.w	r5, [r4, #768]	; 0x300
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 8003242:	f8c3 1180 	str.w	r1, [r3, #384]	; 0x180
+ 800323e:	f8c3 1180 	str.w	r1, [r3, #384]	; 0x180
   NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
- 8003246:	6019      	str	r1, [r3, #0]
+ 8003242:	6019      	str	r1, [r3, #0]
       dmaStreamSetPeripheral(adcp->dmastp, &ADC1->DR);
- 8003248:	6813      	ldr	r3, [r2, #0]
+ 8003244:	6813      	ldr	r3, [r2, #0]
       rccEnableADC1(FALSE);
- 800324a:	4923      	ldr	r1, [pc, #140]	; (80032d8 <main+0x868>)
+ 8003246:	4923      	ldr	r1, [pc, #140]	; (80032d4 <main+0x864>)
       dmaStreamSetPeripheral(adcp->dmastp, &ADC1->DR);
- 800324c:	4a23      	ldr	r2, [pc, #140]	; (80032dc <main+0x86c>)
- 800324e:	609a      	str	r2, [r3, #8]
+ 8003248:	4a23      	ldr	r2, [pc, #140]	; (80032d8 <main+0x868>)
+ 800324a:	609a      	str	r2, [r3, #8]
       rccEnableADC1(FALSE);
- 8003250:	6c4b      	ldr	r3, [r1, #68]	; 0x44
+ 800324c:	6c4b      	ldr	r3, [r1, #68]	; 0x44
     ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
- 8003252:	4823      	ldr	r0, [pc, #140]	; (80032e0 <main+0x870>)
+ 800324e:	4823      	ldr	r0, [pc, #140]	; (80032dc <main+0x86c>)
     adcp->adc->CR1 = 0;
- 8003254:	6aba      	ldr	r2, [r7, #40]	; 0x28
+ 8003250:	6aba      	ldr	r2, [r7, #40]	; 0x28
       rccEnableADC1(FALSE);
- 8003256:	f443 7380 	orr.w	r3, r3, #256	; 0x100
- 800325a:	644b      	str	r3, [r1, #68]	; 0x44
+ 8003252:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+ 8003256:	644b      	str	r3, [r1, #68]	; 0x44
     ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
- 800325c:	6843      	ldr	r3, [r0, #4]
- 800325e:	f403 0340 	and.w	r3, r3, #12582912	; 0xc00000
+ 8003258:	6843      	ldr	r3, [r0, #4]
+ 800325a:	f403 0340 	and.w	r3, r3, #12582912	; 0xc00000
     adcp->adc->CR1 = 0;
- 8003262:	2100      	movs	r1, #0
+ 800325e:	2100      	movs	r1, #0
     ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
- 8003264:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+ 8003260:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
     adcp->adc->CR2 = ADC_CR2_ADON;
- 8003268:	2401      	movs	r4, #1
+ 8003264:	2401      	movs	r4, #1
     ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
- 800326a:	6043      	str	r3, [r0, #4]
+ 8003266:	6043      	str	r3, [r0, #4]
     adcp->adc->CR1 = 0;
- 800326c:	6051      	str	r1, [r2, #4]
+ 8003268:	6051      	str	r1, [r2, #4]
     adcp->adc->CR2 = 0;
- 800326e:	6091      	str	r1, [r2, #8]
+ 800326a:	6091      	str	r1, [r2, #8]
     adcp->adc->CR2 = ADC_CR2_ADON;
- 8003270:	6094      	str	r4, [r2, #8]
- 8003272:	e6c3      	b.n	8002ffc <main+0x58c>
+ 800326c:	6094      	str	r4, [r2, #8]
+ 800326e:	e6c5      	b.n	8002ffc <main+0x58c>
       rccEnableTIM1(FALSE);
- 8003274:	4818      	ldr	r0, [pc, #96]	; (80032d8 <main+0x868>)
+ 8003270:	4818      	ldr	r0, [pc, #96]	; (80032d4 <main+0x864>)
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
- 8003276:	4a1b      	ldr	r2, [pc, #108]	; (80032e4 <main+0x874>)
- 8003278:	6c45      	ldr	r5, [r0, #68]	; 0x44
+ 8003272:	4a1b      	ldr	r2, [pc, #108]	; (80032e0 <main+0x870>)
+ 8003274:	6c45      	ldr	r5, [r0, #68]	; 0x44
     pwmp->tim->CCMR1 = STM32_TIM_CCMR1_OC1M(6) | STM32_TIM_CCMR1_OC1PE |
- 800327a:	f8d6 c018 	ldr.w	ip, [r6, #24]
+ 8003276:	f8d6 c018 	ldr.w	ip, [r6, #24]
       rccEnableTIM1(FALSE);
- 800327e:	f045 0501 	orr.w	r5, r5, #1
- 8003282:	6445      	str	r5, [r0, #68]	; 0x44
+ 800327a:	f045 0501 	orr.w	r5, r5, #1
+ 800327e:	6445      	str	r5, [r0, #68]	; 0x44
       rccResetTIM1();
- 8003284:	6a45      	ldr	r5, [r0, #36]	; 0x24
- 8003286:	f045 0501 	orr.w	r5, r5, #1
- 800328a:	6245      	str	r5, [r0, #36]	; 0x24
- 800328c:	6243      	str	r3, [r0, #36]	; 0x24
- 800328e:	2370      	movs	r3, #112	; 0x70
+ 8003280:	6a45      	ldr	r5, [r0, #36]	; 0x24
+ 8003282:	f045 0501 	orr.w	r5, r5, #1
+ 8003286:	6245      	str	r5, [r0, #36]	; 0x24
+ 8003288:	6243      	str	r3, [r0, #36]	; 0x24
+ 800328a:	2370      	movs	r3, #112	; 0x70
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 8003290:	f04f 7000 	mov.w	r0, #33554432	; 0x2000000
+ 800328c:	f04f 7000 	mov.w	r0, #33554432	; 0x2000000
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
- 8003294:	f882 3319 	strb.w	r3, [r2, #793]	; 0x319
+ 8003290:	f882 3319 	strb.w	r3, [r2, #793]	; 0x319
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 8003298:	f8c2 0180 	str.w	r0, [r2, #384]	; 0x180
+ 8003294:	f8c2 0180 	str.w	r0, [r2, #384]	; 0x180
   NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
- 800329c:	6010      	str	r0, [r2, #0]
+ 8003298:	6010      	str	r0, [r2, #0]
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 800329e:	f04f 6000 	mov.w	r0, #134217728	; 0x8000000
+ 800329a:	f04f 6000 	mov.w	r0, #134217728	; 0x8000000
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
- 80032a2:	f882 331b 	strb.w	r3, [r2, #795]	; 0x31b
+ 800329e:	f882 331b 	strb.w	r3, [r2, #795]	; 0x31b
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
- 80032a6:	f8c2 0180 	str.w	r0, [r2, #384]	; 0x180
+ 80032a2:	f8c2 0180 	str.w	r0, [r2, #384]	; 0x180
     pwmp->tim->CCMR1 = STM32_TIM_CCMR1_OC1M(6) | STM32_TIM_CCMR1_OC1PE |
- 80032aa:	f646 0368 	movw	r3, #26728	; 0x6868
+ 80032a6:	f646 0368 	movw	r3, #26728	; 0x6868
   NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
- 80032ae:	6010      	str	r0, [r2, #0]
+ 80032aa:	6010      	str	r0, [r2, #0]
       pwmp->clock = STM32_TIMCLK2;
- 80032b0:	4a0d      	ldr	r2, [pc, #52]	; (80032e8 <main+0x878>)
+ 80032ac:	4a0d      	ldr	r2, [pc, #52]	; (80032e4 <main+0x874>)
     pwmp->tim->CCMR1 = STM32_TIM_CCMR1_OC1M(6) | STM32_TIM_CCMR1_OC1PE |
- 80032b2:	f8cc 3018 	str.w	r3, [ip, #24]
+ 80032ae:	f8cc 3018 	str.w	r3, [ip, #24]
       pwmp->clock = STM32_TIMCLK2;
- 80032b6:	6172      	str	r2, [r6, #20]
+ 80032b2:	6172      	str	r2, [r6, #20]
     pwmp->tim->CCMR2 = STM32_TIM_CCMR2_OC3M(6) | STM32_TIM_CCMR2_OC3PE |
- 80032b8:	f8cc 301c 	str.w	r3, [ip, #28]
- 80032bc:	e614      	b.n	8002ee8 <main+0x478>
+ 80032b4:	f8cc 301c 	str.w	r3, [ip, #28]
+ 80032b8:	e616      	b.n	8002ee8 <main+0x478>
     rccEnableDMA2(false);
- 80032be:	4906      	ldr	r1, [pc, #24]	; (80032d8 <main+0x868>)
- 80032c0:	6b0b      	ldr	r3, [r1, #48]	; 0x30
- 80032c2:	f443 0380 	orr.w	r3, r3, #4194304	; 0x400000
- 80032c6:	630b      	str	r3, [r1, #48]	; 0x30
- 80032c8:	e797      	b.n	80031fa <main+0x78a>
- 80032ca:	bf00      	nop
- 80032cc:	20000b38 	.word	0x20000b38
- 80032d0:	20000ab8 	.word	0x20000ab8
- 80032d4:	08001b01 	.word	0x08001b01
- 80032d8:	40023800 	.word	0x40023800
- 80032dc:	4001204c 	.word	0x4001204c
- 80032e0:	40012300 	.word	0x40012300
- 80032e4:	e000e100 	.word	0xe000e100
- 80032e8:	05b8d800 	.word	0x05b8d800
- 80032ec:	00000000 	.word	0x00000000
+ 80032ba:	4906      	ldr	r1, [pc, #24]	; (80032d4 <main+0x864>)
+ 80032bc:	6b0b      	ldr	r3, [r1, #48]	; 0x30
+ 80032be:	f443 0380 	orr.w	r3, r3, #4194304	; 0x400000
+ 80032c2:	630b      	str	r3, [r1, #48]	; 0x30
+ 80032c4:	e797      	b.n	80031f6 <main+0x786>
+ 80032c6:	bf00      	nop
+ 80032c8:	20000b38 	.word	0x20000b38
+ 80032cc:	20000ab8 	.word	0x20000ab8
+ 80032d0:	08001b01 	.word	0x08001b01
+ 80032d4:	40023800 	.word	0x40023800
+ 80032d8:	4001204c 	.word	0x4001204c
+ 80032dc:	40012300 	.word	0x40012300
+ 80032e0:	e000e100 	.word	0xe000e100
+ 80032e4:	05b8d800 	.word	0x05b8d800
+	...
 
 080032f0 <__early_init>:
  */

@@ -176,11 +176,11 @@ void calculate_speed(double smer, double brana, int8_t percent) {
                 double speed = truncl(sin(((double)smer_motor-(double)smer)*(double)PI) * 17 * percent);
                 speed += ((speed < 0) ? speed*-1 : speed) < 5 ? -speed : (speed < 0 ? -300 : 300);
                 
-                /*if (brana < 0) {
+                if (brana < 0) {
                     speed = -320;
                 } else if (brana > 0) {
                     speed = 320;
-                }*/
+                }
  
                 move_motor(i,speed+brana);
                 chprintf((BaseSequentialStream*)&SD1,"%d ", (int)speed);
