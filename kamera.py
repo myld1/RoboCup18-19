@@ -119,7 +119,7 @@ while(True):
         blobs = []
 
         # BRANKY - vypocet
-        #img.draw_circle(175,144,110,(0,0,0),1,True)
+        img.draw_circle(175,144,110,(0,0,0),1,True)
         if (branka):
             #ZLTA
             for blob in img.find_blobs(zltabranka, invert = False, pixels_threshold=50, area_threshold=1, merge=False):

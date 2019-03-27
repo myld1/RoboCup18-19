@@ -4,6 +4,7 @@
 #include "config.h"
 #include "includes/chprintf.h"
 
+int16_t sinus(int8_t input);
 
 void mx_set(uint8_t num) {
     if (num & 0b1) {
@@ -86,7 +87,8 @@ THD_FUNCTION(SensorThread, arg) {
 
     while(1) {
         if (get_camera_output() == -128) {
-            for (uint8_t i = 0; i < NUM_OF_SENSORS/2; i++) {
+
+            for (int8_t i = 0; i < NUM_OF_SENSORS/2; i++) {
                 mx_set(i);
                 adcConvert(&ADCD1, &line_sensors_cfg1, &sensor_value1, 1);
                 adcConvert(&ADCD1, &line_sensors_cfg2, &sensor_value2, 1);
@@ -94,10 +96,13 @@ THD_FUNCTION(SensorThread, arg) {
                 sensor_state[i+8] = sensor_value2 < 500 ? 1 : 0;
             }
             
-            for(i = 0; i < 16; i++){
+            double x;
+            double y;
+
+            for(int8_t i = 0; i < 16; i++){
         
-                x -= input[i]*sinus(i);
-                y += input[i]*sinus(i+4);
+                x -= sensor_state[i]*sinus(i);
+                y += sensor_state[i]*sinus(i+4);
             }
 
 
@@ -145,7 +150,7 @@ THD_FUNCTION(SensorThread, arg) {
             double line = (double)chMsgGet(sensor_thread);
             chMsgRelease(sensor_thread, MSG_OK);
             // PROCESS
-            if (abs(line) <= 128) { 
+            if (line <= 128 && line >= -128) { 
                 calculate_speed(line,get_camera_output(),40);
             }
         }
@@ -164,9 +169,9 @@ void init_moving_thread() {
     moving_thread = chThdCreateStatic(waMoveThread, sizeof(waMoveThread), NORMALPRIO, MoveThread, NULL);
 }
 
-int sinus(int input){
+int16_t sinus(int8_t input){
 
-    int iai;
+    int16_t iai;
     input %= 16;
     iai = 1;
     if(input > 7){
@@ -204,36 +209,3 @@ int sinus(int input){
     return iai;
     
 }
-
-int main(){
-    
-    int i;
-    double x, y;
-    int mag;
-    int input[16];
-    
-    /*for(i = 0; i < 16; i++){
-        
-        input[i] = 0;
-        
-    }
-    
-    input[12] = 1;
-    input[0] = 1;*/
-    
-    // TREBA NASTAVIT DO input[] HODNOTY 0/1 PODLA SENZOROV
-    
-    
-    if(mag == 0){
-        output =
-    }else{
-        
-        x /= mag;
-        y /= mag;
-        
-    }
-    
-    printf("%f \r\n", x);
-    printf("%f \r\n", y);
-    
-} 

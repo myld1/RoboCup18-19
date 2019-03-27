@@ -160,7 +160,7 @@ void timer_init() {
  
 void calculate_speed(double smer, double brana, int8_t percent) {
     brana *= -5;
-    if (brana < 20) {
+    if (brana < -20) {
         brana += 50;
     }  else if (brana > 20) {
         brana -= 50;
@@ -175,7 +175,13 @@ void calculate_speed(double smer, double brana, int8_t percent) {
                 smer_motor += MOTOR_CONST;
                 double speed = truncl(sin(((double)smer_motor-(double)smer)*(double)PI) * 17 * percent);
                 speed += ((speed < 0) ? speed*-1 : speed) < 5 ? -speed : (speed < 0 ? -300 : 300);
-                //speed *= i == 2 ? 1.2 : 1;
+                
+                if (brana < 0) {
+                    speed = -600;
+                } else if (brana > 0) {
+                    speed = 600;
+                }
+ 
                 move_motor(i,speed+brana);
                 chprintf((BaseSequentialStream*)&SD1,"%d ", (int)speed);
             }
