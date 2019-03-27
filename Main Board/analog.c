@@ -123,7 +123,7 @@ THD_FUNCTION(SensorThread, arg) {
                 }  
             }
     
-            chMsgSend(moving_thread, output);
+            chMsgSend(moving_thread, out);
             // output
             if (SENSOR_DEBUG) {
                 for(int8_t i = 0; i < NUM_OF_SENSORS; i++)

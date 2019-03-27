@@ -16,8 +16,8 @@ color = [(17, 25, 13, 42, 22, 37)]
 color = [(30, 90, 56, 87, 50, 75)]
 color = [(20, 90, 30, 87, 29, 75)]
 
-modrabranka = [(10, 39, -19, 6, -8, 8)]#(23, 30, -24, -15, 2, 30)
-zltabranka = [(34, 51, -12, 22, 41, 63)]
+modrabranka = [(15, 45, -24, -15, 5, 15)]#(23, 30, -24, -15, 2, 30)
+zltabranka = [(9, 44, -22, -12, 51, 39)]
 
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
@@ -84,7 +84,7 @@ while(True):
     #img.draw_rectangle(140, 151, 75, 42, cl)
 
     #defaults
-    lopta = 254
+    lopta = 127
     zarovnanie = 0
 
     utok = True
@@ -141,7 +141,7 @@ while(True):
                 zb = [0,0]
         else:
             #MODRA
-            for blob in img.find_blobs(modrabranka, invert = False, pixels_threshold=50, area_threshold=1, merge=False):
+            for blob in img.find_blobs(modrabranka, invert = False, pixels_threshold=100, area_threshold=1, merge=False):
                 #img.draw_cross(blob.cx(), blob.cy())
                 if 4225 < pow((blob.cx()-177), 2) + pow((blob.cy()-144), 2) < 31329:
                     blobs.append(blob)
