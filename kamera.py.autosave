@@ -137,9 +137,9 @@ while(True):
                         areamax = blobs[i]
                     elif blobs[i].w()*blobs[i].h() > areamax.w()*areamax.h():
                         areamax = blobs[i]
-                    sucet[0] += blobs[i].cx()*pow(blobs[i].area(),0.5)
-                    sucet[1] += blobs[i].cy()*pow(blobs[i].area(),0.5)
-                    areasum += pow(blobs[i].area(),0.5)
+                    sucet[0] += blobs[i].cx()*blobs[i].area()
+                    sucet[1] += blobs[i].cy()*blobs[i].area()
+                    areasum += blobs[i].area()
                 cx = sucet[0]//areasum
                 cy = sucet[1]//areasum
                 img.draw_cross(cx, cy, (255, 255, 0))

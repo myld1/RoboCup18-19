@@ -16,8 +16,7 @@ int main(void) {
     timer_init();
     init_sensor_thread();
     init_moving_thread();
-    
-    palClearPad(GPIOA, GPIOA_LED_GREEN);
+
     //move_motor(0, 300);
     //move_motor(1, 400);
     //move_motor(2, 300);
