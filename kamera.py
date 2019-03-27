@@ -30,16 +30,16 @@ clock = time.clock()
 
 def uholkbrane(x, y):
     if x == 177 and y-144 < 0:
-        angle = 64
+        uhol = 64
     elif x == 177:
-        angle = -64
+        uhol = -64
     else:
-        angle = math.atan((y-144)/(x-177))/math.pi*127
-    if y-144 <= 0 and x-177 >= 0:
-        angle = angle + 127
-    elif y-144 >= 0 and x-177 >= 0:
-        angle = angle - 127
-    return angle
+        uhol = math.atan((y-144)/(x-177))/math.pi*127
+        if y-144 < 0 and x-177 > 0:
+            uhol = uhol + 127
+        elif y-144 > 0 and x-177 > 0:
+            uhol = uhol - 127
+    return uhol
 
 def vbrane(area):
     if area > 7500:
@@ -159,17 +159,7 @@ while(True):
                 mb = [0, 0]
         blobs = []
 
-
-        #k = 0
-        #if not mb[0]-zb[0]:
-        #    k = 1
-        #angle = math.atan((mb[1]-zb[1])/(mb[0]-zb[0]+k))/math.pi*180
-        #print(angle)
-        #print(lopta)
-
         #UART COM
-        lopta = (lopta/128)*127
-        zarovnanie = (zarovnanie/128)*127
         uart.write(ustruct.pack("<bbb",128,int(lopta),int(zarovnanie)))
         print(str(int(lopta)) + " " + str(int(zarovnanie)))
 
