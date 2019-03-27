@@ -74,7 +74,7 @@ static const ADCConversionGroup line_sensors_cfg2  = {
 thread_t *sensor_thread;
 thread_t *moving_thread;
 int16_t sensors[NUM_OF_SENSORS];
-//double vectors[NUM_OF_SENSORS] = { -1, -0.875, -0.75, -0.625, -0.5, -0.375, -0.25 }; 
+int8_t sensor_state[NUM_OF_SENSORS]; 
 
 THD_WORKING_AREA(waSensorThread, 512);
 THD_FUNCTION(SensorThread, arg) {
@@ -90,9 +90,35 @@ THD_FUNCTION(SensorThread, arg) {
                 mx_set(i);
                 adcConvert(&ADCD1, &line_sensors_cfg1, &sensor_value1, 1);
                 adcConvert(&ADCD1, &line_sensors_cfg2, &sensor_value2, 1);
+                sensor_state[i] = sensor_value1 < 500 ? 1 : 0;
+                sensor_state[i+8] = sensor_value2 < 500 ? 1 : 0;
             }
+            
+            for(i = 0; i < 16; i++){
+        
+                x -= input[i]*sinus(i);
+                y += input[i]*sinus(i+4);
+            }
+
+
             int8_t out = get_camera_output();
-            chMsgSend(moving_thread, out/*con*/);
+            double output;
+            if (!x) {
+                if (y > 0) {
+                    output = 0;
+                } else if (y < 0) {
+                    output = 1;
+                } else {
+                    output = out;
+                }
+            } else {
+                output = atan(y / x) / PI;
+                if (x > 0) {
+                    output -= 1;
+                }  
+            }
+    
+            chMsgSend(moving_thread, output);
             // output
             if (SENSOR_DEBUG) {
                 for(int8_t i = 0; i < NUM_OF_SENSORS; i++)
@@ -137,3 +163,77 @@ void init_sensor_thread() {
 void init_moving_thread() {
     moving_thread = chThdCreateStatic(waMoveThread, sizeof(waMoveThread), NORMALPRIO, MoveThread, NULL);
 }
+
+int sinus(int input){
+
+    int iai;
+    input %= 16;
+    iai = 1;
+    if(input > 7){
+        
+        input -= 8;
+        iai = -1;
+        
+    }
+    switch(input){
+        
+        case 0:  
+        iai *= 0;
+        break;
+        
+        case 1:
+        case 7:
+        iai *= 382;
+        break;
+        
+        case 2:
+        case 6:
+        iai *= 707;
+        break;
+        
+        case 3:
+        case 5:
+        iai *= 923;
+        break;
+        
+        case 4:
+        iai *= 1000;
+        break;
+        
+    }
+    return iai;
+    
+}
+
+int main(){
+    
+    int i;
+    double x, y;
+    int mag;
+    int input[16];
+    
+    /*for(i = 0; i < 16; i++){
+        
+        input[i] = 0;
+        
+    }
+    
+    input[12] = 1;
+    input[0] = 1;*/
+    
+    // TREBA NASTAVIT DO input[] HODNOTY 0/1 PODLA SENZOROV
+    
+    
+    if(mag == 0){
+        output =
+    }else{
+        
+        x /= mag;
+        y /= mag;
+        
+    }
+    
+    printf("%f \r\n", x);
+    printf("%f \r\n", y);
+    
+} 

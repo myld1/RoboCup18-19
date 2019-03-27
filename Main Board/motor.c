@@ -159,7 +159,12 @@ void timer_init() {
 }
  
 void calculate_speed(double smer, double brana, int8_t percent) {
-    brana /= 20;
+    brana *= -5;
+    if (brana < 20) {
+        brana += 50;
+    }  else if (brana > 20) {
+        brana -= 50;
+    }
     chprintf((BaseSequentialStream*)&SD1,"%d : %d \r\n", (int)smer, (int)brana);
     // calculate move angle
     smer /= 127;
