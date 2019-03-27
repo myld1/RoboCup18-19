@@ -35,10 +35,10 @@ def uholkbrane(x, y):
         uhol = -64
     else:
         uhol = math.atan((y-144)/(x-177))/math.pi*127
-        if y-144 < 0 and x-177 > 0:
-            uhol = uhol + 127
-        elif y-144 > 0 and x-177 > 0:
-            uhol = uhol - 127
+    if y-144 < 0 and x-177 > 0:
+        uhol = uhol + 127
+    elif y-144 > 0 and x-177 > 0:
+        uhol = uhol - 127
     return uhol
 
 def vbrane(area):
