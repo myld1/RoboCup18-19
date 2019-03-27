@@ -35,10 +35,10 @@ def uholkbrane(x, y):
         uhol = -64
     else:
         uhol = math.atan((y-144)/(x-177))/math.pi*127
-        if y-144 < 0 and x-177 > 0:
-            uhol = uhol + 127
-        elif y-144 > 0 and x-177 > 0:
-            uhol = uhol - 127
+    if y-144 < 0 and x-177 > 0:
+        uhol = uhol + 127
+    elif y-144 > 0 and x-177 > 0:
+        uhol = uhol - 127
     return uhol
 
 def vbrane(area):
@@ -159,9 +159,21 @@ while(True):
                 mb = [0, 0]
         blobs = []
 
-        #UART COM
-        uart.write(ustruct.pack("<bbb",128,int(lopta),int(zarovnanie)))
-        print(str(int(lopta)) + " " + str(int(zarovnanie)))
 
+        if utok:
+            #UART COM
+            uart.write(ustruct.pack("<bbb",128,int(lopta),int(zarovnanie)))
+            print(str(int(lopta)) + " " + str(int(zarovnanie)))
+        else:
+            if vbrane(areamax.w()*areamax.h()):
+                if lopta > 0:
+                    print(str(int(lopta)) + " 64")
+                else:
+                    print(str(int(lopta)) + " -64")
+            else:
+                if -96 < uholkbrane(areamax.cx(), areamax.cy()) < 96:
+                    print(str(int(lopta)) + " 0")
+                else:
+                    print(str(int(lopta)) + " " + str(int(uholkbrane(areamax.cx(), areamax.cy()))))
     else:
         color[0] = cal()
