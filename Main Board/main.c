@@ -13,7 +13,7 @@ int main(void) {
 
     board_init();
     init_pins();
-    timer_init();
+    //timer_init();
     init_sensor_thread();
     init_moving_thread();
 

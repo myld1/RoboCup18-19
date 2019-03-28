@@ -42,7 +42,7 @@ void timer_reset(int8_t sender) {
 }
 
 void encoder_pulse_captured(ICUDriver *icup) {
-    /*int16_t period_width = 1000000/icuGetPeriodX(icup);
+   /* int16_t period_width = 1000000/icuGetPeriodX(icup);
     int16_t period_calc = (1848*period_width-281984)/1667;
 
     //ICUD sender
@@ -55,8 +55,8 @@ void encoder_pulse_captured(ICUDriver *icup) {
         sender = 2;
     }   
     if (sender >= 0) {
-        //palClearPad(GPIOA, GPIOA_LED_GREEN);
-        //main_visualizer[sender] = 1;
+       // palClearPad(GPIOA, GPIOA_LED_GREEN);
+       // main_visualizer[sender] = 1;
   
         // stats
         rotations_per_sec[sender] = period_width;
@@ -68,8 +68,8 @@ void encoder_pulse_captured(ICUDriver *icup) {
             pwmEnableChannel(&PWMD1, sender, --motor_actual_speeds[sender]);
         }
     }
-    //timer_reset(sender);
-    */
+    timer_reset(sender);*/
+    
 }
 
 void move_motor(int8_t motor_number, int16_t speed) {
@@ -88,7 +88,7 @@ void move_motor(int8_t motor_number, int16_t speed) {
         motor_actual_speeds[motor_number] = speed;
     } 
 
-    /*switch(motor_number) {
+   /* switch(motor_number) {
         case 0:
             chVTReset(&main_timer[motor_number]);
             chVTSet(&main_timer[motor_number], MS2ST(15), motor_tick, &MOTOR_0);
@@ -158,34 +158,44 @@ void timer_init() {
     }
 }
  
+int8_t absl(int8_t a) {
+    if (a < 0) a *= -1;
+    return a;
+}
+
+
 void calculate_speed(double smer, double brana, int8_t percent) {
-    brana *= -2;
-    /*if (brana < -20) {
-        brana -= 10;
-    }  else if (brana > 20) {
-        brana += 10;
-    }*/
-    chprintf((BaseSequentialStream*)&SD1,"%d : %d \r\n", (int)smer, (int)brana);
+
+    brana *= -1;
+    brana = absl(brana) < 7 ? 0 : brana;
+    brana *= 9;
+    //brana = 0;
+    //chprintf((BaseSequentialStream*)&SD1,"%f : %f \r\n", smer, brana);
+
     // calculate move angle
-    smer /= 127;
     if (percent <= 100 && percent > 0) {
         if(smer != -2) {
             double smer_motor = -1;
             for (int8_t i = 0; i < NUM_OF_MOTORS; i++) {
                 smer_motor += MOTOR_CONST;
-                double speed = truncl(sin(((double)smer_motor-(double)smer)*(double)PI) * 17 * percent);
+                double speed = truncl(sin(((double)smer_motor-(double)smer)*(double)PI) * 18 * percent);
+                speed += brana;
                 speed += ((speed < 0) ? speed*-1 : speed) < 5 ? -speed : (speed < 0 ? -300 : 300);
-                
-                if (brana < 0) {
-                    speed = -320;
+               //speed = i == 2 ? speed *= 1.65 : speed;
+
+                /*if (brana < 0) {
+                    speed = -600;
                 } else if (brana > 0) {
-                    speed = 320;
-                }
- 
-                move_motor(i,speed+brana);
-                chprintf((BaseSequentialStream*)&SD1,"%d ", (int)speed);
+                    speed = 600;
+                } else {
+                    speed = 0;
+                }*/
+                chprintf((BaseSequentialStream*)&SD1,"%f\r\n", speed);
+
+                move_motor(i,speed);
+                //chprintf((BaseSequentialStream*)&SD1,"%d ", (int)speed);
             }
-            chprintf((BaseSequentialStream*)&SD1,"\r\n");
+            //chprintf((BaseSequentialStream*)&SD1,"\r\n");
         } else {
             set_motors_off();
         }

@@ -13,11 +13,14 @@ GAIN_SCALE = 0.1
 
 #color = [[58, 87, 18, 65, -10, 52]]
 color = [(17, 25, 13, 42, 22, 37)]
-color = [(30, 90, 56, 87, 50, 75)]
-color = [(20, 90, 30, 87, 29, 75)]
+color = [(25, 63, 16, 52, 35, 52)]
+color = [(15, 90, 30, 87, 29, 75)]
+color = [(28, 63, 13, 82, 32, 80)]
 
-modrabranka = [(15, 45, -24, -15, 5, 15)]#(23, 30, -24, -15, 2, 30)
-zltabranka = [(9, 44, -22, -12, 51, 39)]
+
+
+modrabranka = [(18, 31, -33, -17, -3, 8)]#(23, 30, -24, -15, 2, 30)
+zltabranka = [(42, 53, -44, -6, 45, 56)]
 
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
@@ -77,7 +80,7 @@ while(True):
     clock.tick()
     img = sensor.snapshot()
     img.draw_circle(175,144,60,(0,0,0),1,True)
-    img.draw_circle(175, 144, 165, (255, 255, 255))
+    #img.draw_circle(175, 144, 165, (255, 255, 255))
     #img.draw_circle(177, 144, 55, (255, 255, 255))
     #img.draw_cross(177, 144)
     #img.draw_circle(177, 185, 53, (0, 0, 0))
@@ -88,7 +91,7 @@ while(True):
     zarovnanie = 0
 
     utok = True
-    branka = True
+    branka = False
 
     if (color[0] != [0,0,0,0,0,0]):
         blobs = []
@@ -156,12 +159,19 @@ while(True):
                     blobs.append(blob)
             areamax = 0
             if (blobs):
+                sucet = [0, 0]
+                areasum = 0
                 for i in range(len(blobs)):
                     if not areamax:
                         areamax = blobs[i]
                     elif blobs[i].w()*blobs[i].h() > areamax.w()*areamax.h():
                         areamax = blobs[i]
-                img.draw_rectangle(areamax.rect(), (0, 0, 255))
+                    sucet[0] += blobs[i].cx()*blobs[i].area()
+                    sucet[1] += blobs[i].cy()*blobs[i].area()
+                    areasum += blobs[i].area()
+                cx = sucet[0]//areasum
+                cy = sucet[1]//areasum
+                img.draw_cross(cx, cy, (0, 0, 255))
                 mb = [areamax.cx(), areamax.cy()]
                 zarovnanie = uholkbrane(areamax.cx(), areamax.cy())
             else:
@@ -170,6 +180,17 @@ while(True):
 
 
         if utok:
+            if (abs(lopta) < 63.5):
+                lopta *= 2
+            else:
+                lopta *= 3/2
+
+
+            if (lopta > 127 ):
+                lopta -= lopta % 127
+                lopta *= -1
+
+
             #UART COM
             uart.write(ustruct.pack("<bbb",128,int(lopta),int(zarovnanie)))
             print(str(int(lopta)) + " " + str(int(zarovnanie)))

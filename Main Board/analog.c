@@ -75,7 +75,13 @@ static const ADCConversionGroup line_sensors_cfg2  = {
 thread_t *sensor_thread;
 thread_t *moving_thread;
 int16_t sensors[NUM_OF_SENSORS];
-int8_t sensor_state[NUM_OF_SENSORS]; 
+int16_t sensor_state[NUM_OF_SENSORS];
+
+    int16_t sensor_x[NUM_OF_SENSORS] = {0, -38, -71, -92, -100, -92, -71, -38, 0, 38, 71, 92, 100, 92, 71, 38};
+    int16_t sensor_y[NUM_OF_SENSORS] = {100, 92, 71, 38, 0, -38, -71, -92, -100 -92, -71, -38, 0, 38, 71, 92};
+
+int16_t limit[NUM_OF_SENSORS] = {1400,550,500,1000,600,550,550,500,500,750,500,500,550,500,1000};
+
 
 THD_WORKING_AREA(waSensorThread, 512);
 THD_FUNCTION(SensorThread, arg) {
@@ -90,46 +96,40 @@ THD_FUNCTION(SensorThread, arg) {
 
             for (int8_t i = 0; i < NUM_OF_SENSORS/2; i++) {
                 mx_set(i);
+                chThdSleepMicroseconds(100);
                 adcConvert(&ADCD1, &line_sensors_cfg1, &sensor_value1, 1);
                 adcConvert(&ADCD1, &line_sensors_cfg2, &sensor_value2, 1);
-                sensor_state[i] = sensor_value1 < 500 ? 1 : 0;
-                sensor_state[i+8] = sensor_value2 < 500 ? 1 : 0;
+                sensor_state[i] = sensor_value1 < limit[i]+100 ? 1 : 0;
+                sensor_state[i+8] = sensor_value2 < limit[i+8]+300 ? 1 : 0;
             }
             
-            double x;
-            double y;
+            int16_t x=0;
+            int16_t y=0;
 
             for(int8_t i = 0; i < 16; i++){
         
-                x -= sensor_state[i]*sinus(i);
-                y += sensor_state[i]*sinus(i+4);
+                x += sensor_state[i]*sensor_x[i];
+                y += sensor_state[i]*sensor_y[i];
             }
 
 
-            int8_t out = get_camera_output();
+            double out = get_camera_output();
             double output;
-            if (!x) {
-                if (y > 0) {
-                    output = 0;
-                } else if (y < 0) {
-                    output = 1;
-                } else {
-                    output = out;
-                }
+            if (!x && !y) {
+                out /= 127;
+                output = out;
+                //chprintf((BaseSequentialStream*)&SD1, "     out %f     ", out);
             } else {
-                output = atan(y / x) / PI;
-                if (x > 0) {
-                    output -= 1;
-                }  
+                output = atan2(x, y) / PI; 
+                //chprintf((BaseSequentialStream*)&SD1, "%5f ", output);
             }
-    
-            chMsgSend(moving_thread, out);
+
+            chMsgSend(moving_thread, (msg_t)(output*10000));
             // output
             if (SENSOR_DEBUG) {
                 for(int8_t i = 0; i < NUM_OF_SENSORS; i++)
                 {
-                    int16_t output = sensors[i];
-                    if (output < 800) { output=1; }
+                    int16_t output = sensor_state[i];
                     chprintf((BaseSequentialStream*)&SD1, "%5d ", output);
                 }
                 chprintf((BaseSequentialStream*)&SD1, "\n\r");
@@ -147,12 +147,13 @@ THD_FUNCTION(SensorThread, arg) {
 
         while(1){
             sensor_thread = chMsgWait();
-            double line = (double)chMsgGet(sensor_thread);
+            double line = (double)chMsgGet(sensor_thread) / 10000;
             chMsgRelease(sensor_thread, MSG_OK);
+            chprintf((BaseSequentialStream*)&SD1,"%f \r\n", line);
             // PROCESS
-            if (line <= 128 && line >= -128) { 
-                calculate_speed(line,get_camera_output(),40);
-            }
+            //if (line <= 128 && line >= -128) { 
+                calculate_speed(line,get_camera_output(),35);
+           // }
         }
     }
 
@@ -167,45 +168,4 @@ void init_sensor_thread() {
 
 void init_moving_thread() {
     moving_thread = chThdCreateStatic(waMoveThread, sizeof(waMoveThread), NORMALPRIO, MoveThread, NULL);
-}
-
-int16_t sinus(int8_t input){
-
-    int16_t iai;
-    input %= 16;
-    iai = 1;
-    if(input > 7){
-        
-        input -= 8;
-        iai = -1;
-        
-    }
-    switch(input){
-        
-        case 0:  
-        iai *= 0;
-        break;
-        
-        case 1:
-        case 7:
-        iai *= 382;
-        break;
-        
-        case 2:
-        case 6:
-        iai *= 707;
-        break;
-        
-        case 3:
-        case 5:
-        iai *= 923;
-        break;
-        
-        case 4:
-        iai *= 1000;
-        break;
-        
-    }
-    return iai;
-    
 }

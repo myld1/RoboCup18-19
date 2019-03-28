@@ -16,7 +16,7 @@
 #define SPEED 20
 
 #define PI 3.1415926535
-#define MOTOR_CONST (double)2 / (double)NUM_OF_MOTORS
+#define MOTOR_CONST (double)2 / (double)NUM_OF_MOTORS * 1000
 
 void set_motor_state(int8_t dir,int8_t num);
 void move_motor(int8_t motor_number, int16_t speed);
