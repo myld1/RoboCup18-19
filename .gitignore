@@ -1,2 +1,4 @@
-*/build
+/MainBoard/build
 /.vscode
+.cprojects
+.config.c.kate-setup

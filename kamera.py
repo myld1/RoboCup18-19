@@ -1,35 +1,39 @@
 # Untitled - By: Administrator - pi 12 7 2018
 
-import sensor, image, time, math, ustruct
+import sensor
+import image
+import time
+import math
+import ustruct
 
 from pyb import UART
 
 uart = UART(3, 115200, timeout_char=1)  # init with given baudrate
 
-color = [[0,0,0,0,0,0]]
-cl = (0,0,0)
+color = [[0, 0, 0, 0, 0, 0]]
+cl = (0, 0, 0)
 
 GAIN_SCALE = 0.1
 
-#color = [[58, 87, 18, 65, -10, 52]]
+# color = [[58, 87, 18, 65, -10, 52]]
 color = [(17, 25, 13, 42, 22, 37)]
 color = [(25, 63, 16, 52, 35, 52)]
 color = [(15, 90, 30, 87, 29, 75)]
 color = [(28, 63, 13, 82, 32, 80)]
 
 
-
-modrabranka = [(18, 31, -33, -17, -3, 8)]#(23, 30, -24, -15, 2, 30)
+modrabranka = [(18, 31, -33, -17, -3, 8)]  # (23, 30, -24, -15, 2, 30)
 zltabranka = [(42, 53, -44, -6, 45, 56)]
 
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.CIF)
-sensor.set_auto_gain(False, 10) # must be turned off for color tracking
-sensor.set_auto_whitebal(False) # must be turned off for color tracking
+sensor.set_auto_gain(False, 10)  # must be turned off for color tracking
+sensor.set_auto_whitebal(False)  # must be turned off for color tracking
 sensor.set_auto_exposure(False, 30000000)
-sensor.skip_frames(time = 2000)
+sensor.skip_frames(time=2000)
 clock = time.clock()
+
 
 def uholkbrane(x, y):
     if x == 177 and y-144 < 0:
@@ -44,10 +48,12 @@ def uholkbrane(x, y):
         uhol = uhol - 127
     return uhol
 
+
 def vbrane(area):
     if area > 7500:
         return True
     return False
+
 
 def cal():
     tres = [0, 0, 0, 0, 0, 0]
@@ -63,7 +69,7 @@ def cal():
     for x in range(140, 215, 4):
         for y in range(150, 192, 4):
             for i in range(6):
-                if i%2:
+                if i % 2:
                     if image.rgb_to_lab(img.get_pixel(x, y))[i//2] > tres[i]:
                         tres[i] = image.rgb_to_lab(img.get_pixel(x, y))[i//2]
                 else:
@@ -79,25 +85,25 @@ def cal():
 while(True):
     clock.tick()
     img = sensor.snapshot()
-    img.draw_circle(175,144,60,(0,0,0),1,True)
-    #img.draw_circle(175, 144, 165, (255, 255, 255))
-    #img.draw_circle(177, 144, 55, (255, 255, 255))
-    #img.draw_cross(177, 144)
-    #img.draw_circle(177, 185, 53, (0, 0, 0))
-    #img.draw_rectangle(140, 151, 75, 42, cl)
+    img.draw_circle(175, 144, 60, (0, 0, 0), 1, True)
+    # img.draw_circle(175, 144, 165, (255, 255, 255))
+    # img.draw_circle(177, 144, 55, (255, 255, 255))
+    # img.draw_cross(177, 144)
+    # img.draw_circle(177, 185, 53, (0, 0, 0))
+    # img.draw_rectangle(140, 151, 75, 42, cl)
 
-    #defaults
+    # defaults
     lopta = 127
     zarovnanie = 0
 
     utok = True
     branka = False
 
-    if (color[0] != [0,0,0,0,0,0]):
+    if (color[0] != [0, 0, 0, 0, 0, 0]):
         blobs = []
-        for blob in img.find_blobs(color, invert = False, pixels_threshold=50, area_threshold=1, merge=True):
-            #img.draw_rectangle(blob.rect())
-            #img.draw_cross(blob.cx(), blob.cy())
+        for blob in img.find_blobs(color, invert=False, pixels_threshold=50, area_threshold=1, merge=True):
+            # img.draw_rectangle(blob.rect())
+            # img.draw_cross(blob.cx(), blob.cy())
             if pow(3025 < (blob.cx()-177), 2) + pow((blob.cy()-144), 2) < 31329:
                 blobs.append(blob)
         areamax = 0
@@ -114,7 +120,8 @@ while(True):
             elif areamax.cx() == 177:
                 angle = -64
             else:
-                angle = math.atan((areamax.cy()-144)/(areamax.cx()-177))/math.pi*127
+                angle = math.atan((areamax.cy()-144) /
+                                  (areamax.cx()-177))/math.pi*127
             if areamax.cy()-144 < 0 and areamax.cx()-177 > 0:
                 angle = angle + 127
             elif areamax.cy()-144 > 0 and areamax.cx()-177 > 0:
@@ -124,11 +131,11 @@ while(True):
         blobs = []
 
         # BRANKY - vypocet
-        img.draw_circle(175,144,110,(0,0,0),1,True)
+        img.draw_circle(175, 144, 110, (0, 0, 0), 1, True)
         if (branka):
-            #ZLTA
-            for blob in img.find_blobs(zltabranka, invert = False, pixels_threshold=50, area_threshold=1, merge=True):
-                #img.draw_cross(blob.cx(), blob.cy())
+            # ZLTA
+            for blob in img.find_blobs(zltabranka, invert=False, pixels_threshold=50, area_threshold=1, merge=True):
+                # img.draw_cross(blob.cx(), blob.cy())
                 if 4225 < pow((blob.cx()-177), 2) + pow((blob.cy()-144), 2) < 31329:
                     blobs.append(blob)
             areamax = 0
@@ -147,14 +154,14 @@ while(True):
                 cy = sucet[1]//areasum
                 img.draw_cross(cx, cy, (255, 255, 0))
                 zb = [cx, cy]
-                #print(vbrane(areamax.w()*areamax.h()))
+                # print(vbrane(areamax.w()*areamax.h()))
                 zarovnanie = uholkbrane(cx, cy)
             else:
-                zb = [0,0]
+                zb = [0, 0]
         else:
-            #MODRA
-            for blob in img.find_blobs(modrabranka, invert = False, pixels_threshold=100, area_threshold=1, merge=True):
-                #img.draw_cross(blob.cx(), blob.cy())
+            # MODRA
+            for blob in img.find_blobs(modrabranka, invert=False, pixels_threshold=100, area_threshold=1, merge=True):
+                # img.draw_cross(blob.cx(), blob.cy())
                 if 4225 < pow((blob.cx()-177), 2) + pow((blob.cy()-144), 2) < 31329:
                     blobs.append(blob)
             areamax = 0
@@ -178,33 +185,31 @@ while(True):
                 mb = [0, 0]
         blobs = []
 
-
         if utok:
             if (abs(lopta) < 63.5):
                 lopta *= 2
             else:
                 lopta *= 3/2
 
-
-            if (lopta > 127 ):
+            if (lopta > 127):
                 lopta -= lopta % 127
                 lopta *= -1
 
-
-            #UART COM
-            uart.write(ustruct.pack("<bbb",128,int(lopta),int(zarovnanie)))
+            # UART COM
+            uart.write(ustruct.pack("<bbb", 128, int(lopta), int(zarovnanie)))
             print(str(int(lopta)) + " " + str(int(zarovnanie)))
         else:
             if areamax:
                 if vbrane(areamax.w()*areamax.h()):
                     if lopta > 0:
-                        uart.write(ustruct.pack("<bbb",128,64,0))
+                        uart.write(ustruct.pack("<bbb", 128, 64, 0))
                     else:
-                        uart.write(ustruct.pack("<bbb",128,-64,0))
+                        uart.write(ustruct.pack("<bbb", 128, -64, 0))
                 else:
                     if -96 < zarovnanie < 96:
-                        uart.write(ustruct.pack("<bbb",128,0,0))
+                        uart.write(ustruct.pack("<bbb", 128, 0, 0))
                     else:
-                        uart.write(ustruct.pack("<bbb",128,int(zarovnanie)),0)
+                        uart.write(ustruct.pack(
+                            "<bbb", 128, int(zarovnanie)), 0)
     else:
         color[0] = cal()
