@@ -2,3 +2,4 @@
 /.vscode
 .cprojects
 .config.c.kate-setup
+.dep
